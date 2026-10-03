@@ -1,0 +1,8 @@
+open logical
+open libs
+
+
+assert compliance__B_ISO_8_24_V9_2__ANSP_Austria__Gateway {
+  B_ISO_8_24_V9_2[ANSP_Austria,Gateway]
+}
+check compliance__B_ISO_8_24_V9_2__ANSP_Austria__Gateway for 5

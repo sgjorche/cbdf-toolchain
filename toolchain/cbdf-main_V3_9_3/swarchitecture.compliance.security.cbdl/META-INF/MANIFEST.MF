@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: swarchitecture.compliance.security.cbdl
+Bundle-ManifestVersion: 2
+Bundle-Name: swarchitecture.compliance.security.cbdl
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: swarchitecture.compliance.security.cbdl; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: swarchitecture.compliance.security.m2,
+ org.eclipse.xtext,
+ org.eclipse.xtext.xbase,
+ org.eclipse.equinox.common;bundle-version="3.5.0",
+ org.eclipse.xtext.xbase.lib;bundle-version="2.14.0",
+ org.eclipse.xtext.util,
+ org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Export-Package: swarchitecture.compliance.security.cbdl.serializer,
+ swarchitecture.compliance.security.cbdl,
+ swarchitecture.compliance.security.cbdl.services,
+ swarchitecture.compliance.security.cbdl.scoping,
+ swarchitecture.compliance.security.cbdl.parser.antlr,
+ swarchitecture.compliance.security.cbdl.formatting2,
+ swarchitecture.compliance.security.cbdl.parser.antlr.internal,
+ swarchitecture.compliance.security.cbdl.validation,
+ swarchitecture.compliance.security.cbdl.generator
+Import-Package: org.apache.log4j

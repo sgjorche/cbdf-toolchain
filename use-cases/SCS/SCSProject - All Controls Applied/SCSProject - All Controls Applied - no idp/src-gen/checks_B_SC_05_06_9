@@ -1,0 +1,8 @@
+open logical
+open libs
+
+
+assert compliance__B_SC_05_06__MissionServers__GroundStation1 {
+  B_SC_05_06[MissionServers,GroundStation1]
+}
+check compliance__B_SC_05_06__MissionServers__GroundStation1 for 5

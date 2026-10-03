@@ -1,0 +1,8 @@
+open logical
+open libs
+
+
+assert compliance__B_ISO_8_24_V9_2__FDPS__TraditionalStructureData {
+  B_ISO_8_24_V9_2[FDPS,TraditionalStructureData]
+}
+check compliance__B_ISO_8_24_V9_2__FDPS__TraditionalStructureData for 5

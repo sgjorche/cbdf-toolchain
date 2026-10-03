@@ -1,0 +1,8 @@
+open logical
+open libs
+
+
+assert compliance__B_ISO_8_24_V9_2__CFMU__FDPS {
+  B_ISO_8_24_V9_2[CFMU,FDPS]
+}
+check compliance__B_ISO_8_24_V9_2__CFMU__FDPS for 5

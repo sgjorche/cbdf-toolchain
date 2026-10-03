@@ -1,0 +1,71 @@
+import <"SC.cbdl">
+
+library CNSSPolicy12 {
+  category SecureCommunication {
+
+    compliance CNSS_5(COMPONENT c1, COMPONENT c2) {
+      reference ("CNSS5" : "https://www.cnss.gov/CNSS/issuances/Policy12.pdf")
+      comment "Encrypt all data transmitted between {{ c1 }} and {{ c2 }} if the link is accessible by unauthorized personnel. (Reformulated: quantifier domain pre-filtered by m.receiver = c2; logically equivalent to the original, verified via NMCheck_mini5.)"
+      alloy "
+        all m: MsgPassing | m.receiver = c2 implies (
+          all d: Payload, t: Tick |
+            (some t1: t.prevs | H_inject[c1, m, t1])
+            implies
+            (all c3: Component - c1 - c2 | not E_get_pld[c3, m, d, t])
+        )
+        and
+        all m: MsgPassing | m.receiver = c2 implies (
+          all t: Tick |
+            H_inject[c1, m, t]
+            implies
+            (some t1: t.prevs | H_set_pld[c1, m, m.payload, t1])
+        )
+      "
+    }
+
+    compliance CNSS_7(COMPONENT c1, COMPONENT c2) {
+      reference ("CNSS7" : "https://www.cnss.gov/CNSS/issuances/Policy12.pdf")
+      comment "Enforce Role-Based Access Control (RBAC) for access between {{ c1 }} and {{ c2 }}."
+      alloy "
+        all m: MsgPassing, t: Tick |
+          (H_intercept[c2, m, t] and
+           (m.origin_sender = c1 or m.sender = c1))
+          implies
+          m.sender = m.origin_sender
+      "
+    }
+
+    compliance CNSS_3(COMPONENT c1, COMPONENT c2) {
+      reference ("CNSS3" : "https://www.cnss.gov/CNSS/issuances/Policy12.pdf")
+      comment "Ensure every inject and intercept action between {{ c1 }} and {{ c2 }} is observable in the connector's buffer trace."
+      alloy "
+        all m: MsgPassing, t: Tick |
+          (H_inject[c1, m, t] implies Log.addEntry[m, t])
+          and
+          (H_intercept[c2, m, t] implies Log.addEntry[m, t])
+      "
+    }
+
+    compliance CNSS_6(COMPONENT c1, COMPONENT c2) {
+      reference ("CNSS6" : "https://www.cnss.gov/CNSS/issuances/Policy12.pdf")
+      comment "Ensure messages received by {{ c2 }} from {{ c1 }} were properly injected by {{ c1 }}, preventing spoofing."
+      alloy "
+        all t2: Tick - tick/first, m: MsgPassing |
+          E_get_src[c2, m, c1, t2] implies
+            (some t1: t2.prevs | H_inject[c1, m, t1])
+      "
+    }
+
+    compliance CNSS_8(COMPONENT c1, COMPONENT c2) {
+      reference ("CNSS8" : "https://www.cnss.gov/CNSS/issuances/Policy12.pdf")
+      comment "Prevent privilege escalation between {{ c1 }} and {{ c2 }}: no component other than the addressed receiver may exercise read access on the communication."
+      alloy "
+        all m: MsgPassing, t: Tick, c3: Component - c1 - c2 |
+          (m.origin_sender = c1 and m.receiver = c2)
+          implies
+          not H_intercept[c3, m, t]
+      "
+    }
+
+  }
+}

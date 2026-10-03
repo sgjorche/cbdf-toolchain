@@ -1,0 +1,3 @@
+fact {
+SecureCommunicationTLS[con_GroundStation1_to_LEOSatellite13]
+}

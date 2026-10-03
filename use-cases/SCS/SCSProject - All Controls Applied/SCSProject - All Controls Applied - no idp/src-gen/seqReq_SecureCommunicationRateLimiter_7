@@ -1,0 +1,3 @@
+fact {
+SecureCommunicationRateLimiter[con_HMITerminal_to_MissionServers]
+}

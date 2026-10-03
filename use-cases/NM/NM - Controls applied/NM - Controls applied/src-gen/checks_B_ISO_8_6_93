@@ -1,0 +1,8 @@
+open logical
+open libs
+
+
+assert compliance__B_ISO_8_6__Gateway__NMOC {
+  B_ISO_8_6[Gateway,NMOC]
+}
+check compliance__B_ISO_8_6__Gateway__NMOC for 5

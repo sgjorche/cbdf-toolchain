@@ -1,0 +1,8 @@
+open logical
+open libs
+
+
+assert compliance__B_ISO_8_24_V9_2__Gateway__CFMU {
+  B_ISO_8_24_V9_2[Gateway,CFMU]
+}
+check compliance__B_ISO_8_24_V9_2__Gateway__CFMU for 5

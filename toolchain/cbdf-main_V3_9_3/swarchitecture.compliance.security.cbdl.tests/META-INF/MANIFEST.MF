@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: swarchitecture.compliance.security.cbdl.tests
+Bundle-ManifestVersion: 2
+Bundle-Name: swarchitecture.compliance.security.cbdl.tests
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: swarchitecture.compliance.security.cbdl.tests; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: swarchitecture.compliance.security.cbdl,
+ swarchitecture.compliance.security.m2,
+ org.junit.jupiter.api;bundle-version="[5.1.0,6.0.0)",
+ org.eclipse.xtext.testing,
+ org.eclipse.xtext.xbase.testing,
+ org.eclipse.xtext.xbase.lib;bundle-version="2.14.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Export-Package: swarchitecture.compliance.security.cbdl.tests;x-internal=true

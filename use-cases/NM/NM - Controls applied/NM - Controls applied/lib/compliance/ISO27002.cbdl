@@ -1,0 +1,74 @@
+import <"SC.cbdl">
+
+library ISO27002 {
+  category SecureCommunication {
+
+    compliance ISO_8_24(COMPONENT c1, COMPONENT c2) {
+      reference ("ISO27002-8.24" : "https://www.iso.org/standard/75652.html")
+      comment "Ensure confidentiality and integrity for all transmissions between {{ c1 }} and {{ c2 }} using TLS or IPsec. (Reformulated: quantifier domain pre-filtered by m.receiver = c2; logically equivalent to the original, verified via NMCheck_mini5.)"
+      alloy "
+        all m: MsgPassing | m.receiver = c2 implies (
+          all d: Payload, t: Tick |
+            (some t1: t.prevs | H_inject[c1, m, t1])
+            implies
+            (all c3: Component - c1 - c2 | not E_get_pld[c3, m, d, t])
+        )
+        and
+        all m: MsgPassing | m.receiver = c2 implies (
+          all t: Tick |
+            H_inject[c1, m, t]
+            implies
+            (some t1: t.prevs | H_set_pld[c1, m, m.payload, t1])
+        )
+      "
+    }
+
+    compliance ISO_8_5(COMPONENT c1, COMPONENT c2) {
+      reference ("ISO27002-8.5" : "https://www.iso.org/standard/75652.html")
+      comment "Enforce MFA between {{ c1 }} and {{ c2 }}."
+      alloy "
+        all m: MsgPassing, t: Tick |
+          (H_intercept[c2, m, t] and
+           (m.origin_sender = c1 or m.sender = c1))
+          implies
+          m.sender = m.origin_sender
+      "
+    }
+
+    compliance ISO_8_15(COMPONENT c1, COMPONENT c2) {
+      reference ("ISO27002-8.15" : "https://www.iso.org/standard/75652.html")
+      comment "Ensure every inject and intercept action between {{ c1 }} and {{ c2 }} is observable in the connector's buffer trace for non-repudiation."
+      alloy "
+        all m: MsgPassing, t: Tick |
+          (H_inject[c1, m, t] implies Log.addEntry[m, t])
+          and
+          (H_intercept[c2, m, t] implies Log.addEntry[m, t])
+      "
+    }
+
+    compliance ISO_8_6(COMPONENT c1, COMPONENT c2) {
+      reference ("ISO27002-8.6" : "https://www.iso.org/standard/75652.html")
+      comment "Limit the number of messages from {{ c1 }} to {{ c2 }} to at most one in any two consecutive Ticks to mitigate DoS risks."
+      alloy "
+        all t: Tick - tick/last |
+          #{ m: MsgPassing |
+            m.sender = c1 and
+            m.receiver = c2 and
+            m.sent in (t + t.next)
+          } <= 1
+      "
+    }
+
+    compliance ISO_8_2(COMPONENT c1, COMPONENT c2) {
+      reference ("ISO27002-8.2" : "https://www.iso.org/standard/75652.html")
+      comment "Prevent privilege escalation between {{ c1 }} and {{ c2 }}: no component other than the addressed receiver may exercise read access on the communication."
+      alloy "
+        all m: MsgPassing, t: Tick, c3: Component - c1 - c2 |
+          (m.origin_sender = c1 and m.receiver = c2)
+          implies
+          not H_intercept[c3, m, t]
+      "
+    }
+
+  }
+}

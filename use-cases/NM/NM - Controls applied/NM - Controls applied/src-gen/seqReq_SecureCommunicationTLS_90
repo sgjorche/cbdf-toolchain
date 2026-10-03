@@ -1,0 +1,3 @@
+fact {
+SecureCommunicationTLS[con_ATMPortal_to_Gateway]
+}

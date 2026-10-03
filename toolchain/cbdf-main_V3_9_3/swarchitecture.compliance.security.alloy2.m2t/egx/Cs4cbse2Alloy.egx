@@ -1,0 +1,101 @@
+pre init {
+	var check_id = 1;
+	var sc_id = 1;
+}
+
+
+// generate logical view 
+rule logicalView2Alloy 
+	transform lv : LogicalView {
+	
+	// The EGL template to be invoked
+	template : "../etl/logicalView2alloy.etl"
+	
+	
+	// Output file
+	target : "logical.als"
+}
+
+// generate all propety definition from libs
+rule PropetyView2Alloy 
+	transform pcl : PropertyCategoryLibrary {
+	
+	 pre {
+	    var libName = "libs_" + pcl.name;
+	 }
+	
+	// The EGL template to be invoked
+	template : "../etl/propertyCategoryLibrary2alloy.etl"  
+	
+	// Output file
+	target {
+		return libName;
+	}
+
+}
+
+// generate property verifications 
+rule complianceInstance2Alloy 
+	transform ci : ComplianceInstance {
+	
+	// The EGL template to be invoked
+	template : "../etl/complianceInstance2alloy.etl"
+	
+	 pre {
+	    var checkName = "checks_" + ci.propertyDefinition.name + "_" + check_id;
+	    check_id = check_id + 1;
+	 }
+
+	
+	// Output file
+	target {
+		return checkName;
+	}
+}
+
+
+// generate overlay property verifications 
+rule overlayInstance2Alloy 
+	transform ci : OverlayComplianceInstance {
+	
+	// The EGL template to be invoked
+	template : "../etl/overlayComplianceInstance2alloy.etl"
+	
+	 pre {
+	    var checkName = "checks_" + ci.propertyDefinition.name + "_" + check_id ;
+	    check_id = check_id + 1;
+	 }
+
+	
+	// Output file
+	target {
+		return checkName;
+	}
+}
+
+
+// generate security control fact block (appended into logical.als)
+rule securityControlInstance2Alloy 
+	transform sci : SecurityControlInstance {
+	
+	pre {
+	    var libName = "seqReq_" + sci.propertyDefinition.name + "_" + sc_id;
+	    sc_id = sc_id + 1;
+	 }
+	
+	// The EGL template to be invoked
+	template : "../etl/securityControlInstance2alloy.etl"
+	
+	// Output file
+	target {
+		return libName;
+	}
+
+}
+
+// V3.9: securityControlEnforce2Alloy rule removed.
+// Enforcement checks used a control-conditional form (Control[con] implies Requirement[c1,c2])
+// which coupled the assertion to a specific control. In V3.9, compliance assertions are
+// requirement-only (see complianceInstance2Alloy and overlayInstance2Alloy). Controls are
+// applied as facts in logical.als via securityControlInstance2Alloy and are the sole
+// difference between with-controls and no-controls runs, keeping the assertion invariant.

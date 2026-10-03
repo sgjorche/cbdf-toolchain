@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="compliance" nsURI="swarchitecture.compliance.security.compliance"
+    nsPrefix="compliance">
+  <eClassifiers xsi:type="ecore:EClass" name="ComplianceDefinition" eSuperTypes="property.ecore#//AtomicPropertyDefinition #//PropertyDefinitionStandardRef"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OverlayComplianceDefintion" eSuperTypes="property.ecore#//OverlayPropertyDefinition"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OverlayComplianceInstance" eSuperTypes="property.ecore#//PropertyInstance"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ComplianceInstance" eSuperTypes="property.ecore#//PropertyInstance"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SecurityControlDefintion" eSuperTypes="property.ecore#//AtomicPropertyDefinition #//PropertyDefinitionStandardRef">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="enforce" upperBound="-1"
+        eType="ecore:EClass property.ecore#//PropertyDefinition"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SecurityControlInstance" eSuperTypes="property.ecore#//PropertyInstance"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PropertyDefinitionStandardRef">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="standardRef" upperBound="-1"
+        eType="#//StandardRef" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StandardRef">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+</ecore:EPackage>

@@ -1,0 +1,22 @@
+pred B_SC_13_00[c1:Component,c2:Component]{
+
+			SC_08_00[c1,c2]
+			OMB_4[c1,c2]
+}
+pred B_AC_17_02[c1:Component,c2:Component]{
+
+			AC_17_02[c1,c2]
+			OMB_4[c1,c2]
+}
+pred B_SC_05_06[c1:Component,c2:Component]{
+
+			SC_05_06[c1,c2]
+}
+pred B_AC_06_08[c1:Component,c2:Component]{
+
+			AC_06_08[c1,c2]
+}
+pred B_AU_02_03[c1:Component,c2:Component]{
+
+			AU_02_03[c1,c2]
+}

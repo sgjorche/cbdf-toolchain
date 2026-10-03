@@ -1,0 +1,446 @@
+import <"design.cbdl">
+import <"lib/compliance/Baseline.cbdl">
+import <"lib/solution/SC.cbdl">
+import <"lib/compliance/NISTSP800-53.cbdl">
+import <"lib/compliance/CNSSPolicy12.cbdl">
+import <"controls.cbdl">
+
+// Threat: Spoofing
+// Standard: NIST SP 800-53 Rev.5  Control: AC-17(02)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: CNSS Policy 12  Control: CNSS-7  →  https://www.cnss.gov/CNSS/issuances/Policy12.pdf
+// Standard: CNSS Policy 12  Control: CNSS-6  →  https://www.cnss.gov/CNSS/issuances/Policy12.pdf
+check overlay CNSSxNIST.SecureCommunication.B_AC_17_02_7(EngineerOperator,HMITerminal);
+
+// Threat: Tampering + Information Disclosure
+// Standard: NIST SP 800-53 Rev.5  Control: SC-08(01)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: CNSS Policy 12  Control: CNSS-5  →  https://www.cnss.gov/CNSS/issuances/Policy12.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_08_01_05(EngineerOperator,HMITerminal);
+
+// Threat: Denial of Service
+// Standard: NIST SP 800-53 Rev.5  Control: SC-05(06)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_05_06(EngineerOperator,HMITerminal);
+
+// Threat: Elevation of Privilege
+// Standard: NIST SP 800-53 Rev.5  Control: AC-06(08)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: CNSS Policy 12  Control: CNSS-8  →  https://www.cnss.gov/CNSS/issuances/Policy12.pdf
+check overlay CNSSxNIST.SecureCommunication.B_AC_06_08(EngineerOperator,HMITerminal);
+
+// Threat: Repudiation
+// Standard: NIST SP 800-53 Rev.5  Control: AU-02(03)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: CNSS Policy 12  Control: CNSS-3  →  https://www.cnss.gov/CNSS/issuances/Policy12.pdf
+check overlay CNSSxNIST.SecureCommunication.B_AU_02_03(EngineerOperator,HMITerminal);
+
+// Threat: Tampering + Information Disclosure
+// Standard: NIST SP 800-53 Rev.5  Control: SC-08(01)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: CNSS Policy 12  Control: CNSS-5  →  https://www.cnss.gov/CNSS/issuances/Policy12.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_08_01_05(HMITerminal,MissionServers);
+
+// Threat: Denial of Service
+// Standard: NIST SP 800-53 Rev.5  Control: SC-05(06)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_05_06(HMITerminal,MissionServers);
+
+// Threat: Tampering + Information Disclosure
+// Standard: NIST SP 800-53 Rev.5  Control: SC-08(01)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: CNSS Policy 12  Control: CNSS-5  →  https://www.cnss.gov/CNSS/issuances/Policy12.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_08_01_05(MissionServers,GroundStation1);
+
+// Threat: Denial of Service
+// Standard: NIST SP 800-53 Rev.5  Control: SC-05(06)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_05_06(MissionServers,GroundStation1);
+
+// Threat: Tampering + Information Disclosure
+// Standard: NIST SP 800-53 Rev.5  Control: SC-08(01)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: CNSS Policy 12  Control: CNSS-5  →  https://www.cnss.gov/CNSS/issuances/Policy12.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_08_01_05(MissionServers,GroundStation2);
+
+// Threat: Denial of Service
+// Standard: NIST SP 800-53 Rev.5  Control: SC-05(06)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_05_06(MissionServers,GroundStation2);
+
+// Threat: Tampering + Information Disclosure
+// Standard: NIST SP 800-53 Rev.5  Control: SC-08(01)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: CNSS Policy 12  Control: CNSS-5  →  https://www.cnss.gov/CNSS/issuances/Policy12.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_08_01_05(MissionServers,GroundStation3);
+
+// Threat: Denial of Service
+// Standard: NIST SP 800-53 Rev.5  Control: SC-05(06)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_05_06(MissionServers,GroundStation3);
+
+// Threat: Tampering + Information Disclosure
+// Standard: NIST SP 800-53 Rev.5  Control: SC-08(01)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: CNSS Policy 12  Control: CNSS-5  →  https://www.cnss.gov/CNSS/issuances/Policy12.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_08_01_05(GroundStation1,LEOSatellite01);
+
+// Threat: Denial of Service
+// Standard: NIST SP 800-53 Rev.5  Control: SC-05(06)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_05_06(GroundStation1,LEOSatellite01);
+
+// Threat: Spoofing
+// Standard: NIST SP 800-53 Rev.5  Control: AC-17(02)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: CNSS Policy 12  Control: CNSS-7  →  https://www.cnss.gov/CNSS/issuances/Policy12.pdf
+// Standard: CNSS Policy 12  Control: CNSS-6  →  https://www.cnss.gov/CNSS/issuances/Policy12.pdf
+check overlay CNSSxNIST.SecureCommunication.B_AC_17_02_7(GroundStation1,LEOSatellite01);
+
+// Threat: Tampering + Information Disclosure
+// Standard: NIST SP 800-53 Rev.5  Control: SC-08(01)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: CNSS Policy 12  Control: CNSS-5  →  https://www.cnss.gov/CNSS/issuances/Policy12.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_08_01_05(GroundStation1,LEOSatellite02);
+
+// Threat: Denial of Service
+// Standard: NIST SP 800-53 Rev.5  Control: SC-05(06)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_05_06(GroundStation1,LEOSatellite02);
+
+// Threat: Tampering + Information Disclosure
+// Standard: NIST SP 800-53 Rev.5  Control: SC-08(01)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: CNSS Policy 12  Control: CNSS-5  →  https://www.cnss.gov/CNSS/issuances/Policy12.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_08_01_05(GroundStation1,LEOSatellite03);
+
+// Threat: Denial of Service
+// Standard: NIST SP 800-53 Rev.5  Control: SC-05(06)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_05_06(GroundStation1,LEOSatellite03);
+
+// Threat: Tampering + Information Disclosure
+// Standard: NIST SP 800-53 Rev.5  Control: SC-08(01)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: CNSS Policy 12  Control: CNSS-5  →  https://www.cnss.gov/CNSS/issuances/Policy12.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_08_01_05(GroundStation1,LEOSatellite04);
+
+// Threat: Denial of Service
+// Standard: NIST SP 800-53 Rev.5  Control: SC-05(06)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_05_06(GroundStation1,LEOSatellite04);
+
+// Threat: Tampering + Information Disclosure
+// Standard: NIST SP 800-53 Rev.5  Control: SC-08(01)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: CNSS Policy 12  Control: CNSS-5  →  https://www.cnss.gov/CNSS/issuances/Policy12.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_08_01_05(GroundStation1,LEOSatellite05);
+
+// Threat: Denial of Service
+// Standard: NIST SP 800-53 Rev.5  Control: SC-05(06)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_05_06(GroundStation1,LEOSatellite05);
+
+// Threat: Tampering + Information Disclosure
+// Standard: NIST SP 800-53 Rev.5  Control: SC-08(01)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: CNSS Policy 12  Control: CNSS-5  →  https://www.cnss.gov/CNSS/issuances/Policy12.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_08_01_05(GroundStation1,LEOSatellite06);
+
+// Threat: Denial of Service
+// Standard: NIST SP 800-53 Rev.5  Control: SC-05(06)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_05_06(GroundStation1,LEOSatellite06);
+
+// Threat: Tampering + Information Disclosure
+// Standard: NIST SP 800-53 Rev.5  Control: SC-08(01)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: CNSS Policy 12  Control: CNSS-5  →  https://www.cnss.gov/CNSS/issuances/Policy12.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_08_01_05(GroundStation1,LEOSatellite07);
+
+// Threat: Denial of Service
+// Standard: NIST SP 800-53 Rev.5  Control: SC-05(06)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_05_06(GroundStation1,LEOSatellite07);
+
+// Threat: Tampering + Information Disclosure
+// Standard: NIST SP 800-53 Rev.5  Control: SC-08(01)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: CNSS Policy 12  Control: CNSS-5  →  https://www.cnss.gov/CNSS/issuances/Policy12.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_08_01_05(GroundStation1,LEOSatellite08);
+
+// Threat: Denial of Service
+// Standard: NIST SP 800-53 Rev.5  Control: SC-05(06)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_05_06(GroundStation1,LEOSatellite08);
+
+// Threat: Tampering + Information Disclosure
+// Standard: NIST SP 800-53 Rev.5  Control: SC-08(01)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: CNSS Policy 12  Control: CNSS-5  →  https://www.cnss.gov/CNSS/issuances/Policy12.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_08_01_05(GroundStation1,LEOSatellite09);
+
+// Threat: Denial of Service
+// Standard: NIST SP 800-53 Rev.5  Control: SC-05(06)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_05_06(GroundStation1,LEOSatellite09);
+
+// Threat: Tampering + Information Disclosure
+// Standard: NIST SP 800-53 Rev.5  Control: SC-08(01)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: CNSS Policy 12  Control: CNSS-5  →  https://www.cnss.gov/CNSS/issuances/Policy12.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_08_01_05(GroundStation1,LEOSatellite10);
+
+// Threat: Denial of Service
+// Standard: NIST SP 800-53 Rev.5  Control: SC-05(06)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_05_06(GroundStation1,LEOSatellite10);
+
+// Threat: Tampering + Information Disclosure
+// Standard: NIST SP 800-53 Rev.5  Control: SC-08(01)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: CNSS Policy 12  Control: CNSS-5  →  https://www.cnss.gov/CNSS/issuances/Policy12.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_08_01_05(GroundStation1,LEOSatellite11);
+
+// Threat: Denial of Service
+// Standard: NIST SP 800-53 Rev.5  Control: SC-05(06)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_05_06(GroundStation1,LEOSatellite11);
+
+// Threat: Tampering + Information Disclosure
+// Standard: NIST SP 800-53 Rev.5  Control: SC-08(01)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: CNSS Policy 12  Control: CNSS-5  →  https://www.cnss.gov/CNSS/issuances/Policy12.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_08_01_05(GroundStation1,LEOSatellite12);
+
+// Threat: Denial of Service
+// Standard: NIST SP 800-53 Rev.5  Control: SC-05(06)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_05_06(GroundStation1,LEOSatellite12);
+
+// Threat: Tampering + Information Disclosure
+// Standard: NIST SP 800-53 Rev.5  Control: SC-08(01)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: CNSS Policy 12  Control: CNSS-5  →  https://www.cnss.gov/CNSS/issuances/Policy12.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_08_01_05(GroundStation1,LEOSatellite13);
+
+// Threat: Denial of Service
+// Standard: NIST SP 800-53 Rev.5  Control: SC-05(06)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_05_06(GroundStation1,LEOSatellite13);
+
+// Threat: Tampering + Information Disclosure
+// Standard: NIST SP 800-53 Rev.5  Control: SC-08(01)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: CNSS Policy 12  Control: CNSS-5  →  https://www.cnss.gov/CNSS/issuances/Policy12.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_08_01_05(GroundStation1,LEOSatellite14);
+
+// Threat: Denial of Service
+// Standard: NIST SP 800-53 Rev.5  Control: SC-05(06)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_05_06(GroundStation1,LEOSatellite14);
+
+// Threat: Spoofing
+// Standard: NIST SP 800-53 Rev.5  Control: AC-17(02)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: CNSS Policy 12  Control: CNSS-7  →  https://www.cnss.gov/CNSS/issuances/Policy12.pdf
+// Standard: CNSS Policy 12  Control: CNSS-6  →  https://www.cnss.gov/CNSS/issuances/Policy12.pdf
+check overlay CNSSxNIST.SecureCommunication.B_AC_17_02_7(GroundStation1,LEOSatellite14);
+
+// Threat: Tampering + Information Disclosure
+// Standard: NIST SP 800-53 Rev.5  Control: SC-08(01)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: CNSS Policy 12  Control: CNSS-5  →  https://www.cnss.gov/CNSS/issuances/Policy12.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_08_01_05(GroundStation2,LEOSatellite15);
+
+// Threat: Denial of Service
+// Standard: NIST SP 800-53 Rev.5  Control: SC-05(06)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_05_06(GroundStation2,LEOSatellite15);
+
+// Threat: Tampering + Information Disclosure
+// Standard: NIST SP 800-53 Rev.5  Control: SC-08(01)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: CNSS Policy 12  Control: CNSS-5  →  https://www.cnss.gov/CNSS/issuances/Policy12.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_08_01_05(GroundStation2,LEOSatellite16);
+
+// Threat: Denial of Service
+// Standard: NIST SP 800-53 Rev.5  Control: SC-05(06)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_05_06(GroundStation2,LEOSatellite16);
+
+// Threat: Tampering + Information Disclosure
+// Standard: NIST SP 800-53 Rev.5  Control: SC-08(01)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: CNSS Policy 12  Control: CNSS-5  →  https://www.cnss.gov/CNSS/issuances/Policy12.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_08_01_05(GroundStation2,LEOSatellite17);
+
+// Threat: Denial of Service
+// Standard: NIST SP 800-53 Rev.5  Control: SC-05(06)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_05_06(GroundStation2,LEOSatellite17);
+
+// Threat: Tampering + Information Disclosure
+// Standard: NIST SP 800-53 Rev.5  Control: SC-08(01)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: CNSS Policy 12  Control: CNSS-5  →  https://www.cnss.gov/CNSS/issuances/Policy12.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_08_01_05(GroundStation2,LEOSatellite18);
+
+// Threat: Denial of Service
+// Standard: NIST SP 800-53 Rev.5  Control: SC-05(06)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_05_06(GroundStation2,LEOSatellite18);
+
+// Threat: Tampering + Information Disclosure
+// Standard: NIST SP 800-53 Rev.5  Control: SC-08(01)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: CNSS Policy 12  Control: CNSS-5  →  https://www.cnss.gov/CNSS/issuances/Policy12.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_08_01_05(GroundStation2,LEOSatellite19);
+
+// Threat: Denial of Service
+// Standard: NIST SP 800-53 Rev.5  Control: SC-05(06)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_05_06(GroundStation2,LEOSatellite19);
+
+// Threat: Tampering + Information Disclosure
+// Standard: NIST SP 800-53 Rev.5  Control: SC-08(01)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: CNSS Policy 12  Control: CNSS-5  →  https://www.cnss.gov/CNSS/issuances/Policy12.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_08_01_05(GroundStation2,LEOSatellite20);
+
+// Threat: Denial of Service
+// Standard: NIST SP 800-53 Rev.5  Control: SC-05(06)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_05_06(GroundStation2,LEOSatellite20);
+
+// Threat: Tampering + Information Disclosure
+// Standard: NIST SP 800-53 Rev.5  Control: SC-08(01)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: CNSS Policy 12  Control: CNSS-5  →  https://www.cnss.gov/CNSS/issuances/Policy12.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_08_01_05(GroundStation2,LEOSatellite21);
+
+// Threat: Denial of Service
+// Standard: NIST SP 800-53 Rev.5  Control: SC-05(06)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_05_06(GroundStation2,LEOSatellite21);
+
+// Threat: Tampering + Information Disclosure
+// Standard: NIST SP 800-53 Rev.5  Control: SC-08(01)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: CNSS Policy 12  Control: CNSS-5  →  https://www.cnss.gov/CNSS/issuances/Policy12.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_08_01_05(GroundStation2,LEOSatellite22);
+
+// Threat: Denial of Service
+// Standard: NIST SP 800-53 Rev.5  Control: SC-05(06)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_05_06(GroundStation2,LEOSatellite22);
+
+// Threat: Tampering + Information Disclosure
+// Standard: NIST SP 800-53 Rev.5  Control: SC-08(01)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: CNSS Policy 12  Control: CNSS-5  →  https://www.cnss.gov/CNSS/issuances/Policy12.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_08_01_05(GroundStation2,LEOSatellite23);
+
+// Threat: Denial of Service
+// Standard: NIST SP 800-53 Rev.5  Control: SC-05(06)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_05_06(GroundStation2,LEOSatellite23);
+
+// Threat: Tampering + Information Disclosure
+// Standard: NIST SP 800-53 Rev.5  Control: SC-08(01)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: CNSS Policy 12  Control: CNSS-5  →  https://www.cnss.gov/CNSS/issuances/Policy12.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_08_01_05(GroundStation2,LEOSatellite24);
+
+// Threat: Denial of Service
+// Standard: NIST SP 800-53 Rev.5  Control: SC-05(06)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_05_06(GroundStation2,LEOSatellite24);
+
+// Threat: Tampering + Information Disclosure
+// Standard: NIST SP 800-53 Rev.5  Control: SC-08(01)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: CNSS Policy 12  Control: CNSS-5  →  https://www.cnss.gov/CNSS/issuances/Policy12.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_08_01_05(GroundStation2,LEOSatellite25);
+
+// Threat: Denial of Service
+// Standard: NIST SP 800-53 Rev.5  Control: SC-05(06)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_05_06(GroundStation2,LEOSatellite25);
+
+// Threat: Tampering + Information Disclosure
+// Standard: NIST SP 800-53 Rev.5  Control: SC-08(01)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: CNSS Policy 12  Control: CNSS-5  →  https://www.cnss.gov/CNSS/issuances/Policy12.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_08_01_05(GroundStation2,LEOSatellite26);
+
+// Threat: Denial of Service
+// Standard: NIST SP 800-53 Rev.5  Control: SC-05(06)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_05_06(GroundStation2,LEOSatellite26);
+
+// Threat: Tampering + Information Disclosure
+// Standard: NIST SP 800-53 Rev.5  Control: SC-08(01)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: CNSS Policy 12  Control: CNSS-5  →  https://www.cnss.gov/CNSS/issuances/Policy12.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_08_01_05(GroundStation2,LEOSatellite27);
+
+// Threat: Denial of Service
+// Standard: NIST SP 800-53 Rev.5  Control: SC-05(06)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_05_06(GroundStation2,LEOSatellite27);
+
+// Threat: Spoofing
+// Standard: NIST SP 800-53 Rev.5  Control: AC-17(02)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: CNSS Policy 12  Control: CNSS-7  →  https://www.cnss.gov/CNSS/issuances/Policy12.pdf
+// Standard: CNSS Policy 12  Control: CNSS-6  →  https://www.cnss.gov/CNSS/issuances/Policy12.pdf
+check overlay CNSSxNIST.SecureCommunication.B_AC_17_02_7(GroundStation2,LEOSatellite27);
+
+// Threat: Tampering + Information Disclosure
+// Standard: NIST SP 800-53 Rev.5  Control: SC-08(01)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: CNSS Policy 12  Control: CNSS-5  →  https://www.cnss.gov/CNSS/issuances/Policy12.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_08_01_05(GroundStation3,LEOSatellite28);
+
+// Threat: Denial of Service
+// Standard: NIST SP 800-53 Rev.5  Control: SC-05(06)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_05_06(GroundStation3,LEOSatellite28);
+
+// Threat: Tampering + Information Disclosure
+// Standard: NIST SP 800-53 Rev.5  Control: SC-08(01)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: CNSS Policy 12  Control: CNSS-5  →  https://www.cnss.gov/CNSS/issuances/Policy12.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_08_01_05(GroundStation3,LEOSatellite29);
+
+// Threat: Denial of Service
+// Standard: NIST SP 800-53 Rev.5  Control: SC-05(06)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_05_06(GroundStation3,LEOSatellite29);
+
+// Threat: Tampering + Information Disclosure
+// Standard: NIST SP 800-53 Rev.5  Control: SC-08(01)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: CNSS Policy 12  Control: CNSS-5  →  https://www.cnss.gov/CNSS/issuances/Policy12.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_08_01_05(GroundStation3,LEOSatellite30);
+
+// Threat: Denial of Service
+// Standard: NIST SP 800-53 Rev.5  Control: SC-05(06)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_05_06(GroundStation3,LEOSatellite30);
+
+// Threat: Tampering + Information Disclosure
+// Standard: NIST SP 800-53 Rev.5  Control: SC-08(01)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: CNSS Policy 12  Control: CNSS-5  →  https://www.cnss.gov/CNSS/issuances/Policy12.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_08_01_05(GroundStation3,LEOSatellite31);
+
+// Threat: Denial of Service
+// Standard: NIST SP 800-53 Rev.5  Control: SC-05(06)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_05_06(GroundStation3,LEOSatellite31);
+
+// Threat: Tampering + Information Disclosure
+// Standard: NIST SP 800-53 Rev.5  Control: SC-08(01)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: CNSS Policy 12  Control: CNSS-5  →  https://www.cnss.gov/CNSS/issuances/Policy12.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_08_01_05(GroundStation3,LEOSatellite32);
+
+// Threat: Denial of Service
+// Standard: NIST SP 800-53 Rev.5  Control: SC-05(06)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_05_06(GroundStation3,LEOSatellite32);
+
+// Threat: Tampering + Information Disclosure
+// Standard: NIST SP 800-53 Rev.5  Control: SC-08(01)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: CNSS Policy 12  Control: CNSS-5  →  https://www.cnss.gov/CNSS/issuances/Policy12.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_08_01_05(GroundStation3,LEOSatellite33);
+
+// Threat: Denial of Service
+// Standard: NIST SP 800-53 Rev.5  Control: SC-05(06)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_05_06(GroundStation3,LEOSatellite33);
+
+// Threat: Tampering + Information Disclosure
+// Standard: NIST SP 800-53 Rev.5  Control: SC-08(01)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: CNSS Policy 12  Control: CNSS-5  →  https://www.cnss.gov/CNSS/issuances/Policy12.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_08_01_05(GroundStation3,LEOSatellite34);
+
+// Threat: Denial of Service
+// Standard: NIST SP 800-53 Rev.5  Control: SC-05(06)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_05_06(GroundStation3,LEOSatellite34);
+
+// Threat: Tampering + Information Disclosure
+// Standard: NIST SP 800-53 Rev.5  Control: SC-08(01)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: CNSS Policy 12  Control: CNSS-5  →  https://www.cnss.gov/CNSS/issuances/Policy12.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_08_01_05(GroundStation3,LEOSatellite35);
+
+// Threat: Denial of Service
+// Standard: NIST SP 800-53 Rev.5  Control: SC-05(06)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_05_06(GroundStation3,LEOSatellite35);
+
+// Threat: Tampering + Information Disclosure
+// Standard: NIST SP 800-53 Rev.5  Control: SC-08(01)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: CNSS Policy 12  Control: CNSS-5  →  https://www.cnss.gov/CNSS/issuances/Policy12.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_08_01_05(GroundStation3,LEOSatellite36);
+
+// Threat: Denial of Service
+// Standard: NIST SP 800-53 Rev.5  Control: SC-05(06)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_05_06(GroundStation3,LEOSatellite36);
+
+// Threat: Tampering + Information Disclosure
+// Standard: NIST SP 800-53 Rev.5  Control: SC-08(01)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: CNSS Policy 12  Control: CNSS-5  →  https://www.cnss.gov/CNSS/issuances/Policy12.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_08_01_05(GroundStation3,LEOSatellite37);
+
+// Threat: Denial of Service
+// Standard: NIST SP 800-53 Rev.5  Control: SC-05(06)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_05_06(GroundStation3,LEOSatellite37);
+
+// Threat: Tampering + Information Disclosure
+// Standard: NIST SP 800-53 Rev.5  Control: SC-08(01)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: CNSS Policy 12  Control: CNSS-5  →  https://www.cnss.gov/CNSS/issuances/Policy12.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_08_01_05(GroundStation3,LEOSatellite38);
+
+// Threat: Denial of Service
+// Standard: NIST SP 800-53 Rev.5  Control: SC-05(06)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_05_06(GroundStation3,LEOSatellite38);
+
+// Threat: Tampering + Information Disclosure
+// Standard: NIST SP 800-53 Rev.5  Control: SC-08(01)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: CNSS Policy 12  Control: CNSS-5  →  https://www.cnss.gov/CNSS/issuances/Policy12.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_08_01_05(GroundStation3,LEOSatellite39);
+
+// Threat: Denial of Service
+// Standard: NIST SP 800-53 Rev.5  Control: SC-05(06)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_05_06(GroundStation3,LEOSatellite39);
+
+// Threat: Tampering + Information Disclosure
+// Standard: NIST SP 800-53 Rev.5  Control: SC-08(01)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: CNSS Policy 12  Control: CNSS-5  →  https://www.cnss.gov/CNSS/issuances/Policy12.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_08_01_05(GroundStation3,LEOSatellite40);
+
+// Threat: Denial of Service
+// Standard: NIST SP 800-53 Rev.5  Control: SC-05(06)  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay CNSSxNIST.SecureCommunication.B_SC_05_06(GroundStation3,LEOSatellite40);
+

@@ -1,0 +1,3 @@
+fact {
+SecureCommunicationTLS[con_AOC_to_Gateway]
+}

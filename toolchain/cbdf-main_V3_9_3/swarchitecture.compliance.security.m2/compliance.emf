@@ -1,0 +1,32 @@
+@namespace(uri="swarchitecture.compliance.security.compliance", prefix="compliance")
+package compliance;
+
+import "platform:/resource/swarchitecture.compliance.security.m2/property.ecore";
+
+class ComplianceDefinition extends property.AtomicPropertyDefinition, PropertyDefinitionStandardRef {}
+
+class OverlayComplianceDefintion extends property.OverlayPropertyDefinition {
+}
+
+class OverlayComplianceInstance extends property.PropertyInstance {
+}
+
+class ComplianceInstance extends property.PropertyInstance {
+}
+
+class SecurityControlDefintion extends property.AtomicPropertyDefinition, PropertyDefinitionStandardRef {
+	ref property.PropertyDefinition[*] enforce;
+}
+
+class SecurityControlInstance extends property.PropertyInstance {
+}
+
+class PropertyDefinitionStandardRef {
+	val StandardRef[*] standardRef;
+}
+
+class StandardRef {
+	attr String[1] name;
+	attr String url;
+}
+

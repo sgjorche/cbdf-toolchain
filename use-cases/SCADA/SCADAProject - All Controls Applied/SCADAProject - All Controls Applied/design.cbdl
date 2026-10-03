@@ -1,0 +1,42 @@
+data tcp_cmd: TCP_Data;
+
+
+component ControlCenter {
+    control_center_port_out_fs1 -> tcp_cmd,
+    control_center_port_out_fs2 -> tcp_cmd,
+    control_center_port_out_fs3 -> tcp_cmd,
+    control_center_port_out_fs4 -> tcp_cmd,
+    control_center_port_out_fs5 -> tcp_cmd,
+    control_center_port_out_fs6 -> tcp_cmd
+};
+
+component FieldSite1 {
+    field_site1_port_in_fs1 <- tcp_cmd
+};
+
+component FieldSite2 {
+    field_site2_port_in_fs2 <- tcp_cmd
+};
+
+component FieldSite3 {
+    field_site3_port_in_fs3 <- tcp_cmd
+};
+
+component FieldSite4 {
+    field_site4_port_in_fs4 <- tcp_cmd
+};
+
+component FieldSite5 {
+    field_site5_port_in_fs5 <- tcp_cmd
+};
+
+component FieldSite6 {
+    field_site6_port_in_fs6 <- tcp_cmd
+};
+
+connector con_ControlCenter_to_FieldSite1: ControlCenter.control_center_port_out_fs1 - FieldSite1.field_site1_port_in_fs1;
+connector con_ControlCenter_to_FieldSite2: ControlCenter.control_center_port_out_fs2 - FieldSite2.field_site2_port_in_fs2;
+connector con_ControlCenter_to_FieldSite3: ControlCenter.control_center_port_out_fs3 - FieldSite3.field_site3_port_in_fs3;
+connector con_ControlCenter_to_FieldSite4: ControlCenter.control_center_port_out_fs4 - FieldSite4.field_site4_port_in_fs4;
+connector con_ControlCenter_to_FieldSite5: ControlCenter.control_center_port_out_fs5 - FieldSite5.field_site5_port_in_fs5;
+connector con_ControlCenter_to_FieldSite6: ControlCenter.control_center_port_out_fs6 - FieldSite6.field_site6_port_in_fs6;

@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: M2m
+Bundle-SymbolicName: swarchitecture.cbse.capella4.m2m;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Export-Package: swarchitecture.cbse.capella4.m2m
+Require-Bundle: cbdf.core;bundle-version="1.0.0",
+ swarchitecture.compliance.security.m2;bundle-version="1.0.0"

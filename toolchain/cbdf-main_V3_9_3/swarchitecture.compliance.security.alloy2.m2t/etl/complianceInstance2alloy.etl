@@ -1,0 +1,8 @@
+open logical
+open libs
+
+
+assert compliance__[%=ci.propertyDefinition.name%]__[% for (ip in ci.parameters) { %][%=ip.name%][% if (ip != ci.parameters.last()) { %]__[% } %][% } %] {
+  [%=ci.propertyDefinition.name %][[% for (ip in ci.parameters) { %][%=ip.name%][% if (ip != ci.parameters.last()) { %],[% } %][% } %]]
+}
+check compliance__[%=ci.propertyDefinition.name%]__[% for (ip in ci.parameters) { %][%=ip.name%][% if (ip != ci.parameters.last()) { %]__[% } %][% } %] for 5

@@ -1,0 +1,8 @@
+pred OMB_4[c1:Component,c2:Component]{
+
+		
+        all t2: Tick - tick/first, m: MsgPassing |
+          E_get_src[c2, m, c1, t2] implies
+            (some t1: t2.prevs | H_inject[c1, m, t1])
+      
+}

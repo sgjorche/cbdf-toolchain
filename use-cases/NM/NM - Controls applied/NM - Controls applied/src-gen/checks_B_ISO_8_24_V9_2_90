@@ -1,0 +1,8 @@
+open logical
+open libs
+
+
+assert compliance__B_ISO_8_24_V9_2__ATMPortal__Gateway {
+  B_ISO_8_24_V9_2[ATMPortal,Gateway]
+}
+check compliance__B_ISO_8_24_V9_2__ATMPortal__Gateway for 5

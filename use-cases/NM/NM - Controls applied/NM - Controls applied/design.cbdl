@@ -1,0 +1,309 @@
+data command_data: TCP_Data;
+
+
+component ANSP_Belgium {
+    ansp_belgium_port_belgium_out -> command_data
+};
+
+component ANSP_France {
+    ansp_france_port_france_out -> command_data
+};
+
+component ANSP_Germany {
+    ansp_germany_port_germany_out -> command_data
+};
+
+component ANSP_Luxembourg {
+    ansp_luxembourg_port_luxembourg_out -> command_data
+};
+
+component ANSP_Netherlands {
+    ansp_netherlands_port_netherlands_out -> command_data
+};
+
+component ANSP_UnitedKingdom {
+    ansp_united_kingdom_port_unitedkingdom_out -> command_data
+};
+
+component ANSP_Ireland {
+    ansp_ireland_port_ireland_out -> command_data
+};
+
+component ANSP_Portugal {
+    ansp_portugal_port_portugal_out -> command_data
+};
+
+component ANSP_Switzerland {
+    ansp_switzerland_port_switzerland_out -> command_data
+};
+
+component ANSP_Austria {
+    ansp_austria_port_austria_out -> command_data
+};
+
+component ANSP_Denmark {
+    ansp_denmark_port_denmark_out -> command_data
+};
+
+component ANSP_Norway {
+    ansp_norway_port_norway_out -> command_data
+};
+
+component ANSP_Sweden {
+    ansp_sweden_port_sweden_out -> command_data
+};
+
+component ANSP_Finland {
+    ansp_finland_port_finland_out -> command_data
+};
+
+component ANSP_CzechRepublic {
+    ansp_czech_republic_port_czechrepublic_out -> command_data
+};
+
+component ANSP_Slovakia {
+    ansp_slovakia_port_slovakia_out -> command_data
+};
+
+component ANSP_Poland {
+    ansp_poland_port_poland_out -> command_data
+};
+
+component ANSP_Hungary {
+    ansp_hungary_port_hungary_out -> command_data
+};
+
+component ANSP_Romania {
+    ansp_romania_port_romania_out -> command_data
+};
+
+component ANSP_Bulgaria {
+    ansp_bulgaria_port_bulgaria_out -> command_data
+};
+
+component ANSP_Croatia {
+    ansp_croatia_port_croatia_out -> command_data
+};
+
+component ANSP_Slovenia {
+    ansp_slovenia_port_slovenia_out -> command_data
+};
+
+component ANSP_Lithuania {
+    ansp_lithuania_port_lithuania_out -> command_data
+};
+
+component ANSP_Latvia {
+    ansp_latvia_port_latvia_out -> command_data
+};
+
+component ANSP_Estonia {
+    ansp_estonia_port_estonia_out -> command_data
+};
+
+component ANSP_Iceland {
+    ansp_iceland_port_iceland_out -> command_data
+};
+
+component ANSP_Ukraine {
+    ansp_ukraine_port_ukraine_out -> command_data
+};
+
+component ANSP_Moldova {
+    ansp_moldova_port_moldova_out -> command_data
+};
+
+component ANSP_Greece {
+    ansp_greece_port_greece_out -> command_data
+};
+
+component ANSP_Malta {
+    ansp_malta_port_malta_out -> command_data
+};
+
+component ANSP_Turkey {
+    ansp_turkey_port_turkey_out -> command_data
+};
+
+component ANSP_Cyprus {
+    ansp_cyprus_port_cyprus_out -> command_data
+};
+
+component ANSP_Spain {
+    ansp_spain_port_spain_out -> command_data
+};
+
+component ANSP_Italy {
+    ansp_italy_port_italy_out -> command_data
+};
+
+component ANSP_Albania {
+    ansp_albania_port_albania_out -> command_data
+};
+
+component ANSP_BosniaHerzegovina {
+    ansp_bosnia_herzegovina_port_bosniaherzegovina_out -> command_data
+};
+
+component ANSP_Serbia {
+    ansp_serbia_port_serbia_out -> command_data
+};
+
+component ANSP_Montenegro {
+    ansp_montenegro_port_montenegro_out -> command_data
+};
+
+component ANSP_NorthMacedonia {
+    ansp_north_macedonia_port_northmacedonia_out -> command_data
+};
+
+component ANSP_Monaco {
+    ansp_monaco_port_monaco_out -> command_data
+};
+
+component ANSP_Armenia {
+    ansp_armenia_port_armenia_out -> command_data
+};
+
+component ANSP_Georgia {
+    ansp_georgia_port_georgia_out -> command_data
+};
+
+component AOC {
+    aoc_port_aoc_out -> command_data
+};
+
+component ATMPortal {
+    atm_portal_port_atmp_out -> command_data
+};
+
+component Gateway {
+    gateway_port_gw_in_belgium <- command_data,
+    gateway_port_gw_in_france <- command_data,
+    gateway_port_gw_in_germany <- command_data,
+    gateway_port_gw_in_luxembourg <- command_data,
+    gateway_port_gw_in_netherlands <- command_data,
+    gateway_port_gw_in_unitedkingdom <- command_data,
+    gateway_port_gw_in_ireland <- command_data,
+    gateway_port_gw_in_portugal <- command_data,
+    gateway_port_gw_in_switzerland <- command_data,
+    gateway_port_gw_in_austria <- command_data,
+    gateway_port_gw_in_denmark <- command_data,
+    gateway_port_gw_in_norway <- command_data,
+    gateway_port_gw_in_sweden <- command_data,
+    gateway_port_gw_in_finland <- command_data,
+    gateway_port_gw_in_czechrepublic <- command_data,
+    gateway_port_gw_in_slovakia <- command_data,
+    gateway_port_gw_in_poland <- command_data,
+    gateway_port_gw_in_hungary <- command_data,
+    gateway_port_gw_in_romania <- command_data,
+    gateway_port_gw_in_bulgaria <- command_data,
+    gateway_port_gw_in_croatia <- command_data,
+    gateway_port_gw_in_slovenia <- command_data,
+    gateway_port_gw_in_lithuania <- command_data,
+    gateway_port_gw_in_latvia <- command_data,
+    gateway_port_gw_in_estonia <- command_data,
+    gateway_port_gw_in_iceland <- command_data,
+    gateway_port_gw_in_ukraine <- command_data,
+    gateway_port_gw_in_moldova <- command_data,
+    gateway_port_gw_in_greece <- command_data,
+    gateway_port_gw_in_malta <- command_data,
+    gateway_port_gw_in_turkey <- command_data,
+    gateway_port_gw_in_cyprus <- command_data,
+    gateway_port_gw_in_spain <- command_data,
+    gateway_port_gw_in_italy <- command_data,
+    gateway_port_gw_in_albania <- command_data,
+    gateway_port_gw_in_bosniaherzegovina <- command_data,
+    gateway_port_gw_in_serbia <- command_data,
+    gateway_port_gw_in_montenegro <- command_data,
+    gateway_port_gw_in_northmacedonia <- command_data,
+    gateway_port_gw_in_monaco <- command_data,
+    gateway_port_gw_in_armenia <- command_data,
+    gateway_port_gw_in_georgia <- command_data,
+    gateway_port_gw_in_aoc <- command_data,
+    gateway_port_gw_in_atmp <- command_data,
+    gateway_port_gw_out_nmoc -> command_data,
+    gateway_port_gw_out_cfmu -> command_data
+};
+
+component NMOC {
+    nmoc_port_nmoc_in <- command_data,
+    nmoc_port_nmoc_out_bcf -> command_data
+};
+
+component CFMU {
+    cfmu_port_cfmu_in <- command_data,
+    cfmu_port_cfmu_out_fdps -> command_data
+};
+
+component FDPS {
+    fdps_port_fdps_in <- command_data,
+    fdps_port_fdps_out -> command_data
+};
+
+component BusinessCellFlow {
+    business_cell_flow_port_bcf_in <- command_data,
+    business_cell_flow_port_bcf_out -> command_data
+};
+
+component TraditionalStructureData {
+    traditional_structure_data_port_tsd_in <- command_data,
+    traditional_structure_data_port_tsd_out -> command_data
+};
+
+component BIEcosystem {
+    bi_ecosystem_port_bi_in_bcf <- command_data,
+    bi_ecosystem_port_bi_in_tsd <- command_data
+};
+
+connector con_ANSP_Belgium_to_Gateway: ANSP_Belgium.ansp_belgium_port_belgium_out - Gateway.gateway_port_gw_in_belgium;
+connector con_ANSP_France_to_Gateway: ANSP_France.ansp_france_port_france_out - Gateway.gateway_port_gw_in_france;
+connector con_ANSP_Germany_to_Gateway: ANSP_Germany.ansp_germany_port_germany_out - Gateway.gateway_port_gw_in_germany;
+connector con_ANSP_Luxembourg_to_Gateway: ANSP_Luxembourg.ansp_luxembourg_port_luxembourg_out - Gateway.gateway_port_gw_in_luxembourg;
+connector con_ANSP_Netherlands_to_Gateway: ANSP_Netherlands.ansp_netherlands_port_netherlands_out - Gateway.gateway_port_gw_in_netherlands;
+connector con_ANSP_UnitedKingdom_to_Gateway: ANSP_UnitedKingdom.ansp_united_kingdom_port_unitedkingdom_out - Gateway.gateway_port_gw_in_unitedkingdom;
+connector con_ANSP_Ireland_to_Gateway: ANSP_Ireland.ansp_ireland_port_ireland_out - Gateway.gateway_port_gw_in_ireland;
+connector con_ANSP_Portugal_to_Gateway: ANSP_Portugal.ansp_portugal_port_portugal_out - Gateway.gateway_port_gw_in_portugal;
+connector con_ANSP_Switzerland_to_Gateway: ANSP_Switzerland.ansp_switzerland_port_switzerland_out - Gateway.gateway_port_gw_in_switzerland;
+connector con_ANSP_Austria_to_Gateway: ANSP_Austria.ansp_austria_port_austria_out - Gateway.gateway_port_gw_in_austria;
+connector con_ANSP_Denmark_to_Gateway: ANSP_Denmark.ansp_denmark_port_denmark_out - Gateway.gateway_port_gw_in_denmark;
+connector con_ANSP_Norway_to_Gateway: ANSP_Norway.ansp_norway_port_norway_out - Gateway.gateway_port_gw_in_norway;
+connector con_ANSP_Sweden_to_Gateway: ANSP_Sweden.ansp_sweden_port_sweden_out - Gateway.gateway_port_gw_in_sweden;
+connector con_ANSP_Finland_to_Gateway: ANSP_Finland.ansp_finland_port_finland_out - Gateway.gateway_port_gw_in_finland;
+connector con_ANSP_CzechRepublic_to_Gateway: ANSP_CzechRepublic.ansp_czech_republic_port_czechrepublic_out - Gateway.gateway_port_gw_in_czechrepublic;
+connector con_ANSP_Slovakia_to_Gateway: ANSP_Slovakia.ansp_slovakia_port_slovakia_out - Gateway.gateway_port_gw_in_slovakia;
+connector con_ANSP_Poland_to_Gateway: ANSP_Poland.ansp_poland_port_poland_out - Gateway.gateway_port_gw_in_poland;
+connector con_ANSP_Hungary_to_Gateway: ANSP_Hungary.ansp_hungary_port_hungary_out - Gateway.gateway_port_gw_in_hungary;
+connector con_ANSP_Romania_to_Gateway: ANSP_Romania.ansp_romania_port_romania_out - Gateway.gateway_port_gw_in_romania;
+connector con_ANSP_Bulgaria_to_Gateway: ANSP_Bulgaria.ansp_bulgaria_port_bulgaria_out - Gateway.gateway_port_gw_in_bulgaria;
+connector con_ANSP_Croatia_to_Gateway: ANSP_Croatia.ansp_croatia_port_croatia_out - Gateway.gateway_port_gw_in_croatia;
+connector con_ANSP_Slovenia_to_Gateway: ANSP_Slovenia.ansp_slovenia_port_slovenia_out - Gateway.gateway_port_gw_in_slovenia;
+connector con_ANSP_Lithuania_to_Gateway: ANSP_Lithuania.ansp_lithuania_port_lithuania_out - Gateway.gateway_port_gw_in_lithuania;
+connector con_ANSP_Latvia_to_Gateway: ANSP_Latvia.ansp_latvia_port_latvia_out - Gateway.gateway_port_gw_in_latvia;
+connector con_ANSP_Estonia_to_Gateway: ANSP_Estonia.ansp_estonia_port_estonia_out - Gateway.gateway_port_gw_in_estonia;
+connector con_ANSP_Iceland_to_Gateway: ANSP_Iceland.ansp_iceland_port_iceland_out - Gateway.gateway_port_gw_in_iceland;
+connector con_ANSP_Ukraine_to_Gateway: ANSP_Ukraine.ansp_ukraine_port_ukraine_out - Gateway.gateway_port_gw_in_ukraine;
+connector con_ANSP_Moldova_to_Gateway: ANSP_Moldova.ansp_moldova_port_moldova_out - Gateway.gateway_port_gw_in_moldova;
+connector con_ANSP_Greece_to_Gateway: ANSP_Greece.ansp_greece_port_greece_out - Gateway.gateway_port_gw_in_greece;
+connector con_ANSP_Malta_to_Gateway: ANSP_Malta.ansp_malta_port_malta_out - Gateway.gateway_port_gw_in_malta;
+connector con_ANSP_Turkey_to_Gateway: ANSP_Turkey.ansp_turkey_port_turkey_out - Gateway.gateway_port_gw_in_turkey;
+connector con_ANSP_Cyprus_to_Gateway: ANSP_Cyprus.ansp_cyprus_port_cyprus_out - Gateway.gateway_port_gw_in_cyprus;
+connector con_ANSP_Spain_to_Gateway: ANSP_Spain.ansp_spain_port_spain_out - Gateway.gateway_port_gw_in_spain;
+connector con_ANSP_Italy_to_Gateway: ANSP_Italy.ansp_italy_port_italy_out - Gateway.gateway_port_gw_in_italy;
+connector con_ANSP_Albania_to_Gateway: ANSP_Albania.ansp_albania_port_albania_out - Gateway.gateway_port_gw_in_albania;
+connector con_ANSP_BosniaHerzegovina_to_Gateway: ANSP_BosniaHerzegovina.ansp_bosnia_herzegovina_port_bosniaherzegovina_out - Gateway.gateway_port_gw_in_bosniaherzegovina;
+connector con_ANSP_Serbia_to_Gateway: ANSP_Serbia.ansp_serbia_port_serbia_out - Gateway.gateway_port_gw_in_serbia;
+connector con_ANSP_Montenegro_to_Gateway: ANSP_Montenegro.ansp_montenegro_port_montenegro_out - Gateway.gateway_port_gw_in_montenegro;
+connector con_ANSP_NorthMacedonia_to_Gateway: ANSP_NorthMacedonia.ansp_north_macedonia_port_northmacedonia_out - Gateway.gateway_port_gw_in_northmacedonia;
+connector con_ANSP_Monaco_to_Gateway: ANSP_Monaco.ansp_monaco_port_monaco_out - Gateway.gateway_port_gw_in_monaco;
+connector con_ANSP_Armenia_to_Gateway: ANSP_Armenia.ansp_armenia_port_armenia_out - Gateway.gateway_port_gw_in_armenia;
+connector con_ANSP_Georgia_to_Gateway: ANSP_Georgia.ansp_georgia_port_georgia_out - Gateway.gateway_port_gw_in_georgia;
+connector con_AOC_to_Gateway: AOC.aoc_port_aoc_out - Gateway.gateway_port_gw_in_aoc;
+connector con_ATMPortal_to_Gateway: ATMPortal.atm_portal_port_atmp_out - Gateway.gateway_port_gw_in_atmp;
+connector con_Gateway_to_NMOC: Gateway.gateway_port_gw_out_nmoc - NMOC.nmoc_port_nmoc_in;
+connector con_Gateway_to_CFMU: Gateway.gateway_port_gw_out_cfmu - CFMU.cfmu_port_cfmu_in;
+connector con_NMOC_to_BusinessCellFlow: NMOC.nmoc_port_nmoc_out_bcf - BusinessCellFlow.business_cell_flow_port_bcf_in;
+connector con_CFMU_to_FDPS: CFMU.cfmu_port_cfmu_out_fdps - FDPS.fdps_port_fdps_in;
+connector con_FDPS_to_TraditionalStructureData: FDPS.fdps_port_fdps_out - TraditionalStructureData.traditional_structure_data_port_tsd_in;
+connector con_BusinessCellFlow_to_BIEcosystem: BusinessCellFlow.business_cell_flow_port_bcf_out - BIEcosystem.bi_ecosystem_port_bi_in_bcf;
+connector con_TraditionalStructureData_to_BIEcosystem: TraditionalStructureData.traditional_structure_data_port_tsd_out - BIEcosystem.bi_ecosystem_port_bi_in_tsd;

@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: lang.formal.alloy.ui.tests
+Bundle-ManifestVersion: 2
+Bundle-Name: lang.formal.alloy.ui.tests
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: lang.formal.alloy.ui.tests; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: lang.formal.alloy.ui,
+ org.junit.jupiter.api;bundle-version="[5.1.0,6.0.0)",
+ org.eclipse.xtext.testing,
+ org.eclipse.xtext.xbase.testing,
+ org.eclipse.core.runtime,
+ org.eclipse.xtext.ui.testing,
+ org.eclipse.ui.workbench;resolution:=optional
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Export-Package: lang.formal.alloy.ui.tests;x-internal=true

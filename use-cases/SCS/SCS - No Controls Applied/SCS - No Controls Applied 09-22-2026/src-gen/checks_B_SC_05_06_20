@@ -1,0 +1,8 @@
+open logical
+open libs
+
+
+assert compliance__B_SC_05_06__GroundStation1__LEOSatellite03 {
+  B_SC_05_06[GroundStation1,LEOSatellite03]
+}
+check compliance__B_SC_05_06__GroundStation1__LEOSatellite03 for 5

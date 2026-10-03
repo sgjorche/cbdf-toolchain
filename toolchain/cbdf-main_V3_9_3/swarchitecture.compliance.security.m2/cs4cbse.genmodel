@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="" modelDirectory="/swarchitecture.compliance.security.m2/src"
+    modelPluginID="swarchitecture.compliance.security.m2" modelName="Cs4cbse" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="6.0" copyrightFields="false">
+  <foreignModel>cs4cbse.emf</foreignModel>
+  <genPackages prefix="Cs4cbse" disposableProviderFactory="true" ecorePackage="cs4cbse.ecore#/">
+    <genClasses ecoreClass="cs4cbse.ecore#//Root">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cs4cbse.ecore#//Root/logicalView"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cs4cbse.ecore#//Root/propetyView"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cs4cbse.ecore#//Root/imports"/>
+    </genClasses>
+    <genClasses ecoreClass="cs4cbse.ecore#//LogicalView">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cs4cbse.ecore#//LogicalView/components"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cs4cbse.ecore#//LogicalView/connectors"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cs4cbse.ecore#//LogicalView/interactionNatures"/>
+    </genClasses>
+    <genClasses ecoreClass="cs4cbse.ecore#//PropertyView">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cs4cbse.ecore#//PropertyView/libraries"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cs4cbse.ecore#//PropertyView/complianceProperties"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cs4cbse.ecore#//PropertyView/overlayComplianceProperties"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cs4cbse.ecore#//PropertyView/securityControlProperties"/>
+    </genClasses>
+    <genClasses ecoreClass="cs4cbse.ecore#//Import">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cs4cbse.ecore#//Import/importURI"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="Logical" ecorePackage="logical.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="logical.ecore#//Portkind">
+      <genEnumLiterals ecoreEnumLiteral="logical.ecore#//Portkind/INPUT"/>
+      <genEnumLiterals ecoreEnumLiteral="logical.ecore#//Portkind/OUTPUT"/>
+    </genEnums>
+    <genClasses image="false" ecoreClass="logical.ecore#//Component">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute logical.ecore#//Component/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference logical.ecore#//Component/uses"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference logical.ecore#//Component/parent"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="logical.ecore#//Connector">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute logical.ecore#//Connector/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference logical.ecore#//Connector/connects"/>
+    </genClasses>
+    <genClasses ecoreClass="logical.ecore#//Port">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute logical.ecore#//Port/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference logical.ecore#//Port/realizes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute logical.ecore#//Port/kind"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="logical.ecore#//InteractionNature">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute logical.ecore#//InteractionNature/name"/>
+    </genClasses>
+    <genClasses ecoreClass="logical.ecore#//Data">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference logical.ecore#//Data/type"/>
+    </genClasses>
+    <genClasses ecoreClass="logical.ecore#//DataType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute logical.ecore#//DataType/name"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="Property" ecorePackage="property.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="property.ecore#//PropertyDefinitionParemeterType">
+      <genEnumLiterals ecoreEnumLiteral="property.ecore#//PropertyDefinitionParemeterType/Component"/>
+      <genEnumLiterals ecoreEnumLiteral="property.ecore#//PropertyDefinitionParemeterType/Port"/>
+      <genEnumLiterals ecoreEnumLiteral="property.ecore#//PropertyDefinitionParemeterType/Connector"/>
+    </genEnums>
+    <genClasses image="false" ecoreClass="property.ecore#//PropertyCategoryLibrary">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute property.ecore#//PropertyCategoryLibrary/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference property.ecore#//PropertyCategoryLibrary/categories"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="property.ecore#//PropertyCategory">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute property.ecore#//PropertyCategory/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference property.ecore#//PropertyCategory/properties"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="property.ecore#//PropertyDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute property.ecore#//PropertyDefinition/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference property.ecore#//PropertyDefinition/definitionParameters"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute property.ecore#//PropertyDefinition/description"/>
+    </genClasses>
+    <genClasses ecoreClass="property.ecore#//AtomicPropertyDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute property.ecore#//AtomicPropertyDefinition/alloy"/>
+    </genClasses>
+    <genClasses ecoreClass="property.ecore#//OverlayPropertyDefinition">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference property.ecore#//OverlayPropertyDefinition/instance"/>
+    </genClasses>
+    <genClasses ecoreClass="property.ecore#//OverlayInstance">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute property.ecore#//OverlayInstance/parameters"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference property.ecore#//OverlayInstance/propertyDefinition"/>
+    </genClasses>
+    <genClasses ecoreClass="property.ecore#//PropertyDefinitionParameter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute property.ecore#//PropertyDefinitionParameter/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute property.ecore#//PropertyDefinitionParameter/type"/>
+    </genClasses>
+    <genClasses ecoreClass="property.ecore#//PropertyInstance">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference property.ecore#//PropertyInstance/parameters"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference property.ecore#//PropertyInstance/propertyDefinition"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="Compliance" ecorePackage="compliance.ecore#/">
+    <genClasses ecoreClass="compliance.ecore#//ComplianceDefinition"/>
+    <genClasses ecoreClass="compliance.ecore#//OverlayComplianceDefintion"/>
+    <genClasses ecoreClass="compliance.ecore#//OverlayComplianceInstance"/>
+    <genClasses ecoreClass="compliance.ecore#//ComplianceInstance"/>
+    <genClasses ecoreClass="compliance.ecore#//SecurityControlDefintion">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference compliance.ecore#//SecurityControlDefintion/enforce"/>
+    </genClasses>
+    <genClasses ecoreClass="compliance.ecore#//SecurityControlInstance"/>
+    <genClasses ecoreClass="compliance.ecore#//PropertyDefinitionStandardRef">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference compliance.ecore#//PropertyDefinitionStandardRef/standardRef"/>
+    </genClasses>
+    <genClasses ecoreClass="compliance.ecore#//StandardRef">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute compliance.ecore#//StandardRef/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute compliance.ecore#//StandardRef/url"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

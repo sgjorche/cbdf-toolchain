@@ -1,0 +1,40 @@
+open metamodel/cbsemetamodel
+open libs
+
+[% for (component in lv.components) { %]
+	[% if (component.parent != null) { %]
+one sig [%=component.name%] in [%=component.parent.name%] {
+	[%} else { %]
+one sig [%=component.name%] in Component {
+	[% } %]
+}{
+	[% if (component.uses.size() != 0) { %]
+	uses = [% for (port in component.uses) { %][%=port.name%][% if (port != component.uses.last()) { %] + [% } %][% } %]
+	[%} else { %]
+	uses = none
+	[% } %]
+}
+
+
+[% } %]
+
+[% for (component in lv.components) { %]
+	[% for (port in component.uses) { %]
+one sig [%=port.name%] in Port {}
+	[% } %]
+[% } %]
+
+[% for (connector in lv.connectors) { %]
+one sig [%=connector.name%] in ConnectorMPS {
+}{
+	[% var portOut = connector.connects.selectOne(p | p.kind.toString() = 'OUTPUT'); %]
+	[% var portIn  = connector.connects.selectOne(p | p.kind.toString() = 'INPUT');  %]
+	all t: Tick | connects.t = [%=portOut.name%] + [%=portIn.name%]
+	portO = [%=portOut.name%]
+	portI = [%=portIn.name%]
+}
+[% } %]
+
+fact ConnectorClosure {
+	ConnectorMPS = [% for (connector in lv.connectors) { %][%=connector.name%][% if (connector != lv.connectors.last()) { %] + [% } %][% } %]
+}

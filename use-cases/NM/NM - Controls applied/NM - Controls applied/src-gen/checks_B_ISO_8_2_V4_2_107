@@ -1,0 +1,8 @@
+open logical
+open libs
+
+
+assert compliance__B_ISO_8_2_V4_2__TraditionalStructureData__BIEcosystem {
+  B_ISO_8_2_V4_2[TraditionalStructureData,BIEcosystem]
+}
+check compliance__B_ISO_8_2_V4_2__TraditionalStructureData__BIEcosystem for 5

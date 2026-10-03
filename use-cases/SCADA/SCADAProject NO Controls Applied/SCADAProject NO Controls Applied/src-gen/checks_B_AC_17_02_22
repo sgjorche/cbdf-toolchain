@@ -1,0 +1,8 @@
+open logical
+open libs
+
+
+assert compliance__B_AC_17_02__ControlCenter__FieldSite5 {
+  B_AC_17_02[ControlCenter,FieldSite5]
+}
+check compliance__B_AC_17_02__ControlCenter__FieldSite5 for 5

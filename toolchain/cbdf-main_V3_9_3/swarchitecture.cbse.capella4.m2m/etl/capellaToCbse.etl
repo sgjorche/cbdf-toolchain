@@ -1,0 +1,18 @@
+pre {
+	("pre : Create Target System Root").println();
+	var root : new Target!Root;
+}
+
+post {
+}
+
+rule r1 
+    transform s : Source!LogicalComponent
+    to t : Target!Component {
+    ("r1 : Transform LogicalComponent " +  s.Name + " to Component ").println();
+    t.name = s.Name;
+    t.contains = s.ownedLogicalComponents.equivalent();
+    root.system.add(t);
+}
+
+// TODO Complete all transformation

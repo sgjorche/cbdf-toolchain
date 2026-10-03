@@ -1,0 +1,3 @@
+fact {
+[%=sci.propertyDefinition.name %][[% for (ip in sci.parameters) { %][%=ip.name%][% if (ip != sci.parameters.last()) { %],[% } %][% } %]]
+}

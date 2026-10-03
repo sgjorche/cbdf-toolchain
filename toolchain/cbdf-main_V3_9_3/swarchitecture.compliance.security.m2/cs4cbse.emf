@@ -1,0 +1,29 @@
+@namespace(uri="swarchitecture.compliance.security", prefix="cs4cbse")
+package cs4cbse;
+
+import "platform:/resource/swarchitecture.compliance.security.m2/logical.ecore";
+import "platform:/resource/swarchitecture.compliance.security.m2/property.ecore";
+import "platform:/resource/swarchitecture.compliance.security.m2/compliance.ecore";
+
+class Root {
+	val LogicalView[0..1] logicalView;
+	val PropertyView[0..1] propetyView;
+	val Import[*] imports;
+}
+
+class LogicalView {
+	val logical.Component[*] components;
+	val logical.Connector[*] connectors;
+	val logical.InteractionNature[*] interactionNatures;
+}
+
+class PropertyView  {
+	val property.PropertyCategoryLibrary[*] libraries;
+	val compliance.ComplianceInstance [*] complianceProperties;
+	val compliance.OverlayComplianceInstance [*] overlayComplianceProperties;
+	val compliance.SecurityControlInstance[*] securityControlProperties;
+}
+
+class Import {
+	attr String[1] importURI;
+}

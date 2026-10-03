@@ -1,0 +1,37 @@
+@namespace(uri="swarchitecture.compliance.security.logical", prefix="logical")
+package logical;
+
+class Component {
+	id attr String[1] name;
+	val Port[*] uses;
+	ref Component[0..1] parent;
+}
+
+class Connector {
+	id attr String[1] name;
+	ref Port[+] connects;
+}
+
+class Port {
+	id attr String[1] name;
+	ref InteractionNature[+] realizes;
+	attr Portkind[1] kind;
+}
+
+abstract class InteractionNature {
+	id attr String[1] name;
+}
+
+class Data extends InteractionNature {
+	val DataType[1] type;
+}
+
+class DataType {
+	id attr String[1] name;
+}
+
+enum Portkind {
+	INPUT = 0;
+	OUTPUT = 1;
+}
+

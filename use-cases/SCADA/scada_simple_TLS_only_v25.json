@@ -1,0 +1,94 @@
+{
+  "version": "1.0",
+  "exportedAt": "2026-07-08T00:00:00.000Z",
+  "state": {
+    "dataTypes": [
+      {
+        "name": "tcp_cmd",
+        "type": "TCP_Data"
+      }
+    ],
+    "components": [
+      {
+        "id": "id1",
+        "name": "ControlCenter",
+        "x": 80,
+        "y": 200,
+        "ports": [
+          { "id": "id2", "name": "port_out_fs1", "dir": "out", "dataType": "tcp_cmd" },
+          { "id": "id3", "name": "port_out_fs2", "dir": "out", "dataType": "tcp_cmd" },
+          { "id": "id4", "name": "port_out_fs3", "dir": "out", "dataType": "tcp_cmd" },
+          { "id": "id5", "name": "port_out_fs4", "dir": "out", "dataType": "tcp_cmd" },
+          { "id": "id6", "name": "port_out_fs5", "dir": "out", "dataType": "tcp_cmd" },
+          { "id": "id7", "name": "port_out_fs6", "dir": "out", "dataType": "tcp_cmd" }
+        ]
+      },
+      {
+        "id": "id10",
+        "name": "FieldSite1",
+        "x": 420,
+        "y": 60,
+        "ports": [ { "id": "id11", "name": "port_in_fs1", "dir": "in", "dataType": "tcp_cmd" } ]
+      },
+      {
+        "id": "id20",
+        "name": "FieldSite2",
+        "x": 420,
+        "y": 160,
+        "ports": [ { "id": "id21", "name": "port_in_fs2", "dir": "in", "dataType": "tcp_cmd" } ]
+      },
+      {
+        "id": "id30",
+        "name": "FieldSite3",
+        "x": 420,
+        "y": 260,
+        "ports": [ { "id": "id31", "name": "port_in_fs3", "dir": "in", "dataType": "tcp_cmd" } ]
+      },
+      {
+        "id": "id40",
+        "name": "FieldSite4",
+        "x": 420,
+        "y": 360,
+        "ports": [ { "id": "id41", "name": "port_in_fs4", "dir": "in", "dataType": "tcp_cmd" } ]
+      },
+      {
+        "id": "id50",
+        "name": "FieldSite5",
+        "x": 420,
+        "y": 460,
+        "ports": [ { "id": "id51", "name": "port_in_fs5", "dir": "in", "dataType": "tcp_cmd" } ]
+      },
+      {
+        "id": "id60",
+        "name": "FieldSite6",
+        "x": 420,
+        "y": 560,
+        "ports": [ { "id": "id61", "name": "port_in_fs6", "dir": "in", "dataType": "tcp_cmd" } ]
+      }
+    ],
+    "connectors": [
+      { "id": "con1", "name": "con_ControlCenter_to_FieldSite1", "fromComp": "id1", "fromPort": "id2", "toComp": "id10", "toPort": "id11" },
+      { "id": "con2", "name": "con_ControlCenter_to_FieldSite2", "fromComp": "id1", "fromPort": "id3", "toComp": "id20", "toPort": "id21" },
+      { "id": "con3", "name": "con_ControlCenter_to_FieldSite3", "fromComp": "id1", "fromPort": "id4", "toComp": "id30", "toPort": "id31" },
+      { "id": "con4", "name": "con_ControlCenter_to_FieldSite4", "fromComp": "id1", "fromPort": "id5", "toComp": "id40", "toPort": "id41" },
+      { "id": "con5", "name": "con_ControlCenter_to_FieldSite5", "fromComp": "id1", "fromPort": "id6", "toComp": "id50", "toPort": "id51" },
+      { "id": "con6", "name": "con_ControlCenter_to_FieldSite6", "fromComp": "id1", "fromPort": "id7", "toComp": "id60", "toPort": "id61" }
+    ],
+    "checks": [
+      { "id": "chk1", "overlay": "B_SC_13_00", "comp1": "ControlCenter", "comp2": "FieldSite1" },
+      { "id": "chk2", "overlay": "B_SC_13_00", "comp1": "ControlCenter", "comp2": "FieldSite2" },
+      { "id": "chk3", "overlay": "B_SC_13_00", "comp1": "ControlCenter", "comp2": "FieldSite3" },
+      { "id": "chk4", "overlay": "B_SC_13_00", "comp1": "ControlCenter", "comp2": "FieldSite4" },
+      { "id": "chk5", "overlay": "B_SC_13_00", "comp1": "ControlCenter", "comp2": "FieldSite5" },
+      { "id": "chk6", "overlay": "B_SC_13_00", "comp1": "ControlCenter", "comp2": "FieldSite6" }
+    ],
+    "controls": {
+      "con1": [ "SecureCommunicationTLS" ],
+      "con2": [ "SecureCommunicationTLS" ],
+      "con3": [ "SecureCommunicationTLS" ],
+      "con4": [ "SecureCommunicationTLS" ],
+      "con5": [ "SecureCommunicationTLS" ],
+      "con6": [ "SecureCommunicationTLS" ]
+    }
+  }
+}

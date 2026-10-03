@@ -1,0 +1,3 @@
+fact {
+SecureCommunicationTLS[con_Gateway_to_NMOC]
+}

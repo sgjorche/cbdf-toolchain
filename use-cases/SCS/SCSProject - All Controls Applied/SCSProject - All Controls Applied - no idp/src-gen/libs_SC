@@ -1,0 +1,83 @@
+pred SecureCommunicationTLS[con:Connector]{
+
+		
+        all mp: MsgPassing, t: Tick |
+          (mp in con.buffer.t) implies con.connects.t = mp.origin_sender.uses + mp.receiver.uses
+        all t: Tick, mp: MsgPassing |
+          (mp in con.buffer.t) implies
+          (no mp1: MsgPassing-mp, t2: t.prevs |
+             mp1.sender = mp.sender and mp1.receiver = mp.receiver and
+             mp1.sent = mp.sent and mp1 in con.buffer.t2)
+        all mp: MsgPassing, t: Tick |
+          (mp in con.buffer.t) implies mp.sender = mp.origin_sender
+      
+}
+pred spoofProof[con:Connector]{
+
+		
+        all mp: MsgPassing, t: Tick |
+          mp in con.buffer.t implies
+          mp.sender = mp.origin_sender
+      
+}
+pred tamperProof[con:Connector]{
+
+		
+        all t: Tick, mp: MsgPassing |
+          mp in con.buffer.t implies (
+            no mp1: MsgPassing - mp, t1: t.prevs |
+              mp1.sender = mp.sender and
+              mp1.receiver = mp.receiver and
+              mp1.sent = mp.sent and
+              mp1 in con.buffer.t1
+          )
+      
+}
+pred repudiationProof[con:Connector]{
+
+		
+        all mp: MsgPassing, t: Tick |
+          (mp in con.buffer.t and H_inject[mp.sender, mp, t]) implies Log.addEntry[mp, t]
+        all mp: MsgPassing, t: Tick |
+          (mp in con.buffer.t and H_intercept[mp.receiver, mp, t]) implies Log.addEntry[mp, t]
+      
+}
+pred informationDisclosureProof[con:Connector]{
+
+		
+        all mp: MsgPassing, t: Tick |
+          mp in con.buffer.t implies
+          con.connects.t = mp.origin_sender.uses + mp.receiver.uses
+      
+}
+pred staleProof[con:Connector]{
+
+		
+        all t: Tick - tick/last, mp: MsgPassing |
+          mp in con.buffer.t implies (
+            mp in con.buffer.(t.next) or
+            some c: Component | mp.receiver = c
+          )
+      
+}
+pred EoPProof[con:Connector]{
+
+		
+        all mp: MsgPassing, t: Tick |
+          (mp in con.buffer.t and H_inject[mp.sender, mp, t]) implies Z_inject[mp.sender, mp]
+        all mp: MsgPassing, t: Tick |
+          (mp in con.buffer.t and H_intercept[mp.receiver, mp, t]) implies Z_intercept[mp.receiver, mp]
+      
+}
+pred SecureCommunicationRateLimiter[con:Connector]{
+
+		
+        all c1, c2: Component, t: Tick - tick/last |
+          (con.portO in c1.uses and con.portI in c2.uses) implies
+          #{ mp: MsgPassing |
+            mp.sender = c1 and
+            mp.receiver = c2 and
+            mp.sent in (t + t.next)
+          } <= 1
+      
+}

@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: swarchitecture.compliance.security.alloy2.m2m
+Bundle-SymbolicName: swarchitecture.compliance.security.alloy2.m2t;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Require-Bundle: cbdf.core;bundle-version="1.0.0"
+Export-Package: swarchitecture.compliance.security.alloy2.m2t

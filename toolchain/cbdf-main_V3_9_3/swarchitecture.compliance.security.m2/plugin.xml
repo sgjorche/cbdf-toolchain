@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated cs4cbse -->
+      <package
+            uri="swarchitecture.compliance.security"
+            class="cs4cbse.Cs4cbsePackage"
+            genModel="cs4cbse.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated cs4cbse -->
+      <package
+            uri="swarchitecture.compliance.security.logical"
+            class="logical.LogicalPackage"
+            genModel="cs4cbse.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated cs4cbse -->
+      <package
+            uri="swarchitecture.compliance.security.property"
+            class="property.PropertyPackage"
+            genModel="cs4cbse.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated cs4cbse -->
+      <package
+            uri="swarchitecture.compliance.security.compliance"
+            class="compliance.CompliancePackage"
+            genModel="cs4cbse.genmodel"/>
+   </extension>
+
+</plugin>

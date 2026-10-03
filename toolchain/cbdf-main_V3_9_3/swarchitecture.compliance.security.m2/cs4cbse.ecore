@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="cs4cbse" nsURI="swarchitecture.compliance.security" nsPrefix="cs4cbse">
+  <eClassifiers xsi:type="ecore:EClass" name="Root">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="logicalView" eType="#//LogicalView"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="propetyView" eType="#//PropertyView"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="imports" upperBound="-1"
+        eType="#//Import" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LogicalView">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="components" upperBound="-1"
+        eType="ecore:EClass logical.ecore#//Component" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connectors" upperBound="-1"
+        eType="ecore:EClass logical.ecore#//Connector" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interactionNatures" upperBound="-1"
+        eType="ecore:EClass logical.ecore#//InteractionNature" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PropertyView">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="libraries" upperBound="-1"
+        eType="ecore:EClass property.ecore#//PropertyCategoryLibrary" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="complianceProperties" upperBound="-1"
+        eType="ecore:EClass compliance.ecore#//ComplianceInstance" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="overlayComplianceProperties"
+        upperBound="-1" eType="ecore:EClass compliance.ecore#//OverlayComplianceInstance"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="securityControlProperties"
+        upperBound="-1" eType="ecore:EClass compliance.ecore#//SecurityControlInstance"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Import">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="importURI" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+</ecore:EPackage>

@@ -1,0 +1,8 @@
+open logical
+open libs
+
+
+assert compliance__B_SC_05_06__EngineerOperator__HMITerminal {
+  B_SC_05_06[EngineerOperator,HMITerminal]
+}
+check compliance__B_SC_05_06__EngineerOperator__HMITerminal for 5

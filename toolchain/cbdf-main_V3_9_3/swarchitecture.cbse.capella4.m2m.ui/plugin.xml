@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            id="swarchitecture.cbse.capella4.m2m.ui.commands.category"
+            name="Capella to CBSE Tools">
+      </category>
+      <command
+            categoryId="swarchitecture.cbse.capella4.m2m.ui.commands.category"
+            id="swarchitecture.cbse.capella4.m2m.ui.commands.Capella2CBSE"
+            name="Capella2CBSE">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="swarchitecture.cbse.capella4.m2m.ui.handlers.Capella2CbseHandler"
+            commandId="swarchitecture.cbse.capella4.m2m.ui.commands.Capella2CBSE">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="swarchitecture.cbse.capella4.m2m.ui.commands.Capella2CBSE"
+            contextId="org.eclipse.ui.contexts.window"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M1+7">
+      </key>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="popup:org.eclipse.ui.popup.any?after=additions">
+        <command
+              commandId="swarchitecture.cbse.capella4.m2m.ui.commands.Capella2CBSE"
+              id="compliance.swarchitecture.security.toolbars.Capella2CBSECommand"
+              mnemonic="S">
+                <visibleWhen>
+			           <with variable="activeMenuSelection">
+			            <iterate
+			                 ifEmpty="false">
+			             <adapt type="org.eclipse.core.resources.IResource">
+			               <test property="org.eclipse.core.resources.name" value="*.capella" />
+			             </adapt>
+			            </iterate>
+			           </with>
+     			</visibleWhen>
+        </command>
+      </menuContribution>
+   </extension>
+
+</plugin>

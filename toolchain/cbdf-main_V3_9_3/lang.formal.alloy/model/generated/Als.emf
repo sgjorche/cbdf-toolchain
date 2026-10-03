@@ -1,0 +1,312 @@
+@namespace(uri="lang.formal.lang.alloy", prefix="als")
+package als;
+
+class Specification {
+	val Module module;
+	val Open[*] open;
+	val Paragraph[*] paragraph;
+}
+
+class Module {
+	attr String moduleName;
+	val LeftSquareBracketKeyword left;
+	!unique attr String[*] exactly;
+	val ExactlyName[*] name;
+	val Comma[*] comma;
+	!unique attr int[*] number;
+	val RightSquareBracketKeyword right;
+}
+
+class Open {
+	val OpenName openName;
+	val LeftSquareBracketKeyword left;
+	val AsName previousNameAs;
+	val ReferencesName refname;
+	val RightSquareBracketKeyword right;
+	val AsName nameAs;
+}
+
+class Paragraph {
+}
+
+class Fact extends Paragraph {
+	val FactName name;
+	val Block block;
+}
+
+class Assertion extends Paragraph {
+	val AssertionName name;
+	val Block block;
+}
+
+class Function extends Paragraph {
+	val Ref ~ref;
+	val Dot dot;
+	val ReferencesName name;
+	val LeftSquareBracketKeyword leftS;
+	val Decl[*] decl;
+	val Comma[*] comma;
+	val RightSquareBracketKeyword rightS;
+	val LeftParenthesis leftP;
+	val RightParenthesis rightP;
+	val Colon colon;
+	val Expression expr;
+	val Block block;
+}
+
+class Predicate extends Paragraph {
+	val Ref ~ref;
+	val Dot dot;
+	val PredicateName name;
+	val LeftSquareBracketKeyword leftS;
+	val Decl[*] decl;
+	val Comma[*] comma;
+	val RightSquareBracketKeyword rightS;
+	val LeftParenthesis leftP;
+	val RightParenthesis rightP;
+	val Block block;
+}
+
+class RunCommand extends Paragraph {
+	val Alias runName;
+	ref PredicateName name;
+	val Block block;
+	val Scope scope;
+}
+
+class CheckCommand extends Paragraph {
+	val Alias checkName;
+	ref AssertionName name;
+	val Block block;
+	val Scope scope;
+}
+
+class Scope {
+	attr String for;
+	attr int value;
+	val Expectation expect;
+	attr String but;
+	val Typescope[*] typescope;
+	val Comma[*] comma;
+}
+
+class Expectation {
+	attr String expect;
+	attr int value;
+}
+
+class Typescope {
+	attr String exactly;
+	attr int value;
+	val AsName asname;
+	attr String prev;
+	attr String sl;
+	ref ReferencesName name;
+	attr String post;
+}
+
+class EnumDecl extends Paragraph {
+	val EnumName enumName;
+	val LeftCurlyBracket leftC;
+	val EnumPropertyName[*] propertyEnum;
+	val Comma[*] comma;
+	val RightCurlyBracket rightC;
+}
+
+class Let extends Paragraph {
+	val LetName name;
+	val LeftSquareBracketKeyword leftS;
+	val ReferencesName[*] nameRef;
+	val Comma[*] comma;
+	val RightSquareBracketKeyword rightS;
+	val Block block;
+	val Expression exprName;
+}
+
+class Signature extends Paragraph {
+	val SignatureName[*] signatureName;
+	val SigExt sigExt;
+	val Decl[*] decl;
+	!unique attr String[*] comma2;
+	val Block block;
+}
+
+class SigQual extends Signature {
+	attr String sigq;
+}
+
+class SigExt {
+	val ReferencesSig ~ref;
+	val ReferencesSig[*] ref2;
+}
+
+class Expression {
+	val BinOp[*] binOp;
+	val Expression[*] expr;
+	!unique attr String[*] cmp;
+	val ArrowOp[*] arrowOp;
+	val ParanthesisandExpression[*] par;
+	val Comma[*] comma;
+	attr String parO;
+	attr String parF;
+	attr String let;
+	val LetDecl[*] letdecl;
+	val BlockOrBar[*] blockOrBar;
+	attr String quant;
+	val Decl[*] decl;
+	val UnOp unOp;
+	val CommonQuantUnOp[*] common;
+	attr String none;
+	attr String iden;
+	attr String univ;
+	attr String int;
+	ref ReferencesName nameRef;
+	attr String seq;
+	val AsName asname;
+	val Block[*] block;
+	val LeftCurlyBracket leftCurlyBracket;
+	val RightCurlyBracket rightCurlyBracket;
+}
+
+class Decl {
+	val PropertyName[*] propertyName;
+	val Comma[*] comma;
+	val Colon colon;
+	val Expression expr;
+}
+
+class LetDecl {
+	val PropertyName nameExpression;
+	val Expression expr;
+}
+
+class ParanthesisandExpression {
+	val Expression[*] expr;
+}
+
+class BinOp {
+	val Dot dot;
+}
+
+class UnOp {
+	attr String ~op;
+}
+
+class CommonQuantUnOp {
+}
+
+class ArrowOp {
+	attr String arrow;
+}
+
+class Block {
+	val LeftCurlyBracket leftC;
+	val Expression[*] expr;
+	val RightCurlyBracket rightC;
+}
+
+class BlockOrBar {
+	val Block block;
+	val Expression expr;
+}
+
+class BlockOrPossibleBar {
+	val Block block;
+	val Expression expr;
+}
+
+class OpenName {
+	attr String importURI;
+}
+
+class FactName extends ReferencesName {
+}
+
+class AssertionName {
+	attr String name;
+}
+
+class FunctionName extends ReferencesName {
+}
+
+class FunctionNamewParam extends ReferencesName {
+}
+
+class PredicateName extends ReferencesName {
+}
+
+class Alias {
+	attr String name;
+}
+
+class EnumName extends ReferencesName {
+}
+
+class EnumPropertyName extends ReferencesName {
+}
+
+class LetName extends ReferencesName {
+}
+
+class SignatureName extends ReferencesName {
+}
+
+class PropertyName extends ReferencesName {
+}
+
+class ExactlyName extends ReferencesName {
+}
+
+class AsName {
+	attr String name;
+}
+
+class ReferencesName {
+	attr String name;
+}
+
+class ReferencesSig {
+	val AsName asname;
+	ref SignatureName nameRef;
+}
+
+class Ref {
+	ref ReferencesName nameRef;
+}
+
+class LeftCurlyBracket {
+	attr String leftCurlyBracket;
+}
+
+class RightCurlyBracket {
+	attr String rightCurlyBracket;
+}
+
+class Dot {
+	attr String dot;
+}
+
+class Comma {
+	attr String comma;
+}
+
+class Colon {
+	attr String colon;
+}
+
+class LeftParenthesis {
+	attr String leftParenthesis;
+}
+
+class RightParenthesis {
+	attr String rightParenthesis;
+}
+
+class LeftSquareBracketKeyword {
+	attr String leftSquareBracketKeyword;
+}
+
+class RightSquareBracketKeyword {
+	attr String rightSquareBracketKeyword;
+}
+

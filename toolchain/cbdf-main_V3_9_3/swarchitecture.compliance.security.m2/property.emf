@@ -1,0 +1,48 @@
+@namespace(uri="swarchitecture.compliance.security.property", prefix="property")
+package property;
+
+
+class PropertyCategoryLibrary {
+	id attr String name;
+	val PropertyCategory[*] categories;
+}
+
+class PropertyCategory {
+	id attr String name;
+	val PropertyDefinition[*] properties;
+}
+
+class PropertyDefinition {
+	id attr String name;
+	val PropertyDefinitionParameter[*] definitionParameters;
+	attr String description;
+}
+
+class AtomicPropertyDefinition extends PropertyDefinition {
+	attr String alloy;
+}
+
+class OverlayPropertyDefinition extends PropertyDefinition {
+	val OverlayInstance[*] instance;
+}
+
+class OverlayInstance {
+	attr String[*] parameters;
+	ref PropertyDefinition[1] propertyDefinition;
+}
+
+class PropertyDefinitionParameter {
+	attr String name;
+	attr PropertyDefinitionParemeterType[1] type;
+}
+
+enum PropertyDefinitionParemeterType {
+	Component = 0;
+	Port = 1;
+	Connector = 2;
+}
+
+class PropertyInstance {
+	ref EObject[*] parameters;
+	ref PropertyDefinition[1] propertyDefinition;
+}

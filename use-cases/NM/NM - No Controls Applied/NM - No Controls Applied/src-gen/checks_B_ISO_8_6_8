@@ -1,0 +1,8 @@
+open logical
+open libs
+
+
+assert compliance__B_ISO_8_6__ANSP_Germany__Gateway {
+  B_ISO_8_6[ANSP_Germany,Gateway]
+}
+check compliance__B_ISO_8_6__ANSP_Germany__Gateway for 5

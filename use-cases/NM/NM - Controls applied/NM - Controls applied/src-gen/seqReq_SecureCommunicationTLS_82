@@ -1,0 +1,3 @@
+fact {
+SecureCommunicationTLS[con_ANSP_Monaco_to_Gateway]
+}

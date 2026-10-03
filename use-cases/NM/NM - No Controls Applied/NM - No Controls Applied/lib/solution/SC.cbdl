@@ -1,0 +1,143 @@
+library SC {
+  category SecureCommunication {
+
+    securityControl SecureCommunicationTLS(CONNECTOR con) {
+      reference ("Rouland et al., Chapter 5" : "https://www.theses.fr/2022TOU30254")
+      comment "TLS: confidentiality (topology), no-replay, authenticity."
+      alloy "
+        all mp: MsgPassing, t: Tick |
+          (mp in con.buffer.t) implies con.connects.t = mp.origin_sender.uses + mp.receiver.uses
+        all t: Tick, mp: MsgPassing |
+          (mp in con.buffer.t) implies
+          (no mp1: MsgPassing-mp, t2: t.prevs |
+             mp1.sender = mp.sender and mp1.receiver = mp.receiver and
+             mp1.sent = mp.sent and mp1 in con.buffer.t2)
+        all mp: MsgPassing, t: Tick |
+          (mp in con.buffer.t) implies mp.sender = mp.origin_sender
+      "
+      enforce (
+
+        ISO27002.SecureCommunication.ISO_8_24,
+        OWASP_ASVS.SecureCommunication.OWASP_V9_2,
+        ISO27002xOWASP.SecureCommunication.B_ISO_8_24_V9_2
+      )
+    }
+
+    securityControl spoofProof(CONNECTOR con) {
+      reference ("Rouland et al., Chapter 5" : "https://www.theses.fr/2022TOU30254")
+      comment "Ensure the sender of every message in transit through this connector is authentic (spoofProof policy, Listing 5.5)."
+      alloy "
+        all mp: MsgPassing, t: Tick |
+          mp in con.buffer.t implies
+          mp.sender = mp.origin_sender
+      "
+      enforce (
+        ISO27002.SecureCommunication.ISO_8_5,
+        OWASP_ASVS.SecureCommunication.OWASP_V2_10,
+        ISO27002xOWASP.SecureCommunication.B_ISO_8_5_V2_10
+      )
+    }
+
+    securityControl tamperProof(CONNECTOR con) {
+      reference ("Rouland et al., Chapter 5" : "https://www.theses.fr/2022TOU30254")
+      comment "Ensure no message in transit through this connector has been altered (tamperProof policy, Listing 5.7)."
+      alloy "
+        all t: Tick, mp: MsgPassing |
+          mp in con.buffer.t implies (
+            no mp1: MsgPassing - mp, t1: t.prevs |
+              mp1.sender = mp.sender and
+              mp1.receiver = mp.receiver and
+              mp1.sent = mp.sent and
+              mp1 in con.buffer.t1
+          )
+      "
+      enforce (
+        ISO27002.SecureCommunication.ISO_8_24,
+        OWASP_ASVS.SecureCommunication.OWASP_V9_2,
+        ISO27002xOWASP.SecureCommunication.B_ISO_8_24_V9_2
+      )
+    }
+
+    securityControl repudiationProof(CONNECTOR con) {
+      reference ("Rouland et al., Chapter 5" : "https://www.theses.fr/2022TOU30254")
+      comment "Ensure every inject and intercept action through this connector is traceable in the buffer (repudiationProof policy, Listing 5.9, connector-scoped)."
+      alloy "
+        all mp: MsgPassing, t: Tick |
+          (mp in con.buffer.t and H_inject[mp.sender, mp, t]) implies Log.addEntry[mp, t]
+        all mp: MsgPassing, t: Tick |
+          (mp in con.buffer.t and H_intercept[mp.receiver, mp, t]) implies Log.addEntry[mp, t]
+      "
+      enforce (
+        ISO27002.SecureCommunication.ISO_8_15,
+        OWASP_ASVS.SecureCommunication.OWASP_V7_1,
+        ISO27002xOWASP.SecureCommunication.B_ISO_8_15_V7_1
+      )
+    }
+
+    securityControl informationDisclosureProof(CONNECTOR con) {
+      reference ("Rouland et al., Chapter 5" : "https://www.theses.fr/2022TOU30254")
+      comment "Ensure no message in this connector can be intercepted by a component other than the intended receiver (informationDisclosureProof policy, Listing 5.11)."
+      alloy "
+        all mp: MsgPassing, t: Tick |
+          mp in con.buffer.t implies
+          con.connects.t = mp.origin_sender.uses + mp.receiver.uses
+      "
+      enforce (
+        ISO27002.SecureCommunication.ISO_8_24,
+        OWASP_ASVS.SecureCommunication.OWASP_V9_2,
+        ISO27002xOWASP.SecureCommunication.B_ISO_8_24_V9_2
+      )
+    }
+
+    securityControl staleProof(CONNECTOR con) {
+      reference ("Rouland et al., Chapter 5" : "https://www.theses.fr/2022TOU30254")
+      comment "Ensure messages in transit through this connector are not dropped or delayed beyond freshness (staleProof policy, Listing 5.13)."
+      alloy "
+        all t: Tick - tick/last, mp: MsgPassing |
+          mp in con.buffer.t implies (
+            mp in con.buffer.(t.next) or
+            some c: Component | mp.receiver = c
+          )
+      "
+      enforce (
+        ISO27002.SecureCommunication.ISO_8_6,
+        ISO27002xOWASP.SecureCommunication.B_ISO_8_6
+      )
+    }
+
+    securityControl EoPProof(CONNECTOR con) {
+      reference ("Rouland et al., Chapter 5" : "https://www.theses.fr/2022TOU30254")
+      comment "Ensure every component injecting or intercepting through this connector holds a port structurally attached to it (EoPProof policy, Listing 5.15, connector-scoped)."
+      alloy "
+        all mp: MsgPassing, t: Tick |
+          (mp in con.buffer.t and H_inject[mp.sender, mp, t]) implies Z_inject[mp.sender, mp]
+        all mp: MsgPassing, t: Tick |
+          (mp in con.buffer.t and H_intercept[mp.receiver, mp, t]) implies Z_intercept[mp.receiver, mp]
+      "
+      enforce (
+        ISO27002.SecureCommunication.ISO_8_2,
+        OWASP_ASVS.SecureCommunication.OWASP_V4_2,
+        ISO27002xOWASP.SecureCommunication.B_ISO_8_2_V4_2
+      )
+    }
+
+    securityControl SecureCommunicationRateLimiter(CONNECTOR con) {
+      reference ("NIST SC-5" : "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf")
+      comment "Apply rate limiting between the components at this connector's endpoints (at most one message per two consecutive Ticks) to prevent Denial-of-Service attacks (connector-scoped)."
+      alloy "
+        all c1, c2: Component, t: Tick - tick/last |
+          (con.portO in c1.uses and con.portI in c2.uses) implies
+          #{ mp: MsgPassing |
+            mp.sender = c1 and
+            mp.receiver = c2 and
+            mp.sent in (t + t.next)
+          } <= 1
+      "
+      enforce (
+        ISO27002.SecureCommunication.ISO_8_6,
+        ISO27002xOWASP.SecureCommunication.B_ISO_8_6
+      )
+    }
+
+  }
+}

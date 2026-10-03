@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="scenario" nsURI="swarchitecture.compliance.security.scenario"
+    nsPrefix="scenario">
+  <eClassifiers xsi:type="ecore:EClass" name="CommunicationSyle" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="buffer_by" upperBound="-1"
+        eType="ecore:EClass logical.ecore#//Connector"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="to" upperBound="-1" eType="ecore:EClass logical.ecore#//Port"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="from" lowerBound="1" eType="ecore:EClass logical.ecore#//Port"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MsgExhange" eSuperTypes="#//CommunicationSyle">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operation" lowerBound="1"
+        eType="#//Payload"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Payload">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="ecore:EClass logical.ecore#//DataType"/>
+  </eClassifiers>
+</ecore:EPackage>

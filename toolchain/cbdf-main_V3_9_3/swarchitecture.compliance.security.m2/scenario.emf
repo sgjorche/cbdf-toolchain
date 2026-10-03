@@ -1,0 +1,20 @@
+@namespace(uri="swarchitecture.compliance.security.scenario", prefix="scenario")
+package scenario;
+
+import "platform:/resource/swarchitecture.compliance.security.m2/logical.ecore";
+
+
+abstract class CommunicationSyle {
+	ref logical.Connector[0..*] buffer_by;
+	ref logical.Port[*] to;
+	ref logical.Port[1..1] from;
+}
+
+class MsgExhange extends CommunicationSyle {
+	attr EString[1..1] name;
+	ref Payload[1..1] operation;
+}
+
+class Payload {
+	ref logical.DataType[1..1] type;
+}

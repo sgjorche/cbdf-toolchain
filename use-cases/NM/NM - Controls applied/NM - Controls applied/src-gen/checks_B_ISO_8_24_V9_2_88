@@ -1,0 +1,8 @@
+open logical
+open libs
+
+
+assert compliance__B_ISO_8_24_V9_2__AOC__Gateway {
+  B_ISO_8_24_V9_2[AOC,Gateway]
+}
+check compliance__B_ISO_8_24_V9_2__AOC__Gateway for 5

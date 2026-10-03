@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            id="swarchitecture.compliance.security.alloy2.m2m.ui.commands.category"
+            name="Cs4cbse to Alloy">
+      </category>
+      <command
+            categoryId="swarchitecture.compliance.security.alloy2.m2m.ui.commands.category"
+            id="swarchitecture.compliance.security.alloy2.m2m.ui.commands.Cs4cbse2Alloy"
+            name="Cs4cbse2Alloy">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="swarchitecture.compliance.security.alloy2.m2m.ui.handlers.Cs4cbse2AlloyHandler"
+            commandId="swarchitecture.compliance.security.alloy2.m2m.ui.commands.Cs4cbse2Alloy">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="swarchitecture.compliance.security.alloy2.m2m.ui.commands.Cs4cbse2Alloy"
+            contextId="org.eclipse.ui.contexts.window"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M1+8">
+      </key>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="popup:org.eclipse.ui.popup.any?after=additions">
+        <command
+              commandId="swarchitecture.compliance.security.alloy2.m2m.ui.commands.Cs4cbse2Alloy"
+              id="compliance.swarchitecture.security.toolbars.Capella2CBSECommand"
+              mnemonic="S">
+                <visibleWhen>
+			           <with variable="activeMenuSelection">
+			            <iterate
+			                 ifEmpty="false">
+			             <adapt type="org.eclipse.core.resources.IResource">
+			               <test property="org.eclipse.core.resources.name" value="*.cbdl" />
+			             </adapt>
+			            </iterate>
+			           </with>
+     			</visibleWhen>
+        </command>
+      </menuContribution>
+	</extension>
+</plugin>

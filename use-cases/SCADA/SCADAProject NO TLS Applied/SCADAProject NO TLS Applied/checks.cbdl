@@ -1,0 +1,37 @@
+import <"design.cbdl">
+import <"lib/compliance/Baseline.cbdl">
+import <"lib/solution/SC.cbdl">
+import <"lib/compliance/NIST.cbdl">
+import <"lib/compliance/OMB.cbdl">
+import <"controls.cbdl">
+
+// Threat: Tampering + Information Disclosure + Spoofing
+// Standard: NIST SP 800-53 Rev.5  Control: SC-8: Transmission Confidentiality and Integrity  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: OMB Circular A-130  Control: Section 4: Authentication  →  https://www.whitehouse.gov/wp-content/uploads/legacy_drupal_files/omb/circulars/A130/a130revised.pdf#page=28
+check overlay NISTxOMB.SecureCommunication.B_SC_13_00(ControlCenter,FieldSite1);
+
+// Threat: Tampering + Information Disclosure + Spoofing
+// Standard: NIST SP 800-53 Rev.5  Control: SC-8: Transmission Confidentiality and Integrity  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: OMB Circular A-130  Control: Section 4: Authentication  →  https://www.whitehouse.gov/wp-content/uploads/legacy_drupal_files/omb/circulars/A130/a130revised.pdf#page=28
+check overlay NISTxOMB.SecureCommunication.B_SC_13_00(ControlCenter,FieldSite2);
+
+// Threat: Tampering + Information Disclosure + Spoofing
+// Standard: NIST SP 800-53 Rev.5  Control: SC-8: Transmission Confidentiality and Integrity  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: OMB Circular A-130  Control: Section 4: Authentication  →  https://www.whitehouse.gov/wp-content/uploads/legacy_drupal_files/omb/circulars/A130/a130revised.pdf#page=28
+check overlay NISTxOMB.SecureCommunication.B_SC_13_00(ControlCenter,FieldSite3);
+
+// Threat: Tampering + Information Disclosure + Spoofing
+// Standard: NIST SP 800-53 Rev.5  Control: SC-8: Transmission Confidentiality and Integrity  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: OMB Circular A-130  Control: Section 4: Authentication  →  https://www.whitehouse.gov/wp-content/uploads/legacy_drupal_files/omb/circulars/A130/a130revised.pdf#page=28
+check overlay NISTxOMB.SecureCommunication.B_SC_13_00(ControlCenter,FieldSite4);
+
+// Threat: Tampering + Information Disclosure + Spoofing
+// Standard: NIST SP 800-53 Rev.5  Control: SC-8: Transmission Confidentiality and Integrity  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: OMB Circular A-130  Control: Section 4: Authentication  →  https://www.whitehouse.gov/wp-content/uploads/legacy_drupal_files/omb/circulars/A130/a130revised.pdf#page=28
+check overlay NISTxOMB.SecureCommunication.B_SC_13_00(ControlCenter,FieldSite5);
+
+// Threat: Tampering + Information Disclosure + Spoofing
+// Standard: NIST SP 800-53 Rev.5  Control: SC-8: Transmission Confidentiality and Integrity  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: OMB Circular A-130  Control: Section 4: Authentication  →  https://www.whitehouse.gov/wp-content/uploads/legacy_drupal_files/omb/circulars/A130/a130revised.pdf#page=28
+check overlay NISTxOMB.SecureCommunication.B_SC_13_00(ControlCenter,FieldSite6);
+

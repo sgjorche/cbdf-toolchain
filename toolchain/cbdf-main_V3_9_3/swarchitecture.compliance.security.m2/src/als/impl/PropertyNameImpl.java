@@ -1,0 +1,37 @@
+/**
+ */
+package als.impl;
+
+import als.AlsPackage;
+import als.PropertyName;
+
+import org.eclipse.emf.ecore.EClass;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Property Name</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * @generated
+ */
+public class PropertyNameImpl extends ReferencesNameImpl implements PropertyName {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected PropertyNameImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return AlsPackage.Literals.PROPERTY_NAME;
+	}
+
+} //PropertyNameImpl

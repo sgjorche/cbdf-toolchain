@@ -1,0 +1,139 @@
+import <"design.cbdl">
+import <"lib/compliance/Baseline.cbdl">
+import <"lib/solution/SC.cbdl">
+import <"lib/compliance/NIST.cbdl">
+import <"lib/compliance/OMB.cbdl">
+import <"controls.cbdl">
+
+// Threat: Tampering + Information Disclosure + Spoofing
+// Standard: NIST SP 800-53 Rev.5  Control: SC-8: Transmission Confidentiality and Integrity  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: OMB Circular A-130  Control: Section 4: Authentication  →  https://www.whitehouse.gov/wp-content/uploads/legacy_drupal_files/omb/circulars/A130/a130revised.pdf#page=28
+check overlay NISTxOMB.SecureCommunication.B_SC_13_00(ControlCenter,FieldSite1);
+
+// Threat: Spoofing
+// Standard: NIST SP 800-53 Rev.5  Control: AC-17(02): Remote Access / Protection of Confidentiality and Integrity  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: OMB Circular A-130  Control: Section 4: Authentication  →  https://www.whitehouse.gov/wp-content/uploads/legacy_drupal_files/omb/circulars/A130/a130revised.pdf#page=28
+check overlay NISTxOMB.SecureCommunication.B_AC_17_02(ControlCenter,FieldSite1);
+
+// Threat: Repudiation
+// Standard: NIST SP 800-53 Rev.5  Control: AU-2(03): Event Logging / Reviews and Updates  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay NISTxOMB.SecureCommunication.B_AU_02_03(ControlCenter,FieldSite1);
+
+// Threat: Elevation of Privilege
+// Standard: NIST SP 800-53 Rev.5  Control: AC-6(08): Least Privilege / Privilege Levels for Code Execution  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay NISTxOMB.SecureCommunication.B_AC_06_08(ControlCenter,FieldSite1);
+
+// Threat: Denial of Service
+// Standard: NIST SP 800-53 Rev.5  Control: SC-5: Denial of Service Protection  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay NISTxOMB.SecureCommunication.B_SC_05_06(ControlCenter,FieldSite1);
+
+// Threat: Tampering + Information Disclosure + Spoofing
+// Standard: NIST SP 800-53 Rev.5  Control: SC-8: Transmission Confidentiality and Integrity  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: OMB Circular A-130  Control: Section 4: Authentication  →  https://www.whitehouse.gov/wp-content/uploads/legacy_drupal_files/omb/circulars/A130/a130revised.pdf#page=28
+check overlay NISTxOMB.SecureCommunication.B_SC_13_00(ControlCenter,FieldSite2);
+
+// Threat: Spoofing
+// Standard: NIST SP 800-53 Rev.5  Control: AC-17(02): Remote Access / Protection of Confidentiality and Integrity  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: OMB Circular A-130  Control: Section 4: Authentication  →  https://www.whitehouse.gov/wp-content/uploads/legacy_drupal_files/omb/circulars/A130/a130revised.pdf#page=28
+check overlay NISTxOMB.SecureCommunication.B_AC_17_02(ControlCenter,FieldSite2);
+
+// Threat: Repudiation
+// Standard: NIST SP 800-53 Rev.5  Control: AU-2(03): Event Logging / Reviews and Updates  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay NISTxOMB.SecureCommunication.B_AU_02_03(ControlCenter,FieldSite2);
+
+// Threat: Elevation of Privilege
+// Standard: NIST SP 800-53 Rev.5  Control: AC-6(08): Least Privilege / Privilege Levels for Code Execution  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay NISTxOMB.SecureCommunication.B_AC_06_08(ControlCenter,FieldSite2);
+
+// Threat: Denial of Service
+// Standard: NIST SP 800-53 Rev.5  Control: SC-5: Denial of Service Protection  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay NISTxOMB.SecureCommunication.B_SC_05_06(ControlCenter,FieldSite2);
+
+// Threat: Tampering + Information Disclosure + Spoofing
+// Standard: NIST SP 800-53 Rev.5  Control: SC-8: Transmission Confidentiality and Integrity  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: OMB Circular A-130  Control: Section 4: Authentication  →  https://www.whitehouse.gov/wp-content/uploads/legacy_drupal_files/omb/circulars/A130/a130revised.pdf#page=28
+check overlay NISTxOMB.SecureCommunication.B_SC_13_00(ControlCenter,FieldSite3);
+
+// Threat: Spoofing
+// Standard: NIST SP 800-53 Rev.5  Control: AC-17(02): Remote Access / Protection of Confidentiality and Integrity  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: OMB Circular A-130  Control: Section 4: Authentication  →  https://www.whitehouse.gov/wp-content/uploads/legacy_drupal_files/omb/circulars/A130/a130revised.pdf#page=28
+check overlay NISTxOMB.SecureCommunication.B_AC_17_02(ControlCenter,FieldSite3);
+
+// Threat: Repudiation
+// Standard: NIST SP 800-53 Rev.5  Control: AU-2(03): Event Logging / Reviews and Updates  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay NISTxOMB.SecureCommunication.B_AU_02_03(ControlCenter,FieldSite3);
+
+// Threat: Elevation of Privilege
+// Standard: NIST SP 800-53 Rev.5  Control: AC-6(08): Least Privilege / Privilege Levels for Code Execution  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay NISTxOMB.SecureCommunication.B_AC_06_08(ControlCenter,FieldSite3);
+
+// Threat: Denial of Service
+// Standard: NIST SP 800-53 Rev.5  Control: SC-5: Denial of Service Protection  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay NISTxOMB.SecureCommunication.B_SC_05_06(ControlCenter,FieldSite3);
+
+// Threat: Tampering + Information Disclosure + Spoofing
+// Standard: NIST SP 800-53 Rev.5  Control: SC-8: Transmission Confidentiality and Integrity  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: OMB Circular A-130  Control: Section 4: Authentication  →  https://www.whitehouse.gov/wp-content/uploads/legacy_drupal_files/omb/circulars/A130/a130revised.pdf#page=28
+check overlay NISTxOMB.SecureCommunication.B_SC_13_00(ControlCenter,FieldSite4);
+
+// Threat: Spoofing
+// Standard: NIST SP 800-53 Rev.5  Control: AC-17(02): Remote Access / Protection of Confidentiality and Integrity  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: OMB Circular A-130  Control: Section 4: Authentication  →  https://www.whitehouse.gov/wp-content/uploads/legacy_drupal_files/omb/circulars/A130/a130revised.pdf#page=28
+check overlay NISTxOMB.SecureCommunication.B_AC_17_02(ControlCenter,FieldSite4);
+
+// Threat: Repudiation
+// Standard: NIST SP 800-53 Rev.5  Control: AU-2(03): Event Logging / Reviews and Updates  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay NISTxOMB.SecureCommunication.B_AU_02_03(ControlCenter,FieldSite4);
+
+// Threat: Elevation of Privilege
+// Standard: NIST SP 800-53 Rev.5  Control: AC-6(08): Least Privilege / Privilege Levels for Code Execution  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay NISTxOMB.SecureCommunication.B_AC_06_08(ControlCenter,FieldSite4);
+
+// Threat: Denial of Service
+// Standard: NIST SP 800-53 Rev.5  Control: SC-5: Denial of Service Protection  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay NISTxOMB.SecureCommunication.B_SC_05_06(ControlCenter,FieldSite4);
+
+// Threat: Tampering + Information Disclosure + Spoofing
+// Standard: NIST SP 800-53 Rev.5  Control: SC-8: Transmission Confidentiality and Integrity  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: OMB Circular A-130  Control: Section 4: Authentication  →  https://www.whitehouse.gov/wp-content/uploads/legacy_drupal_files/omb/circulars/A130/a130revised.pdf#page=28
+check overlay NISTxOMB.SecureCommunication.B_SC_13_00(ControlCenter,FieldSite5);
+
+// Threat: Spoofing
+// Standard: NIST SP 800-53 Rev.5  Control: AC-17(02): Remote Access / Protection of Confidentiality and Integrity  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: OMB Circular A-130  Control: Section 4: Authentication  →  https://www.whitehouse.gov/wp-content/uploads/legacy_drupal_files/omb/circulars/A130/a130revised.pdf#page=28
+check overlay NISTxOMB.SecureCommunication.B_AC_17_02(ControlCenter,FieldSite5);
+
+// Threat: Repudiation
+// Standard: NIST SP 800-53 Rev.5  Control: AU-2(03): Event Logging / Reviews and Updates  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay NISTxOMB.SecureCommunication.B_AU_02_03(ControlCenter,FieldSite5);
+
+// Threat: Elevation of Privilege
+// Standard: NIST SP 800-53 Rev.5  Control: AC-6(08): Least Privilege / Privilege Levels for Code Execution  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay NISTxOMB.SecureCommunication.B_AC_06_08(ControlCenter,FieldSite5);
+
+// Threat: Denial of Service
+// Standard: NIST SP 800-53 Rev.5  Control: SC-5: Denial of Service Protection  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay NISTxOMB.SecureCommunication.B_SC_05_06(ControlCenter,FieldSite5);
+
+// Threat: Tampering + Information Disclosure + Spoofing
+// Standard: NIST SP 800-53 Rev.5  Control: SC-8: Transmission Confidentiality and Integrity  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: OMB Circular A-130  Control: Section 4: Authentication  →  https://www.whitehouse.gov/wp-content/uploads/legacy_drupal_files/omb/circulars/A130/a130revised.pdf#page=28
+check overlay NISTxOMB.SecureCommunication.B_SC_13_00(ControlCenter,FieldSite6);
+
+// Threat: Spoofing
+// Standard: NIST SP 800-53 Rev.5  Control: AC-17(02): Remote Access / Protection of Confidentiality and Integrity  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+// Standard: OMB Circular A-130  Control: Section 4: Authentication  →  https://www.whitehouse.gov/wp-content/uploads/legacy_drupal_files/omb/circulars/A130/a130revised.pdf#page=28
+check overlay NISTxOMB.SecureCommunication.B_AC_17_02(ControlCenter,FieldSite6);
+
+// Threat: Repudiation
+// Standard: NIST SP 800-53 Rev.5  Control: AU-2(03): Event Logging / Reviews and Updates  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay NISTxOMB.SecureCommunication.B_AU_02_03(ControlCenter,FieldSite6);
+
+// Threat: Elevation of Privilege
+// Standard: NIST SP 800-53 Rev.5  Control: AC-6(08): Least Privilege / Privilege Levels for Code Execution  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay NISTxOMB.SecureCommunication.B_AC_06_08(ControlCenter,FieldSite6);
+
+// Threat: Denial of Service
+// Standard: NIST SP 800-53 Rev.5  Control: SC-5: Denial of Service Protection  →  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+check overlay NISTxOMB.SecureCommunication.B_SC_05_06(ControlCenter,FieldSite6);
+

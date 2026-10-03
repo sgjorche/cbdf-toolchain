@@ -1,0 +1,56 @@
+import <"NISTSP800-53.cbdl">
+import <"CNSSPolicy12.cbdl">
+
+library CNSSxNIST {
+  category SecureCommunication {
+
+    overlay B_AC_17_02_7 (COMPONENT c1, COMPONENT c2) {
+      instance (
+        NISTSP800.SecureCommunication.AC_17_02_7(c1,c2),
+        CNSSPolicy12.SecureCommunication.CNSS_7(c1,c2),
+        CNSSPolicy12.SecureCommunication.CNSS_6(c1,c2)
+      )
+      comment "Enforces role-based access control, multi-factor authentication, and message source verification between {{ c1 }} and {{ c2 }} during terminal login."
+    }
+
+    overlay B_SC_08_01_05 (COMPONENT c1, COMPONENT c2) {
+      instance (
+        NISTSP800.SecureCommunication.SC_08_01(c1,c2),
+        CNSSPolicy12.SecureCommunication.CNSS_5(c1,c2)
+      )
+      comment "Communication links between c1 and c2 must ensure confidentiality and integrity using cryptographic mechanisms and must be encrypted if accessible by unauthorized entities."
+    }
+
+    overlay B_SC_08_01 (COMPONENT c1, COMPONENT c2) {
+      instance (
+        NISTSP800.SecureCommunication.SC_08_01(c1,c2),
+        CNSSPolicy12.SecureCommunication.CNSS_5(c1,c2)
+      )
+      comment "Ensures encrypted communication between {{ c1 }} and {{ c2 }} using cryptographic mechanisms to protect data in transit."
+    }
+
+    overlay B_SC_05_06 (COMPONENT c1, COMPONENT c2) {
+      instance (
+        NISTSP800.SecureCommunication.SC_05_06(c1,c2)
+      )
+      comment "Applies rate limiting at the command dispatch layer between {{ c1 }} and {{ c2 }} to prevent flooding or abuse."
+    }
+
+    overlay B_AC_06_08 (COMPONENT c1, COMPONENT c2) {
+      instance (
+        NISTSP800.SecureCommunication.AC_06_08(c1,c2),
+        CNSSPolicy12.SecureCommunication.CNSS_8(c1,c2)
+      )
+      comment "Restricts elevated privileges between {{ c1 }} and {{ c2 }} to specific engineering roles with scoped authority."
+    }
+
+    overlay B_AU_02_03 (COMPONENT c1, COMPONENT c2) {
+      instance (
+        NISTSP800.SecureCommunication.AU_02_03(c1,c2),
+        CNSSPolicy12.SecureCommunication.CNSS_3(c1,c2)
+      )
+      comment "Ensures that all message inject and intercept actions between {{ c1 }} and {{ c2 }} are logged for non-repudiation."
+    }
+
+  }
+}

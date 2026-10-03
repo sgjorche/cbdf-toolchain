@@ -1,0 +1,12 @@
+import <"design.cbdl">
+import <"lib/compliance/Baseline.cbdl">
+import <"lib/solution/SC.cbdl">
+import <"lib/compliance/NIST.cbdl">
+import <"lib/compliance/OMB.cbdl">
+
+securityReq SC.SecureCommunication.SecureCommunicationTLS(con_ControlCenter_to_FieldSite1);
+securityReq SC.SecureCommunication.SecureCommunicationTLS(con_ControlCenter_to_FieldSite2);
+securityReq SC.SecureCommunication.SecureCommunicationTLS(con_ControlCenter_to_FieldSite3);
+securityReq SC.SecureCommunication.SecureCommunicationTLS(con_ControlCenter_to_FieldSite4);
+securityReq SC.SecureCommunication.SecureCommunicationTLS(con_ControlCenter_to_FieldSite5);
+securityReq SC.SecureCommunication.SecureCommunicationTLS(con_ControlCenter_to_FieldSite6);

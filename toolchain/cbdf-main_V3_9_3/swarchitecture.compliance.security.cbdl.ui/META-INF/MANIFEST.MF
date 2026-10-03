@@ -1,0 +1,25 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: swarchitecture.compliance.security.cbdl.ui
+Bundle-ManifestVersion: 2
+Bundle-Name: swarchitecture.compliance.security.cbdl.ui
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: swarchitecture.compliance.security.cbdl.ui; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: swarchitecture.compliance.security.cbdl,
+ swarchitecture.compliance.security.cbdl.ide,
+ swarchitecture.compliance.security.m2,
+ org.eclipse.xtext.ui,
+ org.eclipse.xtext.ui.shared,
+ org.eclipse.xtext.ui.codetemplates.ui,
+ org.eclipse.ui.editors;bundle-version="3.5.0",
+ org.eclipse.ui.ide;bundle-version="3.5.0",
+ org.eclipse.ui,
+ org.eclipse.compare,
+ org.eclipse.xtext.builder
+Import-Package: org.apache.log4j
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Export-Package: swarchitecture.compliance.security.cbdl.ui.quickfix,
+ swarchitecture.compliance.security.cbdl.ui.contentassist,
+ swarchitecture.compliance.security.cbdl.ui.internal
+Bundle-Activator: swarchitecture.compliance.security.cbdl.ui.internal.CbdlActivator

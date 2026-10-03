@@ -1,0 +1,45 @@
+/**
+ */
+package als;
+
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Sig Qual</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link als.SigQual#getSigq <em>Sigq</em>}</li>
+ * </ul>
+ *
+ * @see als.AlsPackage#getSigQual()
+ * @model
+ * @generated
+ */
+public interface SigQual extends Signature {
+	/**
+	 * Returns the value of the '<em><b>Sigq</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Sigq</em>' attribute.
+	 * @see #setSigq(String)
+	 * @see als.AlsPackage#getSigQual_Sigq()
+	 * @model
+	 * @generated
+	 */
+	String getSigq();
+
+	/**
+	 * Sets the value of the '{@link als.SigQual#getSigq <em>Sigq</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Sigq</em>' attribute.
+	 * @see #getSigq()
+	 * @generated
+	 */
+	void setSigq(String value);
+
+} // SigQual

@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Tests
+Bundle-SymbolicName: swarchitecture.cbse.capella4.m2m.tests
+Bundle-Version: 1.0.0.qualifier

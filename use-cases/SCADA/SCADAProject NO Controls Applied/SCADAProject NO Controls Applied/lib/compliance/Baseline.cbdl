@@ -1,0 +1,45 @@
+import <"NIST.cbdl">
+import <"OMB.cbdl">
+
+library NISTxOMB {
+  category SecureCommunication {
+
+    overlay B_SC_13_00 (COMPONENT c1, COMPONENT c2) {
+      instance (
+        NISTSP800.SecureCommunication.SC_08_00(c1,c2),
+        OMB130.SecureCommunication.OMB_4(c1,c2)
+      )
+      comment "Communication links between {{ c1 }} and {{ c2 }} must ensure confidentiality and integrity using cryptographic mechanisms and must be encrypted if accessible by unauthorized entities."
+    }
+
+    overlay B_AC_17_02 (COMPONENT c1, COMPONENT c2) {
+      instance (
+        NISTSP800.SecureCommunication.AC_17_02(c1,c2),
+        OMB130.SecureCommunication.OMB_4(c1,c2)
+      )
+      comment "Enforces role-based access control, multi-factor authentication, and message source verification between {{ c1 }} and {{ c2 }} during operator login."
+    }
+
+    overlay B_SC_05_06 (COMPONENT c1, COMPONENT c2) {
+      instance (
+        NISTSP800.SecureCommunication.SC_05_06(c1,c2)
+      )
+      comment "Applies rate limiting at the command dispatch layer between {{ c1 }} and {{ c2 }} to prevent flooding or abuse."
+    }
+
+    overlay B_AC_06_08 (COMPONENT c1, COMPONENT c2) {
+      instance (
+        NISTSP800.SecureCommunication.AC_06_08(c1,c2)
+      )
+      comment "Restricts elevated privileges between {{ c1 }} and {{ c2 }} to specific operator roles with scoped authority."
+    }
+
+    overlay B_AU_02_03 (COMPONENT c1, COMPONENT c2) {
+      instance (
+        NISTSP800.SecureCommunication.AU_02_03(c1,c2)
+      )
+      comment "Ensures that all message inject and intercept actions between {{ c1 }} and {{ c2 }} are logged for non-repudiation."
+    }
+
+  }
+}

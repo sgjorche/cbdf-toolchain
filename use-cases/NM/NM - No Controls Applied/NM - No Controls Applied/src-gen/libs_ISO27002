@@ -1,0 +1,57 @@
+pred ISO_8_24[c1:Component,c2:Component]{
+
+		
+        all m: MsgPassing | m.receiver = c2 implies (
+          all d: Payload, t: Tick |
+            (some t1: t.prevs | H_inject[c1, m, t1])
+            implies
+            (all c3: Component - c1 - c2 | not E_get_pld[c3, m, d, t])
+        )
+        and
+        all m: MsgPassing | m.receiver = c2 implies (
+          all t: Tick |
+            H_inject[c1, m, t]
+            implies
+            (some t1: t.prevs | H_set_pld[c1, m, m.payload, t1])
+        )
+      
+}
+pred ISO_8_5[c1:Component,c2:Component]{
+
+		
+        all m: MsgPassing, t: Tick |
+          (H_intercept[c2, m, t] and
+           (m.origin_sender = c1 or m.sender = c1))
+          implies
+          m.sender = m.origin_sender
+      
+}
+pred ISO_8_15[c1:Component,c2:Component]{
+
+		
+        all m: MsgPassing, t: Tick |
+          (H_inject[c1, m, t] implies Log.addEntry[m, t])
+          and
+          (H_intercept[c2, m, t] implies Log.addEntry[m, t])
+      
+}
+pred ISO_8_6[c1:Component,c2:Component]{
+
+		
+        all t: Tick - tick/last |
+          #{ m: MsgPassing |
+            m.sender = c1 and
+            m.receiver = c2 and
+            m.sent in (t + t.next)
+          } <= 1
+      
+}
+pred ISO_8_2[c1:Component,c2:Component]{
+
+		
+        all m: MsgPassing, t: Tick, c3: Component - c1 - c2 |
+          (m.origin_sender = c1 and m.receiver = c2)
+          implies
+          not H_intercept[c3, m, t]
+      
+}

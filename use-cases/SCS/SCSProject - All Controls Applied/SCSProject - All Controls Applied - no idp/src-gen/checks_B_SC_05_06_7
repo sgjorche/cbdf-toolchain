@@ -1,0 +1,8 @@
+open logical
+open libs
+
+
+assert compliance__B_SC_05_06__HMITerminal__MissionServers {
+  B_SC_05_06[HMITerminal,MissionServers]
+}
+check compliance__B_SC_05_06__HMITerminal__MissionServers for 5

@@ -1,0 +1,2351 @@
+{
+  "version": "1.0",
+  "exportedAt": "2026-07-15T00:00:00.000Z",
+  "state": {
+    "dataTypes": [
+      {
+        "name": "command_data",
+        "type": "TCP_Data"
+      }
+    ],
+    "components": [
+      {
+        "id": "id2000",
+        "name": "ANSP_Belgium",
+        "x": 40,
+        "y": 40,
+        "ports": [
+          {
+            "id": "id2001",
+            "name": "port_belgium_out",
+            "dir": "out",
+            "dataType": "command_data"
+          }
+        ]
+      },
+      {
+        "id": "id2002",
+        "name": "ANSP_France",
+        "x": 40,
+        "y": 100,
+        "ports": [
+          {
+            "id": "id2003",
+            "name": "port_france_out",
+            "dir": "out",
+            "dataType": "command_data"
+          }
+        ]
+      },
+      {
+        "id": "id2004",
+        "name": "ANSP_Germany",
+        "x": 40,
+        "y": 160,
+        "ports": [
+          {
+            "id": "id2005",
+            "name": "port_germany_out",
+            "dir": "out",
+            "dataType": "command_data"
+          }
+        ]
+      },
+      {
+        "id": "id2006",
+        "name": "ANSP_Luxembourg",
+        "x": 40,
+        "y": 220,
+        "ports": [
+          {
+            "id": "id2007",
+            "name": "port_luxembourg_out",
+            "dir": "out",
+            "dataType": "command_data"
+          }
+        ]
+      },
+      {
+        "id": "id2008",
+        "name": "ANSP_Netherlands",
+        "x": 40,
+        "y": 280,
+        "ports": [
+          {
+            "id": "id2009",
+            "name": "port_netherlands_out",
+            "dir": "out",
+            "dataType": "command_data"
+          }
+        ]
+      },
+      {
+        "id": "id2010",
+        "name": "ANSP_UnitedKingdom",
+        "x": 40,
+        "y": 340,
+        "ports": [
+          {
+            "id": "id2011",
+            "name": "port_unitedkingdom_out",
+            "dir": "out",
+            "dataType": "command_data"
+          }
+        ]
+      },
+      {
+        "id": "id2012",
+        "name": "ANSP_Ireland",
+        "x": 40,
+        "y": 400,
+        "ports": [
+          {
+            "id": "id2013",
+            "name": "port_ireland_out",
+            "dir": "out",
+            "dataType": "command_data"
+          }
+        ]
+      },
+      {
+        "id": "id2014",
+        "name": "ANSP_Portugal",
+        "x": 40,
+        "y": 460,
+        "ports": [
+          {
+            "id": "id2015",
+            "name": "port_portugal_out",
+            "dir": "out",
+            "dataType": "command_data"
+          }
+        ]
+      },
+      {
+        "id": "id2016",
+        "name": "ANSP_Switzerland",
+        "x": 40,
+        "y": 520,
+        "ports": [
+          {
+            "id": "id2017",
+            "name": "port_switzerland_out",
+            "dir": "out",
+            "dataType": "command_data"
+          }
+        ]
+      },
+      {
+        "id": "id2018",
+        "name": "ANSP_Austria",
+        "x": 40,
+        "y": 580,
+        "ports": [
+          {
+            "id": "id2019",
+            "name": "port_austria_out",
+            "dir": "out",
+            "dataType": "command_data"
+          }
+        ]
+      },
+      {
+        "id": "id2020",
+        "name": "ANSP_Denmark",
+        "x": 40,
+        "y": 640,
+        "ports": [
+          {
+            "id": "id2021",
+            "name": "port_denmark_out",
+            "dir": "out",
+            "dataType": "command_data"
+          }
+        ]
+      },
+      {
+        "id": "id2022",
+        "name": "ANSP_Norway",
+        "x": 40,
+        "y": 700,
+        "ports": [
+          {
+            "id": "id2023",
+            "name": "port_norway_out",
+            "dir": "out",
+            "dataType": "command_data"
+          }
+        ]
+      },
+      {
+        "id": "id2024",
+        "name": "ANSP_Sweden",
+        "x": 40,
+        "y": 760,
+        "ports": [
+          {
+            "id": "id2025",
+            "name": "port_sweden_out",
+            "dir": "out",
+            "dataType": "command_data"
+          }
+        ]
+      },
+      {
+        "id": "id2026",
+        "name": "ANSP_Finland",
+        "x": 40,
+        "y": 820,
+        "ports": [
+          {
+            "id": "id2027",
+            "name": "port_finland_out",
+            "dir": "out",
+            "dataType": "command_data"
+          }
+        ]
+      },
+      {
+        "id": "id2028",
+        "name": "ANSP_CzechRepublic",
+        "x": 40,
+        "y": 880,
+        "ports": [
+          {
+            "id": "id2029",
+            "name": "port_czechrepublic_out",
+            "dir": "out",
+            "dataType": "command_data"
+          }
+        ]
+      },
+      {
+        "id": "id2030",
+        "name": "ANSP_Slovakia",
+        "x": 40,
+        "y": 940,
+        "ports": [
+          {
+            "id": "id2031",
+            "name": "port_slovakia_out",
+            "dir": "out",
+            "dataType": "command_data"
+          }
+        ]
+      },
+      {
+        "id": "id2032",
+        "name": "ANSP_Poland",
+        "x": 40,
+        "y": 1000,
+        "ports": [
+          {
+            "id": "id2033",
+            "name": "port_poland_out",
+            "dir": "out",
+            "dataType": "command_data"
+          }
+        ]
+      },
+      {
+        "id": "id2034",
+        "name": "ANSP_Hungary",
+        "x": 40,
+        "y": 1060,
+        "ports": [
+          {
+            "id": "id2035",
+            "name": "port_hungary_out",
+            "dir": "out",
+            "dataType": "command_data"
+          }
+        ]
+      },
+      {
+        "id": "id2036",
+        "name": "ANSP_Romania",
+        "x": 40,
+        "y": 1120,
+        "ports": [
+          {
+            "id": "id2037",
+            "name": "port_romania_out",
+            "dir": "out",
+            "dataType": "command_data"
+          }
+        ]
+      },
+      {
+        "id": "id2038",
+        "name": "ANSP_Bulgaria",
+        "x": 40,
+        "y": 1180,
+        "ports": [
+          {
+            "id": "id2039",
+            "name": "port_bulgaria_out",
+            "dir": "out",
+            "dataType": "command_data"
+          }
+        ]
+      },
+      {
+        "id": "id2040",
+        "name": "ANSP_Croatia",
+        "x": 40,
+        "y": 1240,
+        "ports": [
+          {
+            "id": "id2041",
+            "name": "port_croatia_out",
+            "dir": "out",
+            "dataType": "command_data"
+          }
+        ]
+      },
+      {
+        "id": "id2042",
+        "name": "ANSP_Slovenia",
+        "x": 40,
+        "y": 1300,
+        "ports": [
+          {
+            "id": "id2043",
+            "name": "port_slovenia_out",
+            "dir": "out",
+            "dataType": "command_data"
+          }
+        ]
+      },
+      {
+        "id": "id2044",
+        "name": "ANSP_Lithuania",
+        "x": 40,
+        "y": 1360,
+        "ports": [
+          {
+            "id": "id2045",
+            "name": "port_lithuania_out",
+            "dir": "out",
+            "dataType": "command_data"
+          }
+        ]
+      },
+      {
+        "id": "id2046",
+        "name": "ANSP_Latvia",
+        "x": 40,
+        "y": 1420,
+        "ports": [
+          {
+            "id": "id2047",
+            "name": "port_latvia_out",
+            "dir": "out",
+            "dataType": "command_data"
+          }
+        ]
+      },
+      {
+        "id": "id2048",
+        "name": "ANSP_Estonia",
+        "x": 40,
+        "y": 1480,
+        "ports": [
+          {
+            "id": "id2049",
+            "name": "port_estonia_out",
+            "dir": "out",
+            "dataType": "command_data"
+          }
+        ]
+      },
+      {
+        "id": "id2050",
+        "name": "ANSP_Iceland",
+        "x": 40,
+        "y": 1540,
+        "ports": [
+          {
+            "id": "id2051",
+            "name": "port_iceland_out",
+            "dir": "out",
+            "dataType": "command_data"
+          }
+        ]
+      },
+      {
+        "id": "id2052",
+        "name": "ANSP_Ukraine",
+        "x": 40,
+        "y": 1600,
+        "ports": [
+          {
+            "id": "id2053",
+            "name": "port_ukraine_out",
+            "dir": "out",
+            "dataType": "command_data"
+          }
+        ]
+      },
+      {
+        "id": "id2054",
+        "name": "ANSP_Moldova",
+        "x": 40,
+        "y": 1660,
+        "ports": [
+          {
+            "id": "id2055",
+            "name": "port_moldova_out",
+            "dir": "out",
+            "dataType": "command_data"
+          }
+        ]
+      },
+      {
+        "id": "id2056",
+        "name": "ANSP_Greece",
+        "x": 40,
+        "y": 1720,
+        "ports": [
+          {
+            "id": "id2057",
+            "name": "port_greece_out",
+            "dir": "out",
+            "dataType": "command_data"
+          }
+        ]
+      },
+      {
+        "id": "id2058",
+        "name": "ANSP_Malta",
+        "x": 40,
+        "y": 1780,
+        "ports": [
+          {
+            "id": "id2059",
+            "name": "port_malta_out",
+            "dir": "out",
+            "dataType": "command_data"
+          }
+        ]
+      },
+      {
+        "id": "id2060",
+        "name": "ANSP_Turkey",
+        "x": 40,
+        "y": 1840,
+        "ports": [
+          {
+            "id": "id2061",
+            "name": "port_turkey_out",
+            "dir": "out",
+            "dataType": "command_data"
+          }
+        ]
+      },
+      {
+        "id": "id2062",
+        "name": "ANSP_Cyprus",
+        "x": 40,
+        "y": 1900,
+        "ports": [
+          {
+            "id": "id2063",
+            "name": "port_cyprus_out",
+            "dir": "out",
+            "dataType": "command_data"
+          }
+        ]
+      },
+      {
+        "id": "id2064",
+        "name": "ANSP_Spain",
+        "x": 40,
+        "y": 1960,
+        "ports": [
+          {
+            "id": "id2065",
+            "name": "port_spain_out",
+            "dir": "out",
+            "dataType": "command_data"
+          }
+        ]
+      },
+      {
+        "id": "id2066",
+        "name": "ANSP_Italy",
+        "x": 40,
+        "y": 2020,
+        "ports": [
+          {
+            "id": "id2067",
+            "name": "port_italy_out",
+            "dir": "out",
+            "dataType": "command_data"
+          }
+        ]
+      },
+      {
+        "id": "id2068",
+        "name": "ANSP_Albania",
+        "x": 40,
+        "y": 2080,
+        "ports": [
+          {
+            "id": "id2069",
+            "name": "port_albania_out",
+            "dir": "out",
+            "dataType": "command_data"
+          }
+        ]
+      },
+      {
+        "id": "id2070",
+        "name": "ANSP_BosniaHerzegovina",
+        "x": 40,
+        "y": 2140,
+        "ports": [
+          {
+            "id": "id2071",
+            "name": "port_bosniaherzegovina_out",
+            "dir": "out",
+            "dataType": "command_data"
+          }
+        ]
+      },
+      {
+        "id": "id2072",
+        "name": "ANSP_Serbia",
+        "x": 40,
+        "y": 2200,
+        "ports": [
+          {
+            "id": "id2073",
+            "name": "port_serbia_out",
+            "dir": "out",
+            "dataType": "command_data"
+          }
+        ]
+      },
+      {
+        "id": "id2074",
+        "name": "ANSP_Montenegro",
+        "x": 40,
+        "y": 2260,
+        "ports": [
+          {
+            "id": "id2075",
+            "name": "port_montenegro_out",
+            "dir": "out",
+            "dataType": "command_data"
+          }
+        ]
+      },
+      {
+        "id": "id2076",
+        "name": "ANSP_NorthMacedonia",
+        "x": 40,
+        "y": 2320,
+        "ports": [
+          {
+            "id": "id2077",
+            "name": "port_northmacedonia_out",
+            "dir": "out",
+            "dataType": "command_data"
+          }
+        ]
+      },
+      {
+        "id": "id2078",
+        "name": "ANSP_Monaco",
+        "x": 40,
+        "y": 2380,
+        "ports": [
+          {
+            "id": "id2079",
+            "name": "port_monaco_out",
+            "dir": "out",
+            "dataType": "command_data"
+          }
+        ]
+      },
+      {
+        "id": "id2080",
+        "name": "ANSP_Armenia",
+        "x": 40,
+        "y": 2440,
+        "ports": [
+          {
+            "id": "id2081",
+            "name": "port_armenia_out",
+            "dir": "out",
+            "dataType": "command_data"
+          }
+        ]
+      },
+      {
+        "id": "id2082",
+        "name": "ANSP_Georgia",
+        "x": 40,
+        "y": 2500,
+        "ports": [
+          {
+            "id": "id2083",
+            "name": "port_georgia_out",
+            "dir": "out",
+            "dataType": "command_data"
+          }
+        ]
+      },
+      {
+        "id": "id2084",
+        "name": "AOC",
+        "x": 40,
+        "y": 2560,
+        "ports": [
+          {
+            "id": "id2085",
+            "name": "port_aoc_out",
+            "dir": "out",
+            "dataType": "command_data"
+          }
+        ]
+      },
+      {
+        "id": "id2086",
+        "name": "ATMPortal",
+        "x": 40,
+        "y": 2660,
+        "ports": [
+          {
+            "id": "id2087",
+            "name": "port_atmp_out",
+            "dir": "out",
+            "dataType": "command_data"
+          }
+        ]
+      },
+      {
+        "id": "id2088",
+        "name": "Gateway",
+        "x": 500,
+        "y": 1300,
+        "ports": [
+          {
+            "id": "id2089",
+            "name": "port_gw_in_belgium",
+            "dir": "in",
+            "dataType": "command_data"
+          },
+          {
+            "id": "id2090",
+            "name": "port_gw_in_france",
+            "dir": "in",
+            "dataType": "command_data"
+          },
+          {
+            "id": "id2091",
+            "name": "port_gw_in_germany",
+            "dir": "in",
+            "dataType": "command_data"
+          },
+          {
+            "id": "id2092",
+            "name": "port_gw_in_luxembourg",
+            "dir": "in",
+            "dataType": "command_data"
+          },
+          {
+            "id": "id2093",
+            "name": "port_gw_in_netherlands",
+            "dir": "in",
+            "dataType": "command_data"
+          },
+          {
+            "id": "id2094",
+            "name": "port_gw_in_unitedkingdom",
+            "dir": "in",
+            "dataType": "command_data"
+          },
+          {
+            "id": "id2095",
+            "name": "port_gw_in_ireland",
+            "dir": "in",
+            "dataType": "command_data"
+          },
+          {
+            "id": "id2096",
+            "name": "port_gw_in_portugal",
+            "dir": "in",
+            "dataType": "command_data"
+          },
+          {
+            "id": "id2097",
+            "name": "port_gw_in_switzerland",
+            "dir": "in",
+            "dataType": "command_data"
+          },
+          {
+            "id": "id2098",
+            "name": "port_gw_in_austria",
+            "dir": "in",
+            "dataType": "command_data"
+          },
+          {
+            "id": "id2099",
+            "name": "port_gw_in_denmark",
+            "dir": "in",
+            "dataType": "command_data"
+          },
+          {
+            "id": "id2100",
+            "name": "port_gw_in_norway",
+            "dir": "in",
+            "dataType": "command_data"
+          },
+          {
+            "id": "id2101",
+            "name": "port_gw_in_sweden",
+            "dir": "in",
+            "dataType": "command_data"
+          },
+          {
+            "id": "id2102",
+            "name": "port_gw_in_finland",
+            "dir": "in",
+            "dataType": "command_data"
+          },
+          {
+            "id": "id2103",
+            "name": "port_gw_in_czechrepublic",
+            "dir": "in",
+            "dataType": "command_data"
+          },
+          {
+            "id": "id2104",
+            "name": "port_gw_in_slovakia",
+            "dir": "in",
+            "dataType": "command_data"
+          },
+          {
+            "id": "id2105",
+            "name": "port_gw_in_poland",
+            "dir": "in",
+            "dataType": "command_data"
+          },
+          {
+            "id": "id2106",
+            "name": "port_gw_in_hungary",
+            "dir": "in",
+            "dataType": "command_data"
+          },
+          {
+            "id": "id2107",
+            "name": "port_gw_in_romania",
+            "dir": "in",
+            "dataType": "command_data"
+          },
+          {
+            "id": "id2108",
+            "name": "port_gw_in_bulgaria",
+            "dir": "in",
+            "dataType": "command_data"
+          },
+          {
+            "id": "id2109",
+            "name": "port_gw_in_croatia",
+            "dir": "in",
+            "dataType": "command_data"
+          },
+          {
+            "id": "id2110",
+            "name": "port_gw_in_slovenia",
+            "dir": "in",
+            "dataType": "command_data"
+          },
+          {
+            "id": "id2111",
+            "name": "port_gw_in_lithuania",
+            "dir": "in",
+            "dataType": "command_data"
+          },
+          {
+            "id": "id2112",
+            "name": "port_gw_in_latvia",
+            "dir": "in",
+            "dataType": "command_data"
+          },
+          {
+            "id": "id2113",
+            "name": "port_gw_in_estonia",
+            "dir": "in",
+            "dataType": "command_data"
+          },
+          {
+            "id": "id2114",
+            "name": "port_gw_in_iceland",
+            "dir": "in",
+            "dataType": "command_data"
+          },
+          {
+            "id": "id2115",
+            "name": "port_gw_in_ukraine",
+            "dir": "in",
+            "dataType": "command_data"
+          },
+          {
+            "id": "id2116",
+            "name": "port_gw_in_moldova",
+            "dir": "in",
+            "dataType": "command_data"
+          },
+          {
+            "id": "id2117",
+            "name": "port_gw_in_greece",
+            "dir": "in",
+            "dataType": "command_data"
+          },
+          {
+            "id": "id2118",
+            "name": "port_gw_in_malta",
+            "dir": "in",
+            "dataType": "command_data"
+          },
+          {
+            "id": "id2119",
+            "name": "port_gw_in_turkey",
+            "dir": "in",
+            "dataType": "command_data"
+          },
+          {
+            "id": "id2120",
+            "name": "port_gw_in_cyprus",
+            "dir": "in",
+            "dataType": "command_data"
+          },
+          {
+            "id": "id2121",
+            "name": "port_gw_in_spain",
+            "dir": "in",
+            "dataType": "command_data"
+          },
+          {
+            "id": "id2122",
+            "name": "port_gw_in_italy",
+            "dir": "in",
+            "dataType": "command_data"
+          },
+          {
+            "id": "id2123",
+            "name": "port_gw_in_albania",
+            "dir": "in",
+            "dataType": "command_data"
+          },
+          {
+            "id": "id2124",
+            "name": "port_gw_in_bosniaherzegovina",
+            "dir": "in",
+            "dataType": "command_data"
+          },
+          {
+            "id": "id2125",
+            "name": "port_gw_in_serbia",
+            "dir": "in",
+            "dataType": "command_data"
+          },
+          {
+            "id": "id2126",
+            "name": "port_gw_in_montenegro",
+            "dir": "in",
+            "dataType": "command_data"
+          },
+          {
+            "id": "id2127",
+            "name": "port_gw_in_northmacedonia",
+            "dir": "in",
+            "dataType": "command_data"
+          },
+          {
+            "id": "id2128",
+            "name": "port_gw_in_monaco",
+            "dir": "in",
+            "dataType": "command_data"
+          },
+          {
+            "id": "id2129",
+            "name": "port_gw_in_armenia",
+            "dir": "in",
+            "dataType": "command_data"
+          },
+          {
+            "id": "id2130",
+            "name": "port_gw_in_georgia",
+            "dir": "in",
+            "dataType": "command_data"
+          },
+          {
+            "id": "id2131",
+            "name": "port_gw_in_aoc",
+            "dir": "in",
+            "dataType": "command_data"
+          },
+          {
+            "id": "id2132",
+            "name": "port_gw_in_atmp",
+            "dir": "in",
+            "dataType": "command_data"
+          },
+          {
+            "id": "id2133",
+            "name": "port_gw_out_nmoc",
+            "dir": "out",
+            "dataType": "command_data"
+          },
+          {
+            "id": "id2134",
+            "name": "port_gw_out_cfmu",
+            "dir": "out",
+            "dataType": "command_data"
+          }
+        ]
+      },
+      {
+        "id": "id2135",
+        "name": "NMOC",
+        "x": 900,
+        "y": 900,
+        "ports": [
+          {
+            "id": "id2136",
+            "name": "port_nmoc_in",
+            "dir": "in",
+            "dataType": "command_data"
+          },
+          {
+            "id": "id2137",
+            "name": "port_nmoc_out_bcf",
+            "dir": "out",
+            "dataType": "command_data"
+          }
+        ]
+      },
+      {
+        "id": "id2138",
+        "name": "CFMU",
+        "x": 900,
+        "y": 1300,
+        "ports": [
+          {
+            "id": "id2139",
+            "name": "port_cfmu_in",
+            "dir": "in",
+            "dataType": "command_data"
+          },
+          {
+            "id": "id2140",
+            "name": "port_cfmu_out_fdps",
+            "dir": "out",
+            "dataType": "command_data"
+          }
+        ]
+      },
+      {
+        "id": "id2141",
+        "name": "FDPS",
+        "x": 1200,
+        "y": 1300,
+        "ports": [
+          {
+            "id": "id2142",
+            "name": "port_fdps_in",
+            "dir": "in",
+            "dataType": "command_data"
+          },
+          {
+            "id": "id2143",
+            "name": "port_fdps_out",
+            "dir": "out",
+            "dataType": "command_data"
+          }
+        ]
+      },
+      {
+        "id": "id2144",
+        "name": "BusinessCellFlow",
+        "x": 1200,
+        "y": 900,
+        "ports": [
+          {
+            "id": "id2145",
+            "name": "port_bcf_in",
+            "dir": "in",
+            "dataType": "command_data"
+          },
+          {
+            "id": "id2146",
+            "name": "port_bcf_out",
+            "dir": "out",
+            "dataType": "command_data"
+          }
+        ]
+      },
+      {
+        "id": "id2147",
+        "name": "TraditionalStructureData",
+        "x": 1500,
+        "y": 1300,
+        "ports": [
+          {
+            "id": "id2148",
+            "name": "port_tsd_in",
+            "dir": "in",
+            "dataType": "command_data"
+          },
+          {
+            "id": "id2149",
+            "name": "port_tsd_out",
+            "dir": "out",
+            "dataType": "command_data"
+          }
+        ]
+      },
+      {
+        "id": "id2150",
+        "name": "BIEcosystem",
+        "x": 1500,
+        "y": 900,
+        "ports": [
+          {
+            "id": "id2151",
+            "name": "port_bi_in_bcf",
+            "dir": "in",
+            "dataType": "command_data"
+          },
+          {
+            "id": "id2152",
+            "name": "port_bi_in_tsd",
+            "dir": "in",
+            "dataType": "command_data"
+          }
+        ]
+      }
+    ],
+    "connectors": [
+      {
+        "id": "id2153",
+        "name": "con_ANSP_Belgium_to_Gateway",
+        "fromComp": "id2000",
+        "fromPort": "id2001",
+        "toComp": "id2088",
+        "toPort": "id2089"
+      },
+      {
+        "id": "id2154",
+        "name": "con_ANSP_France_to_Gateway",
+        "fromComp": "id2002",
+        "fromPort": "id2003",
+        "toComp": "id2088",
+        "toPort": "id2090"
+      },
+      {
+        "id": "id2155",
+        "name": "con_ANSP_Germany_to_Gateway",
+        "fromComp": "id2004",
+        "fromPort": "id2005",
+        "toComp": "id2088",
+        "toPort": "id2091"
+      },
+      {
+        "id": "id2156",
+        "name": "con_ANSP_Luxembourg_to_Gateway",
+        "fromComp": "id2006",
+        "fromPort": "id2007",
+        "toComp": "id2088",
+        "toPort": "id2092"
+      },
+      {
+        "id": "id2157",
+        "name": "con_ANSP_Netherlands_to_Gateway",
+        "fromComp": "id2008",
+        "fromPort": "id2009",
+        "toComp": "id2088",
+        "toPort": "id2093"
+      },
+      {
+        "id": "id2158",
+        "name": "con_ANSP_UnitedKingdom_to_Gateway",
+        "fromComp": "id2010",
+        "fromPort": "id2011",
+        "toComp": "id2088",
+        "toPort": "id2094"
+      },
+      {
+        "id": "id2159",
+        "name": "con_ANSP_Ireland_to_Gateway",
+        "fromComp": "id2012",
+        "fromPort": "id2013",
+        "toComp": "id2088",
+        "toPort": "id2095"
+      },
+      {
+        "id": "id2160",
+        "name": "con_ANSP_Portugal_to_Gateway",
+        "fromComp": "id2014",
+        "fromPort": "id2015",
+        "toComp": "id2088",
+        "toPort": "id2096"
+      },
+      {
+        "id": "id2161",
+        "name": "con_ANSP_Switzerland_to_Gateway",
+        "fromComp": "id2016",
+        "fromPort": "id2017",
+        "toComp": "id2088",
+        "toPort": "id2097"
+      },
+      {
+        "id": "id2162",
+        "name": "con_ANSP_Austria_to_Gateway",
+        "fromComp": "id2018",
+        "fromPort": "id2019",
+        "toComp": "id2088",
+        "toPort": "id2098"
+      },
+      {
+        "id": "id2163",
+        "name": "con_ANSP_Denmark_to_Gateway",
+        "fromComp": "id2020",
+        "fromPort": "id2021",
+        "toComp": "id2088",
+        "toPort": "id2099"
+      },
+      {
+        "id": "id2164",
+        "name": "con_ANSP_Norway_to_Gateway",
+        "fromComp": "id2022",
+        "fromPort": "id2023",
+        "toComp": "id2088",
+        "toPort": "id2100"
+      },
+      {
+        "id": "id2165",
+        "name": "con_ANSP_Sweden_to_Gateway",
+        "fromComp": "id2024",
+        "fromPort": "id2025",
+        "toComp": "id2088",
+        "toPort": "id2101"
+      },
+      {
+        "id": "id2166",
+        "name": "con_ANSP_Finland_to_Gateway",
+        "fromComp": "id2026",
+        "fromPort": "id2027",
+        "toComp": "id2088",
+        "toPort": "id2102"
+      },
+      {
+        "id": "id2167",
+        "name": "con_ANSP_CzechRepublic_to_Gateway",
+        "fromComp": "id2028",
+        "fromPort": "id2029",
+        "toComp": "id2088",
+        "toPort": "id2103"
+      },
+      {
+        "id": "id2168",
+        "name": "con_ANSP_Slovakia_to_Gateway",
+        "fromComp": "id2030",
+        "fromPort": "id2031",
+        "toComp": "id2088",
+        "toPort": "id2104"
+      },
+      {
+        "id": "id2169",
+        "name": "con_ANSP_Poland_to_Gateway",
+        "fromComp": "id2032",
+        "fromPort": "id2033",
+        "toComp": "id2088",
+        "toPort": "id2105"
+      },
+      {
+        "id": "id2170",
+        "name": "con_ANSP_Hungary_to_Gateway",
+        "fromComp": "id2034",
+        "fromPort": "id2035",
+        "toComp": "id2088",
+        "toPort": "id2106"
+      },
+      {
+        "id": "id2171",
+        "name": "con_ANSP_Romania_to_Gateway",
+        "fromComp": "id2036",
+        "fromPort": "id2037",
+        "toComp": "id2088",
+        "toPort": "id2107"
+      },
+      {
+        "id": "id2172",
+        "name": "con_ANSP_Bulgaria_to_Gateway",
+        "fromComp": "id2038",
+        "fromPort": "id2039",
+        "toComp": "id2088",
+        "toPort": "id2108"
+      },
+      {
+        "id": "id2173",
+        "name": "con_ANSP_Croatia_to_Gateway",
+        "fromComp": "id2040",
+        "fromPort": "id2041",
+        "toComp": "id2088",
+        "toPort": "id2109"
+      },
+      {
+        "id": "id2174",
+        "name": "con_ANSP_Slovenia_to_Gateway",
+        "fromComp": "id2042",
+        "fromPort": "id2043",
+        "toComp": "id2088",
+        "toPort": "id2110"
+      },
+      {
+        "id": "id2175",
+        "name": "con_ANSP_Lithuania_to_Gateway",
+        "fromComp": "id2044",
+        "fromPort": "id2045",
+        "toComp": "id2088",
+        "toPort": "id2111"
+      },
+      {
+        "id": "id2176",
+        "name": "con_ANSP_Latvia_to_Gateway",
+        "fromComp": "id2046",
+        "fromPort": "id2047",
+        "toComp": "id2088",
+        "toPort": "id2112"
+      },
+      {
+        "id": "id2177",
+        "name": "con_ANSP_Estonia_to_Gateway",
+        "fromComp": "id2048",
+        "fromPort": "id2049",
+        "toComp": "id2088",
+        "toPort": "id2113"
+      },
+      {
+        "id": "id2178",
+        "name": "con_ANSP_Iceland_to_Gateway",
+        "fromComp": "id2050",
+        "fromPort": "id2051",
+        "toComp": "id2088",
+        "toPort": "id2114"
+      },
+      {
+        "id": "id2179",
+        "name": "con_ANSP_Ukraine_to_Gateway",
+        "fromComp": "id2052",
+        "fromPort": "id2053",
+        "toComp": "id2088",
+        "toPort": "id2115"
+      },
+      {
+        "id": "id2180",
+        "name": "con_ANSP_Moldova_to_Gateway",
+        "fromComp": "id2054",
+        "fromPort": "id2055",
+        "toComp": "id2088",
+        "toPort": "id2116"
+      },
+      {
+        "id": "id2181",
+        "name": "con_ANSP_Greece_to_Gateway",
+        "fromComp": "id2056",
+        "fromPort": "id2057",
+        "toComp": "id2088",
+        "toPort": "id2117"
+      },
+      {
+        "id": "id2182",
+        "name": "con_ANSP_Malta_to_Gateway",
+        "fromComp": "id2058",
+        "fromPort": "id2059",
+        "toComp": "id2088",
+        "toPort": "id2118"
+      },
+      {
+        "id": "id2183",
+        "name": "con_ANSP_Turkey_to_Gateway",
+        "fromComp": "id2060",
+        "fromPort": "id2061",
+        "toComp": "id2088",
+        "toPort": "id2119"
+      },
+      {
+        "id": "id2184",
+        "name": "con_ANSP_Cyprus_to_Gateway",
+        "fromComp": "id2062",
+        "fromPort": "id2063",
+        "toComp": "id2088",
+        "toPort": "id2120"
+      },
+      {
+        "id": "id2185",
+        "name": "con_ANSP_Spain_to_Gateway",
+        "fromComp": "id2064",
+        "fromPort": "id2065",
+        "toComp": "id2088",
+        "toPort": "id2121"
+      },
+      {
+        "id": "id2186",
+        "name": "con_ANSP_Italy_to_Gateway",
+        "fromComp": "id2066",
+        "fromPort": "id2067",
+        "toComp": "id2088",
+        "toPort": "id2122"
+      },
+      {
+        "id": "id2187",
+        "name": "con_ANSP_Albania_to_Gateway",
+        "fromComp": "id2068",
+        "fromPort": "id2069",
+        "toComp": "id2088",
+        "toPort": "id2123"
+      },
+      {
+        "id": "id2188",
+        "name": "con_ANSP_BosniaHerzegovina_to_Gateway",
+        "fromComp": "id2070",
+        "fromPort": "id2071",
+        "toComp": "id2088",
+        "toPort": "id2124"
+      },
+      {
+        "id": "id2189",
+        "name": "con_ANSP_Serbia_to_Gateway",
+        "fromComp": "id2072",
+        "fromPort": "id2073",
+        "toComp": "id2088",
+        "toPort": "id2125"
+      },
+      {
+        "id": "id2190",
+        "name": "con_ANSP_Montenegro_to_Gateway",
+        "fromComp": "id2074",
+        "fromPort": "id2075",
+        "toComp": "id2088",
+        "toPort": "id2126"
+      },
+      {
+        "id": "id2191",
+        "name": "con_ANSP_NorthMacedonia_to_Gateway",
+        "fromComp": "id2076",
+        "fromPort": "id2077",
+        "toComp": "id2088",
+        "toPort": "id2127"
+      },
+      {
+        "id": "id2192",
+        "name": "con_ANSP_Monaco_to_Gateway",
+        "fromComp": "id2078",
+        "fromPort": "id2079",
+        "toComp": "id2088",
+        "toPort": "id2128"
+      },
+      {
+        "id": "id2193",
+        "name": "con_ANSP_Armenia_to_Gateway",
+        "fromComp": "id2080",
+        "fromPort": "id2081",
+        "toComp": "id2088",
+        "toPort": "id2129"
+      },
+      {
+        "id": "id2194",
+        "name": "con_ANSP_Georgia_to_Gateway",
+        "fromComp": "id2082",
+        "fromPort": "id2083",
+        "toComp": "id2088",
+        "toPort": "id2130"
+      },
+      {
+        "id": "id2195",
+        "name": "con_AOC_to_Gateway",
+        "fromComp": "id2084",
+        "fromPort": "id2085",
+        "toComp": "id2088",
+        "toPort": "id2131"
+      },
+      {
+        "id": "id2196",
+        "name": "con_ATMPortal_to_Gateway",
+        "fromComp": "id2086",
+        "fromPort": "id2087",
+        "toComp": "id2088",
+        "toPort": "id2132"
+      },
+      {
+        "id": "id2197",
+        "name": "con_Gateway_to_NMOC",
+        "fromComp": "id2088",
+        "fromPort": "id2133",
+        "toComp": "id2135",
+        "toPort": "id2136"
+      },
+      {
+        "id": "id2198",
+        "name": "con_Gateway_to_CFMU",
+        "fromComp": "id2088",
+        "fromPort": "id2134",
+        "toComp": "id2138",
+        "toPort": "id2139"
+      },
+      {
+        "id": "id2199",
+        "name": "con_NMOC_to_BusinessCellFlow",
+        "fromComp": "id2135",
+        "fromPort": "id2137",
+        "toComp": "id2144",
+        "toPort": "id2145"
+      },
+      {
+        "id": "id2200",
+        "name": "con_CFMU_to_FDPS",
+        "fromComp": "id2138",
+        "fromPort": "id2140",
+        "toComp": "id2141",
+        "toPort": "id2142"
+      },
+      {
+        "id": "id2201",
+        "name": "con_FDPS_to_TraditionalStructureData",
+        "fromComp": "id2141",
+        "fromPort": "id2143",
+        "toComp": "id2147",
+        "toPort": "id2148"
+      },
+      {
+        "id": "id2202",
+        "name": "con_BusinessCellFlow_to_BIEcosystem",
+        "fromComp": "id2144",
+        "fromPort": "id2146",
+        "toComp": "id2150",
+        "toPort": "id2151"
+      },
+      {
+        "id": "id2203",
+        "name": "con_TraditionalStructureData_to_BIEcosystem",
+        "fromComp": "id2147",
+        "fromPort": "id2149",
+        "toComp": "id2150",
+        "toPort": "id2152"
+      }
+    ],
+    "checks": [
+      {
+        "id": "chk1",
+        "overlay": "B_ISO_8_24_V9_2",
+        "comp1": "ANSP_Belgium",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk2",
+        "overlay": "B_ISO_8_6",
+        "comp1": "ANSP_Belgium",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk3",
+        "overlay": "B_ISO_8_5_V2_10",
+        "comp1": "ANSP_Belgium",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk4",
+        "overlay": "B_ISO_8_24_V9_2",
+        "comp1": "ANSP_France",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk5",
+        "overlay": "B_ISO_8_6",
+        "comp1": "ANSP_France",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk6",
+        "overlay": "B_ISO_8_5_V2_10",
+        "comp1": "ANSP_France",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk7",
+        "overlay": "B_ISO_8_24_V9_2",
+        "comp1": "ANSP_Germany",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk8",
+        "overlay": "B_ISO_8_6",
+        "comp1": "ANSP_Germany",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk9",
+        "overlay": "B_ISO_8_5_V2_10",
+        "comp1": "ANSP_Germany",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk10",
+        "overlay": "B_ISO_8_24_V9_2",
+        "comp1": "ANSP_Luxembourg",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk11",
+        "overlay": "B_ISO_8_6",
+        "comp1": "ANSP_Luxembourg",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk12",
+        "overlay": "B_ISO_8_24_V9_2",
+        "comp1": "ANSP_Netherlands",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk13",
+        "overlay": "B_ISO_8_6",
+        "comp1": "ANSP_Netherlands",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk14",
+        "overlay": "B_ISO_8_24_V9_2",
+        "comp1": "ANSP_UnitedKingdom",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk15",
+        "overlay": "B_ISO_8_6",
+        "comp1": "ANSP_UnitedKingdom",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk16",
+        "overlay": "B_ISO_8_24_V9_2",
+        "comp1": "ANSP_Ireland",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk17",
+        "overlay": "B_ISO_8_6",
+        "comp1": "ANSP_Ireland",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk18",
+        "overlay": "B_ISO_8_24_V9_2",
+        "comp1": "ANSP_Portugal",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk19",
+        "overlay": "B_ISO_8_6",
+        "comp1": "ANSP_Portugal",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk20",
+        "overlay": "B_ISO_8_24_V9_2",
+        "comp1": "ANSP_Switzerland",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk21",
+        "overlay": "B_ISO_8_6",
+        "comp1": "ANSP_Switzerland",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk22",
+        "overlay": "B_ISO_8_24_V9_2",
+        "comp1": "ANSP_Austria",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk23",
+        "overlay": "B_ISO_8_6",
+        "comp1": "ANSP_Austria",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk24",
+        "overlay": "B_ISO_8_24_V9_2",
+        "comp1": "ANSP_Denmark",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk25",
+        "overlay": "B_ISO_8_6",
+        "comp1": "ANSP_Denmark",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk26",
+        "overlay": "B_ISO_8_24_V9_2",
+        "comp1": "ANSP_Norway",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk27",
+        "overlay": "B_ISO_8_6",
+        "comp1": "ANSP_Norway",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk28",
+        "overlay": "B_ISO_8_24_V9_2",
+        "comp1": "ANSP_Sweden",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk29",
+        "overlay": "B_ISO_8_6",
+        "comp1": "ANSP_Sweden",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk30",
+        "overlay": "B_ISO_8_24_V9_2",
+        "comp1": "ANSP_Finland",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk31",
+        "overlay": "B_ISO_8_6",
+        "comp1": "ANSP_Finland",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk32",
+        "overlay": "B_ISO_8_24_V9_2",
+        "comp1": "ANSP_CzechRepublic",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk33",
+        "overlay": "B_ISO_8_6",
+        "comp1": "ANSP_CzechRepublic",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk34",
+        "overlay": "B_ISO_8_24_V9_2",
+        "comp1": "ANSP_Slovakia",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk35",
+        "overlay": "B_ISO_8_6",
+        "comp1": "ANSP_Slovakia",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk36",
+        "overlay": "B_ISO_8_24_V9_2",
+        "comp1": "ANSP_Poland",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk37",
+        "overlay": "B_ISO_8_6",
+        "comp1": "ANSP_Poland",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk38",
+        "overlay": "B_ISO_8_24_V9_2",
+        "comp1": "ANSP_Hungary",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk39",
+        "overlay": "B_ISO_8_6",
+        "comp1": "ANSP_Hungary",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk40",
+        "overlay": "B_ISO_8_24_V9_2",
+        "comp1": "ANSP_Romania",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk41",
+        "overlay": "B_ISO_8_6",
+        "comp1": "ANSP_Romania",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk42",
+        "overlay": "B_ISO_8_24_V9_2",
+        "comp1": "ANSP_Bulgaria",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk43",
+        "overlay": "B_ISO_8_6",
+        "comp1": "ANSP_Bulgaria",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk44",
+        "overlay": "B_ISO_8_24_V9_2",
+        "comp1": "ANSP_Croatia",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk45",
+        "overlay": "B_ISO_8_6",
+        "comp1": "ANSP_Croatia",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk46",
+        "overlay": "B_ISO_8_24_V9_2",
+        "comp1": "ANSP_Slovenia",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk47",
+        "overlay": "B_ISO_8_6",
+        "comp1": "ANSP_Slovenia",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk48",
+        "overlay": "B_ISO_8_24_V9_2",
+        "comp1": "ANSP_Lithuania",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk49",
+        "overlay": "B_ISO_8_6",
+        "comp1": "ANSP_Lithuania",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk50",
+        "overlay": "B_ISO_8_24_V9_2",
+        "comp1": "ANSP_Latvia",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk51",
+        "overlay": "B_ISO_8_6",
+        "comp1": "ANSP_Latvia",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk52",
+        "overlay": "B_ISO_8_24_V9_2",
+        "comp1": "ANSP_Estonia",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk53",
+        "overlay": "B_ISO_8_6",
+        "comp1": "ANSP_Estonia",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk54",
+        "overlay": "B_ISO_8_24_V9_2",
+        "comp1": "ANSP_Iceland",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk55",
+        "overlay": "B_ISO_8_6",
+        "comp1": "ANSP_Iceland",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk56",
+        "overlay": "B_ISO_8_24_V9_2",
+        "comp1": "ANSP_Ukraine",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk57",
+        "overlay": "B_ISO_8_6",
+        "comp1": "ANSP_Ukraine",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk58",
+        "overlay": "B_ISO_8_24_V9_2",
+        "comp1": "ANSP_Moldova",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk59",
+        "overlay": "B_ISO_8_6",
+        "comp1": "ANSP_Moldova",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk60",
+        "overlay": "B_ISO_8_24_V9_2",
+        "comp1": "ANSP_Greece",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk61",
+        "overlay": "B_ISO_8_6",
+        "comp1": "ANSP_Greece",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk62",
+        "overlay": "B_ISO_8_24_V9_2",
+        "comp1": "ANSP_Malta",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk63",
+        "overlay": "B_ISO_8_6",
+        "comp1": "ANSP_Malta",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk64",
+        "overlay": "B_ISO_8_24_V9_2",
+        "comp1": "ANSP_Turkey",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk65",
+        "overlay": "B_ISO_8_6",
+        "comp1": "ANSP_Turkey",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk66",
+        "overlay": "B_ISO_8_24_V9_2",
+        "comp1": "ANSP_Cyprus",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk67",
+        "overlay": "B_ISO_8_6",
+        "comp1": "ANSP_Cyprus",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk68",
+        "overlay": "B_ISO_8_24_V9_2",
+        "comp1": "ANSP_Spain",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk69",
+        "overlay": "B_ISO_8_6",
+        "comp1": "ANSP_Spain",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk70",
+        "overlay": "B_ISO_8_24_V9_2",
+        "comp1": "ANSP_Italy",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk71",
+        "overlay": "B_ISO_8_6",
+        "comp1": "ANSP_Italy",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk72",
+        "overlay": "B_ISO_8_24_V9_2",
+        "comp1": "ANSP_Albania",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk73",
+        "overlay": "B_ISO_8_6",
+        "comp1": "ANSP_Albania",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk74",
+        "overlay": "B_ISO_8_24_V9_2",
+        "comp1": "ANSP_BosniaHerzegovina",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk75",
+        "overlay": "B_ISO_8_6",
+        "comp1": "ANSP_BosniaHerzegovina",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk76",
+        "overlay": "B_ISO_8_24_V9_2",
+        "comp1": "ANSP_Serbia",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk77",
+        "overlay": "B_ISO_8_6",
+        "comp1": "ANSP_Serbia",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk78",
+        "overlay": "B_ISO_8_24_V9_2",
+        "comp1": "ANSP_Montenegro",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk79",
+        "overlay": "B_ISO_8_6",
+        "comp1": "ANSP_Montenegro",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk80",
+        "overlay": "B_ISO_8_24_V9_2",
+        "comp1": "ANSP_NorthMacedonia",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk81",
+        "overlay": "B_ISO_8_6",
+        "comp1": "ANSP_NorthMacedonia",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk82",
+        "overlay": "B_ISO_8_24_V9_2",
+        "comp1": "ANSP_Monaco",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk83",
+        "overlay": "B_ISO_8_6",
+        "comp1": "ANSP_Monaco",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk84",
+        "overlay": "B_ISO_8_24_V9_2",
+        "comp1": "ANSP_Armenia",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk85",
+        "overlay": "B_ISO_8_6",
+        "comp1": "ANSP_Armenia",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk86",
+        "overlay": "B_ISO_8_24_V9_2",
+        "comp1": "ANSP_Georgia",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk87",
+        "overlay": "B_ISO_8_6",
+        "comp1": "ANSP_Georgia",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk88",
+        "overlay": "B_ISO_8_24_V9_2",
+        "comp1": "AOC",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk89",
+        "overlay": "B_ISO_8_6",
+        "comp1": "AOC",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk90",
+        "overlay": "B_ISO_8_24_V9_2",
+        "comp1": "ATMPortal",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk91",
+        "overlay": "B_ISO_8_6",
+        "comp1": "ATMPortal",
+        "comp2": "Gateway"
+      },
+      {
+        "id": "chk92",
+        "overlay": "B_ISO_8_24_V9_2",
+        "comp1": "Gateway",
+        "comp2": "NMOC"
+      },
+      {
+        "id": "chk93",
+        "overlay": "B_ISO_8_6",
+        "comp1": "Gateway",
+        "comp2": "NMOC"
+      },
+      {
+        "id": "chk94",
+        "overlay": "B_ISO_8_24_V9_2",
+        "comp1": "Gateway",
+        "comp2": "CFMU"
+      },
+      {
+        "id": "chk95",
+        "overlay": "B_ISO_8_6",
+        "comp1": "Gateway",
+        "comp2": "CFMU"
+      },
+      {
+        "id": "chk96",
+        "overlay": "B_ISO_8_24_V9_2",
+        "comp1": "NMOC",
+        "comp2": "BusinessCellFlow"
+      },
+      {
+        "id": "chk97",
+        "overlay": "B_ISO_8_6",
+        "comp1": "NMOC",
+        "comp2": "BusinessCellFlow"
+      },
+      {
+        "id": "chk98",
+        "overlay": "B_ISO_8_24_V9_2",
+        "comp1": "CFMU",
+        "comp2": "FDPS"
+      },
+      {
+        "id": "chk99",
+        "overlay": "B_ISO_8_6",
+        "comp1": "CFMU",
+        "comp2": "FDPS"
+      },
+      {
+        "id": "chk100",
+        "overlay": "B_ISO_8_24_V9_2",
+        "comp1": "FDPS",
+        "comp2": "TraditionalStructureData"
+      },
+      {
+        "id": "chk101",
+        "overlay": "B_ISO_8_6",
+        "comp1": "FDPS",
+        "comp2": "TraditionalStructureData"
+      },
+      {
+        "id": "chk102",
+        "overlay": "B_ISO_8_24",
+        "comp1": "BusinessCellFlow",
+        "comp2": "BIEcosystem"
+      },
+      {
+        "id": "chk103",
+        "overlay": "B_ISO_8_6",
+        "comp1": "BusinessCellFlow",
+        "comp2": "BIEcosystem"
+      },
+      {
+        "id": "chk104",
+        "overlay": "B_ISO_8_5_V2_10",
+        "comp1": "TraditionalStructureData",
+        "comp2": "BIEcosystem"
+      },
+      {
+        "id": "chk105",
+        "overlay": "B_ISO_8_24",
+        "comp1": "TraditionalStructureData",
+        "comp2": "BIEcosystem"
+      },
+      {
+        "id": "chk106",
+        "overlay": "B_ISO_8_6",
+        "comp1": "TraditionalStructureData",
+        "comp2": "BIEcosystem"
+      },
+      {
+        "id": "chk107",
+        "overlay": "B_ISO_8_2_V4_2",
+        "comp1": "TraditionalStructureData",
+        "comp2": "BIEcosystem"
+      }
+    ],
+    "controls": {
+      "id2153": [
+        "SecureCommunicationTLS",
+        "informationDisclosureProof",
+        "SecureCommunicationRateLimiter",
+        "spoofProof"
+      ],
+      "id2154": [
+        "SecureCommunicationTLS",
+        "informationDisclosureProof",
+        "SecureCommunicationRateLimiter",
+        "spoofProof"
+      ],
+      "id2155": [
+        "SecureCommunicationTLS",
+        "informationDisclosureProof",
+        "SecureCommunicationRateLimiter",
+        "spoofProof"
+      ],
+      "id2156": [
+        "SecureCommunicationTLS",
+        "informationDisclosureProof",
+        "SecureCommunicationRateLimiter"
+      ],
+      "id2157": [
+        "SecureCommunicationTLS",
+        "informationDisclosureProof",
+        "SecureCommunicationRateLimiter"
+      ],
+      "id2158": [
+        "SecureCommunicationTLS",
+        "informationDisclosureProof",
+        "SecureCommunicationRateLimiter"
+      ],
+      "id2159": [
+        "SecureCommunicationTLS",
+        "informationDisclosureProof",
+        "SecureCommunicationRateLimiter"
+      ],
+      "id2160": [
+        "SecureCommunicationTLS",
+        "informationDisclosureProof",
+        "SecureCommunicationRateLimiter"
+      ],
+      "id2161": [
+        "SecureCommunicationTLS",
+        "informationDisclosureProof",
+        "SecureCommunicationRateLimiter"
+      ],
+      "id2162": [
+        "SecureCommunicationTLS",
+        "informationDisclosureProof",
+        "SecureCommunicationRateLimiter"
+      ],
+      "id2163": [
+        "SecureCommunicationTLS",
+        "informationDisclosureProof",
+        "SecureCommunicationRateLimiter"
+      ],
+      "id2164": [
+        "SecureCommunicationTLS",
+        "informationDisclosureProof",
+        "SecureCommunicationRateLimiter"
+      ],
+      "id2165": [
+        "SecureCommunicationTLS",
+        "informationDisclosureProof",
+        "SecureCommunicationRateLimiter"
+      ],
+      "id2166": [
+        "SecureCommunicationTLS",
+        "informationDisclosureProof",
+        "SecureCommunicationRateLimiter"
+      ],
+      "id2167": [
+        "SecureCommunicationTLS",
+        "informationDisclosureProof",
+        "SecureCommunicationRateLimiter"
+      ],
+      "id2168": [
+        "SecureCommunicationTLS",
+        "informationDisclosureProof",
+        "SecureCommunicationRateLimiter"
+      ],
+      "id2169": [
+        "SecureCommunicationTLS",
+        "informationDisclosureProof",
+        "SecureCommunicationRateLimiter"
+      ],
+      "id2170": [
+        "SecureCommunicationTLS",
+        "informationDisclosureProof",
+        "SecureCommunicationRateLimiter"
+      ],
+      "id2171": [
+        "SecureCommunicationTLS",
+        "informationDisclosureProof",
+        "SecureCommunicationRateLimiter"
+      ],
+      "id2172": [
+        "SecureCommunicationTLS",
+        "informationDisclosureProof",
+        "SecureCommunicationRateLimiter"
+      ],
+      "id2173": [
+        "SecureCommunicationTLS",
+        "informationDisclosureProof",
+        "SecureCommunicationRateLimiter"
+      ],
+      "id2174": [
+        "SecureCommunicationTLS",
+        "informationDisclosureProof",
+        "SecureCommunicationRateLimiter"
+      ],
+      "id2175": [
+        "SecureCommunicationTLS",
+        "informationDisclosureProof",
+        "SecureCommunicationRateLimiter"
+      ],
+      "id2176": [
+        "SecureCommunicationTLS",
+        "informationDisclosureProof",
+        "SecureCommunicationRateLimiter"
+      ],
+      "id2177": [
+        "SecureCommunicationTLS",
+        "informationDisclosureProof",
+        "SecureCommunicationRateLimiter"
+      ],
+      "id2178": [
+        "SecureCommunicationTLS",
+        "informationDisclosureProof",
+        "SecureCommunicationRateLimiter"
+      ],
+      "id2179": [
+        "SecureCommunicationTLS",
+        "informationDisclosureProof",
+        "SecureCommunicationRateLimiter"
+      ],
+      "id2180": [
+        "SecureCommunicationTLS",
+        "informationDisclosureProof",
+        "SecureCommunicationRateLimiter"
+      ],
+      "id2181": [
+        "SecureCommunicationTLS",
+        "informationDisclosureProof",
+        "SecureCommunicationRateLimiter"
+      ],
+      "id2182": [
+        "SecureCommunicationTLS",
+        "informationDisclosureProof",
+        "SecureCommunicationRateLimiter"
+      ],
+      "id2183": [
+        "SecureCommunicationTLS",
+        "informationDisclosureProof",
+        "SecureCommunicationRateLimiter"
+      ],
+      "id2184": [
+        "SecureCommunicationTLS",
+        "informationDisclosureProof",
+        "SecureCommunicationRateLimiter"
+      ],
+      "id2185": [
+        "SecureCommunicationTLS",
+        "informationDisclosureProof",
+        "SecureCommunicationRateLimiter"
+      ],
+      "id2186": [
+        "SecureCommunicationTLS",
+        "informationDisclosureProof",
+        "SecureCommunicationRateLimiter"
+      ],
+      "id2187": [
+        "SecureCommunicationTLS",
+        "informationDisclosureProof",
+        "SecureCommunicationRateLimiter"
+      ],
+      "id2188": [
+        "SecureCommunicationTLS",
+        "informationDisclosureProof",
+        "SecureCommunicationRateLimiter"
+      ],
+      "id2189": [
+        "SecureCommunicationTLS",
+        "informationDisclosureProof",
+        "SecureCommunicationRateLimiter"
+      ],
+      "id2190": [
+        "SecureCommunicationTLS",
+        "informationDisclosureProof",
+        "SecureCommunicationRateLimiter"
+      ],
+      "id2191": [
+        "SecureCommunicationTLS",
+        "informationDisclosureProof",
+        "SecureCommunicationRateLimiter"
+      ],
+      "id2192": [
+        "SecureCommunicationTLS",
+        "informationDisclosureProof",
+        "SecureCommunicationRateLimiter"
+      ],
+      "id2193": [
+        "SecureCommunicationTLS",
+        "informationDisclosureProof",
+        "SecureCommunicationRateLimiter"
+      ],
+      "id2194": [
+        "SecureCommunicationTLS",
+        "informationDisclosureProof",
+        "SecureCommunicationRateLimiter"
+      ],
+      "id2195": [
+        "SecureCommunicationTLS",
+        "informationDisclosureProof",
+        "SecureCommunicationRateLimiter"
+      ],
+      "id2196": [
+        "SecureCommunicationTLS",
+        "informationDisclosureProof",
+        "SecureCommunicationRateLimiter"
+      ],
+      "id2197": [
+        "SecureCommunicationTLS",
+        "informationDisclosureProof",
+        "SecureCommunicationRateLimiter"
+      ],
+      "id2198": [
+        "SecureCommunicationTLS",
+        "informationDisclosureProof",
+        "SecureCommunicationRateLimiter"
+      ],
+      "id2199": [
+        "SecureCommunicationTLS",
+        "informationDisclosureProof",
+        "SecureCommunicationRateLimiter"
+      ],
+      "id2200": [
+        "SecureCommunicationTLS",
+        "informationDisclosureProof",
+        "SecureCommunicationRateLimiter"
+      ],
+      "id2201": [
+        "SecureCommunicationTLS",
+        "informationDisclosureProof",
+        "SecureCommunicationRateLimiter"
+      ],
+      "id2202": [
+        "SecureCommunicationTLS",
+        "informationDisclosureProof",
+        "SecureCommunicationRateLimiter",
+        "EoPProof"
+      ],
+      "id2203": [
+        "SecureCommunicationTLS",
+        "spoofProof",
+        "informationDisclosureProof",
+        "SecureCommunicationRateLimiter",
+        "EoPProof"
+      ]
+    }
+  }
+}

@@ -1,0 +1,16 @@
+[% for (lib in pcl) { %]
+[% for (libCat in lib.categories) { %]
+[% for (p in libCat.properties) { %]
+pred [%=p.name%][[% for (dp in p.definitionParameters) { %][%=dp.name%]:[%=dp.type%][% if (dp != p.definitionParameters.last()) { %],[% } %][% } %]]{
+
+	[% if (p.isKindOf(OverlayPropertyDefinition)) { %]
+		[% for (i in p.instance) {%]
+			[%=i.propertyDefinition.name%][[% for (ip in i.parameters) { %][%=ip%][% if (ip != i.parameters.last()) { %],[% } %][% } %]]
+		[% } %]
+	[% } else { %]
+		[%=p.alloy%]
+	[% } %]
+}
+[%}%]
+[%}%]
+[%}%]

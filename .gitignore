@@ -1,0 +1,14 @@
+# Eclipse / Java
+.metadata/
+bin/
+target/
+*.class
+.settings/
+.project.bak
+# OS
+.DS_Store
+Thumbs.db
+# Editors
+*.swp
+.idea/
+.vscode/

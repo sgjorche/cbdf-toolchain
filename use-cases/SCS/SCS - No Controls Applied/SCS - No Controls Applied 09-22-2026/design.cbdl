@@ -1,0 +1,277 @@
+data command_data: TCP_Data;
+data telemetry_data: TCP_Data;
+
+
+component EngineerOperator {
+    engineer_operator_port_eo_send_commands -> command_data
+};
+
+component HMITerminal {
+    hmi_terminal_port_hmi_receive_requests <- command_data,
+    hmi_terminal_port_hmi_send_commands -> command_data
+};
+
+component MissionServers {
+    mission_servers_port_ms_receive_commands <- command_data,
+    mission_servers_port_ms_issue_commands_gs1 -> command_data,
+    mission_servers_port_ms_issue_commands_gs2 -> command_data,
+    mission_servers_port_ms_issue_commands_gs3 -> command_data
+};
+
+component GroundStation1 {
+    ground_station1_port_gs1_receive_commands <- command_data,
+    ground_station1_port_gs1_uplink_sat01 -> command_data,
+    ground_station1_port_gs1_uplink_sat02 -> command_data,
+    ground_station1_port_gs1_uplink_sat03 -> command_data,
+    ground_station1_port_gs1_uplink_sat04 -> command_data,
+    ground_station1_port_gs1_uplink_sat05 -> command_data,
+    ground_station1_port_gs1_uplink_sat06 -> command_data,
+    ground_station1_port_gs1_uplink_sat07 -> command_data,
+    ground_station1_port_gs1_uplink_sat08 -> command_data,
+    ground_station1_port_gs1_uplink_sat09 -> command_data,
+    ground_station1_port_gs1_uplink_sat10 -> command_data,
+    ground_station1_port_gs1_uplink_sat11 -> command_data,
+    ground_station1_port_gs1_uplink_sat12 -> command_data,
+    ground_station1_port_gs1_uplink_sat13 -> command_data,
+    ground_station1_port_gs1_uplink_sat14 -> command_data
+};
+
+component GroundStation2 {
+    ground_station2_port_gs2_receive_commands <- command_data,
+    ground_station2_port_gs2_uplink_sat15 -> command_data,
+    ground_station2_port_gs2_uplink_sat16 -> command_data,
+    ground_station2_port_gs2_uplink_sat17 -> command_data,
+    ground_station2_port_gs2_uplink_sat18 -> command_data,
+    ground_station2_port_gs2_uplink_sat19 -> command_data,
+    ground_station2_port_gs2_uplink_sat20 -> command_data,
+    ground_station2_port_gs2_uplink_sat21 -> command_data,
+    ground_station2_port_gs2_uplink_sat22 -> command_data,
+    ground_station2_port_gs2_uplink_sat23 -> command_data,
+    ground_station2_port_gs2_uplink_sat24 -> command_data,
+    ground_station2_port_gs2_uplink_sat25 -> command_data,
+    ground_station2_port_gs2_uplink_sat26 -> command_data,
+    ground_station2_port_gs2_uplink_sat27 -> command_data
+};
+
+component GroundStation3 {
+    ground_station3_port_gs3_receive_commands <- command_data,
+    ground_station3_port_gs3_uplink_sat28 -> command_data,
+    ground_station3_port_gs3_uplink_sat29 -> command_data,
+    ground_station3_port_gs3_uplink_sat30 -> command_data,
+    ground_station3_port_gs3_uplink_sat31 -> command_data,
+    ground_station3_port_gs3_uplink_sat32 -> command_data,
+    ground_station3_port_gs3_uplink_sat33 -> command_data,
+    ground_station3_port_gs3_uplink_sat34 -> command_data,
+    ground_station3_port_gs3_uplink_sat35 -> command_data,
+    ground_station3_port_gs3_uplink_sat36 -> command_data,
+    ground_station3_port_gs3_uplink_sat37 -> command_data,
+    ground_station3_port_gs3_uplink_sat38 -> command_data,
+    ground_station3_port_gs3_uplink_sat39 -> command_data,
+    ground_station3_port_gs3_uplink_sat40 -> command_data
+};
+
+component LEOSatellite01 {
+    leo_satellite01_port_sat01_receive_uplink <- command_data
+};
+
+component LEOSatellite02 {
+    leo_satellite02_port_sat02_receive_uplink <- command_data
+};
+
+component LEOSatellite03 {
+    leo_satellite03_port_sat03_receive_uplink <- command_data
+};
+
+component LEOSatellite04 {
+    leo_satellite04_port_sat04_receive_uplink <- command_data
+};
+
+component LEOSatellite05 {
+    leo_satellite05_port_sat05_receive_uplink <- command_data
+};
+
+component LEOSatellite06 {
+    leo_satellite06_port_sat06_receive_uplink <- command_data
+};
+
+component LEOSatellite07 {
+    leo_satellite07_port_sat07_receive_uplink <- command_data
+};
+
+component LEOSatellite08 {
+    leo_satellite08_port_sat08_receive_uplink <- command_data
+};
+
+component LEOSatellite09 {
+    leo_satellite09_port_sat09_receive_uplink <- command_data
+};
+
+component LEOSatellite10 {
+    leo_satellite10_port_sat10_receive_uplink <- command_data
+};
+
+component LEOSatellite11 {
+    leo_satellite11_port_sat11_receive_uplink <- command_data
+};
+
+component LEOSatellite12 {
+    leo_satellite12_port_sat12_receive_uplink <- command_data
+};
+
+component LEOSatellite13 {
+    leo_satellite13_port_sat13_receive_uplink <- command_data
+};
+
+component LEOSatellite14 {
+    leo_satellite14_port_sat14_receive_uplink <- command_data
+};
+
+component LEOSatellite15 {
+    leo_satellite15_port_sat15_receive_uplink <- command_data
+};
+
+component LEOSatellite16 {
+    leo_satellite16_port_sat16_receive_uplink <- command_data
+};
+
+component LEOSatellite17 {
+    leo_satellite17_port_sat17_receive_uplink <- command_data
+};
+
+component LEOSatellite18 {
+    leo_satellite18_port_sat18_receive_uplink <- command_data
+};
+
+component LEOSatellite19 {
+    leo_satellite19_port_sat19_receive_uplink <- command_data
+};
+
+component LEOSatellite20 {
+    leo_satellite20_port_sat20_receive_uplink <- command_data
+};
+
+component LEOSatellite21 {
+    leo_satellite21_port_sat21_receive_uplink <- command_data
+};
+
+component LEOSatellite22 {
+    leo_satellite22_port_sat22_receive_uplink <- command_data
+};
+
+component LEOSatellite23 {
+    leo_satellite23_port_sat23_receive_uplink <- command_data
+};
+
+component LEOSatellite24 {
+    leo_satellite24_port_sat24_receive_uplink <- command_data
+};
+
+component LEOSatellite25 {
+    leo_satellite25_port_sat25_receive_uplink <- command_data
+};
+
+component LEOSatellite26 {
+    leo_satellite26_port_sat26_receive_uplink <- command_data
+};
+
+component LEOSatellite27 {
+    leo_satellite27_port_sat27_receive_uplink <- command_data
+};
+
+component LEOSatellite28 {
+    leo_satellite28_port_sat28_receive_uplink <- command_data
+};
+
+component LEOSatellite29 {
+    leo_satellite29_port_sat29_receive_uplink <- command_data
+};
+
+component LEOSatellite30 {
+    leo_satellite30_port_sat30_receive_uplink <- command_data
+};
+
+component LEOSatellite31 {
+    leo_satellite31_port_sat31_receive_uplink <- command_data
+};
+
+component LEOSatellite32 {
+    leo_satellite32_port_sat32_receive_uplink <- command_data
+};
+
+component LEOSatellite33 {
+    leo_satellite33_port_sat33_receive_uplink <- command_data
+};
+
+component LEOSatellite34 {
+    leo_satellite34_port_sat34_receive_uplink <- command_data
+};
+
+component LEOSatellite35 {
+    leo_satellite35_port_sat35_receive_uplink <- command_data
+};
+
+component LEOSatellite36 {
+    leo_satellite36_port_sat36_receive_uplink <- command_data
+};
+
+component LEOSatellite37 {
+    leo_satellite37_port_sat37_receive_uplink <- command_data
+};
+
+component LEOSatellite38 {
+    leo_satellite38_port_sat38_receive_uplink <- command_data
+};
+
+component LEOSatellite39 {
+    leo_satellite39_port_sat39_receive_uplink <- command_data
+};
+
+component LEOSatellite40 {
+    leo_satellite40_port_sat40_receive_uplink <- command_data
+};
+
+connector con_EngineerOperator_to_HMITerminal: EngineerOperator.engineer_operator_port_eo_send_commands - HMITerminal.hmi_terminal_port_hmi_receive_requests;
+connector con_HMITerminal_to_MissionServers: HMITerminal.hmi_terminal_port_hmi_send_commands - MissionServers.mission_servers_port_ms_receive_commands;
+connector con_MissionServers_to_GroundStation1: MissionServers.mission_servers_port_ms_issue_commands_gs1 - GroundStation1.ground_station1_port_gs1_receive_commands;
+connector con_MissionServers_to_GroundStation2: MissionServers.mission_servers_port_ms_issue_commands_gs2 - GroundStation2.ground_station2_port_gs2_receive_commands;
+connector con_MissionServers_to_GroundStation3: MissionServers.mission_servers_port_ms_issue_commands_gs3 - GroundStation3.ground_station3_port_gs3_receive_commands;
+connector con_GroundStation1_to_LEOSatellite01: GroundStation1.ground_station1_port_gs1_uplink_sat01 - LEOSatellite01.leo_satellite01_port_sat01_receive_uplink;
+connector con_GroundStation1_to_LEOSatellite02: GroundStation1.ground_station1_port_gs1_uplink_sat02 - LEOSatellite02.leo_satellite02_port_sat02_receive_uplink;
+connector con_GroundStation1_to_LEOSatellite03: GroundStation1.ground_station1_port_gs1_uplink_sat03 - LEOSatellite03.leo_satellite03_port_sat03_receive_uplink;
+connector con_GroundStation1_to_LEOSatellite04: GroundStation1.ground_station1_port_gs1_uplink_sat04 - LEOSatellite04.leo_satellite04_port_sat04_receive_uplink;
+connector con_GroundStation1_to_LEOSatellite05: GroundStation1.ground_station1_port_gs1_uplink_sat05 - LEOSatellite05.leo_satellite05_port_sat05_receive_uplink;
+connector con_GroundStation1_to_LEOSatellite06: GroundStation1.ground_station1_port_gs1_uplink_sat06 - LEOSatellite06.leo_satellite06_port_sat06_receive_uplink;
+connector con_GroundStation1_to_LEOSatellite07: GroundStation1.ground_station1_port_gs1_uplink_sat07 - LEOSatellite07.leo_satellite07_port_sat07_receive_uplink;
+connector con_GroundStation1_to_LEOSatellite08: GroundStation1.ground_station1_port_gs1_uplink_sat08 - LEOSatellite08.leo_satellite08_port_sat08_receive_uplink;
+connector con_GroundStation1_to_LEOSatellite09: GroundStation1.ground_station1_port_gs1_uplink_sat09 - LEOSatellite09.leo_satellite09_port_sat09_receive_uplink;
+connector con_GroundStation1_to_LEOSatellite10: GroundStation1.ground_station1_port_gs1_uplink_sat10 - LEOSatellite10.leo_satellite10_port_sat10_receive_uplink;
+connector con_GroundStation1_to_LEOSatellite11: GroundStation1.ground_station1_port_gs1_uplink_sat11 - LEOSatellite11.leo_satellite11_port_sat11_receive_uplink;
+connector con_GroundStation1_to_LEOSatellite12: GroundStation1.ground_station1_port_gs1_uplink_sat12 - LEOSatellite12.leo_satellite12_port_sat12_receive_uplink;
+connector con_GroundStation1_to_LEOSatellite13: GroundStation1.ground_station1_port_gs1_uplink_sat13 - LEOSatellite13.leo_satellite13_port_sat13_receive_uplink;
+connector con_GroundStation1_to_LEOSatellite14: GroundStation1.ground_station1_port_gs1_uplink_sat14 - LEOSatellite14.leo_satellite14_port_sat14_receive_uplink;
+connector con_GroundStation2_to_LEOSatellite15: GroundStation2.ground_station2_port_gs2_uplink_sat15 - LEOSatellite15.leo_satellite15_port_sat15_receive_uplink;
+connector con_GroundStation2_to_LEOSatellite16: GroundStation2.ground_station2_port_gs2_uplink_sat16 - LEOSatellite16.leo_satellite16_port_sat16_receive_uplink;
+connector con_GroundStation2_to_LEOSatellite17: GroundStation2.ground_station2_port_gs2_uplink_sat17 - LEOSatellite17.leo_satellite17_port_sat17_receive_uplink;
+connector con_GroundStation2_to_LEOSatellite18: GroundStation2.ground_station2_port_gs2_uplink_sat18 - LEOSatellite18.leo_satellite18_port_sat18_receive_uplink;
+connector con_GroundStation2_to_LEOSatellite19: GroundStation2.ground_station2_port_gs2_uplink_sat19 - LEOSatellite19.leo_satellite19_port_sat19_receive_uplink;
+connector con_GroundStation2_to_LEOSatellite20: GroundStation2.ground_station2_port_gs2_uplink_sat20 - LEOSatellite20.leo_satellite20_port_sat20_receive_uplink;
+connector con_GroundStation2_to_LEOSatellite21: GroundStation2.ground_station2_port_gs2_uplink_sat21 - LEOSatellite21.leo_satellite21_port_sat21_receive_uplink;
+connector con_GroundStation2_to_LEOSatellite22: GroundStation2.ground_station2_port_gs2_uplink_sat22 - LEOSatellite22.leo_satellite22_port_sat22_receive_uplink;
+connector con_GroundStation2_to_LEOSatellite23: GroundStation2.ground_station2_port_gs2_uplink_sat23 - LEOSatellite23.leo_satellite23_port_sat23_receive_uplink;
+connector con_GroundStation2_to_LEOSatellite24: GroundStation2.ground_station2_port_gs2_uplink_sat24 - LEOSatellite24.leo_satellite24_port_sat24_receive_uplink;
+connector con_GroundStation2_to_LEOSatellite25: GroundStation2.ground_station2_port_gs2_uplink_sat25 - LEOSatellite25.leo_satellite25_port_sat25_receive_uplink;
+connector con_GroundStation2_to_LEOSatellite26: GroundStation2.ground_station2_port_gs2_uplink_sat26 - LEOSatellite26.leo_satellite26_port_sat26_receive_uplink;
+connector con_GroundStation2_to_LEOSatellite27: GroundStation2.ground_station2_port_gs2_uplink_sat27 - LEOSatellite27.leo_satellite27_port_sat27_receive_uplink;
+connector con_GroundStation3_to_LEOSatellite28: GroundStation3.ground_station3_port_gs3_uplink_sat28 - LEOSatellite28.leo_satellite28_port_sat28_receive_uplink;
+connector con_GroundStation3_to_LEOSatellite29: GroundStation3.ground_station3_port_gs3_uplink_sat29 - LEOSatellite29.leo_satellite29_port_sat29_receive_uplink;
+connector con_GroundStation3_to_LEOSatellite30: GroundStation3.ground_station3_port_gs3_uplink_sat30 - LEOSatellite30.leo_satellite30_port_sat30_receive_uplink;
+connector con_GroundStation3_to_LEOSatellite31: GroundStation3.ground_station3_port_gs3_uplink_sat31 - LEOSatellite31.leo_satellite31_port_sat31_receive_uplink;
+connector con_GroundStation3_to_LEOSatellite32: GroundStation3.ground_station3_port_gs3_uplink_sat32 - LEOSatellite32.leo_satellite32_port_sat32_receive_uplink;
+connector con_GroundStation3_to_LEOSatellite33: GroundStation3.ground_station3_port_gs3_uplink_sat33 - LEOSatellite33.leo_satellite33_port_sat33_receive_uplink;
+connector con_GroundStation3_to_LEOSatellite34: GroundStation3.ground_station3_port_gs3_uplink_sat34 - LEOSatellite34.leo_satellite34_port_sat34_receive_uplink;
+connector con_GroundStation3_to_LEOSatellite35: GroundStation3.ground_station3_port_gs3_uplink_sat35 - LEOSatellite35.leo_satellite35_port_sat35_receive_uplink;
+connector con_GroundStation3_to_LEOSatellite36: GroundStation3.ground_station3_port_gs3_uplink_sat36 - LEOSatellite36.leo_satellite36_port_sat36_receive_uplink;
+connector con_GroundStation3_to_LEOSatellite37: GroundStation3.ground_station3_port_gs3_uplink_sat37 - LEOSatellite37.leo_satellite37_port_sat37_receive_uplink;
+connector con_GroundStation3_to_LEOSatellite38: GroundStation3.ground_station3_port_gs3_uplink_sat38 - LEOSatellite38.leo_satellite38_port_sat38_receive_uplink;
+connector con_GroundStation3_to_LEOSatellite39: GroundStation3.ground_station3_port_gs3_uplink_sat39 - LEOSatellite39.leo_satellite39_port_sat39_receive_uplink;
+connector con_GroundStation3_to_LEOSatellite40: GroundStation3.ground_station3_port_gs3_uplink_sat40 - LEOSatellite40.leo_satellite40_port_sat40_receive_uplink;

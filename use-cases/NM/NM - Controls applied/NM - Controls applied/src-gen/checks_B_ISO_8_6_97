@@ -1,0 +1,8 @@
+open logical
+open libs
+
+
+assert compliance__B_ISO_8_6__NMOC__BusinessCellFlow {
+  B_ISO_8_6[NMOC,BusinessCellFlow]
+}
+check compliance__B_ISO_8_6__NMOC__BusinessCellFlow for 5
